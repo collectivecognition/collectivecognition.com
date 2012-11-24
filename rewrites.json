@@ -1,0 +1,32 @@
+[{
+	"from": "",
+	"to": "_show/post"
+},{
+	"from": "/css/*",
+	"to": "css/*"
+},{
+	"from": "/images/*",
+	"to": "images/*"
+},{
+	"from": "/js/*",
+	"to": "js/*"
+},{
+	"from": "/favicon.ico",
+	"to": "favicon.ico"
+},{
+	"from": "/blog/:post",
+	"to": "_show/post",
+	"query": {
+		"post": ":post"
+	}
+},
+{
+	"from": "/blog",
+	"to": "_show/post"
+},{
+	"from": "/:page",
+	"to": "_show/page",
+	"query": {
+		"page": ":page"
+	}
+}]

@@ -1,0 +1,41 @@
+{{> header}}
+		<div class='page white top'>
+			
+			<div class='header'>
+			
+								<a href='http://collectivecognition.com' id='logo'>Collective Cognition</a>
+								
+				<div id='menu'>
+				
+					<a href='/'>blog</a>
+					<a href='/apps'>apps</a>
+				
+				</div>
+				
+				<!--<div id='contact'>
+					<a href='http://www.facebook.com/pages/Collective-Cognition/146978935332908' class='facebook'>Facebook</a>
+					<a href='http://www.twitter.com/cognitionapps' class='twitter'>Twitter</a>
+					<a href='http://collectivecognition.com/feed/' class='rss'>RSS</a>
+					<a href='mailto:apps@collectivecognition.com' class='email'>Email</a>
+				</div>-->
+			</div>
+			<div class='background'>
+			
+				<div class='content'>
+					
+					<h2>{{title}}</h2>
+					<hr />
+					<h4><em>Posted on {{date}} by William Blanchette</em></h4>
+					
+					{{{content}}}
+				
+				</div>
+			
+			</div>
+			<div class='footer'>
+			</div>
+			<div id="post-nav">
+				{{#previous}}<div class="nav-older"><a href="/blog/{{previous.content}}">&lt; Previous</a></div>{{/previous}}
+				{{#next}}<div class="nav-newer"><a href="/blog/{{next.content}}">&lt; Next</a></div>{{/next}}
+			</div>
+{{> footer}}
