@@ -1,74 +1,461 @@
+/*
+Theme Name: Collective Cognition
+Theme URI: http://www.collectivecognition.com/
+Description: 
+Author: William Blanchette
+Version: 1.0
+Tags:
+*/
+
 body {
-  font: 16px/1.5 verdana, helvetica-neue, helvetica, arial, san-serif;
-  background: black;
-  color: #ececec;
-  padding: 0;
-  margin: 0;
+
+	background: #515151;
+
 }
-ul {
-  margin: 0;
-  padding: 0;
-}
-a {
-  color: #ccc;
-  text-decoration: none;
-}
- 
+
+a,
+a:visited,
 a:hover {
-  color: #ececec;
-  text-decoration: underline;
+
+	color: #7ab5cd;
+
 }
- 
-#main {
-  width: 960px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.4);
+
+a img {
+
+	border: 0;
+
 }
-header {
-  padding: 0 10px;
-  overflow: hidden;
+
+#wrapper {
+
+	width: 730px;
+	margin: 0px auto;
+
 }
-h1 {
-  margin: 0;
+
+.page {
+
+	width: 730px;
+	position: relative;
+
 }
- 
-nav ul, ul.entries {
-  list-style-type: none;
+
+.header {
+
+	background: url(/images/header.png);
+	position: relative;
+	height: 36px;
+
 }
-nav li a {
-  float: left;
-  margin: 5px; 
+
+.page.top .header.blank {
+
+	background: url(/images/header.png);
+	position: relative;
+	height: 36px;
+
 }
+
+.page.top .header {
+	
+	background: url(/images/header-top.png);
+	height: 113px;
+
+}
+
+.page.white .header {
+
+	background: url(/images/header-white.png);
+	height: 36px;
+
+}
+
+.page.white.top .header {
+
+	background: url(/images/header-white-top.png);
+	height: 113px;
+
+}
+
+.header-overlay {
+
+	background: url(/images/header-overlay.png);
+	position: relative;
+	height: 36px;
+	
+}
+
+.page.top .header-overlay {
+	
+	background: url(/images/header-overlay-top.png) bottom left;
+	height: 113px;
+
+}
+
+.background {
+
+	background: url(/images/background.png);
+	position: relative;
+
+}
+
+.page.white .background {
+
+	background: url(/images/background-white.png);
+	position: relative;
+
+}
+
+.background-overlay {
+
+	background: url(/images/background-overlay.png);
+	position: relative;
+
+}
+
+.footer {
+
+	background: url(/images/footer.png);
+	height: 42px;
+	position: relative;
+
+}
+
+.page.white .footer {
+
+	background: url(/images/footer-white.png);
+	height: 42px;
+	position: relative;
+
+}
+
+.footer-overlay {
+
+	background: url(/images/footer-overlay.png);
+	height: 11px;
+	position: relative;
+
+}
+
+#logo {
+
+	width: 252px;
+	height: 92px;
+	background: url(/images/logo.png);
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	line-height: 200px;
+	overflow: hidden;
+
+}
+
+#menu {
+
+	position: absolute;
+	right: 30px;
+	top: 50px;
+
+}
+
+#menu a {
+
+	font-family: "Lucida Grande", "Arial", "Sans Serif";
+	font-size: 15px;
+	color: #ffffff;
+	text-shadow: 1px 1px #333333;
+	margin-right: 15px;
+	float: left;
+	text-decoration: none;
+
+}
+
+#menu a:hover {
+
+	text-decoration: underline;
+
+}
+
+.page.app .background-overlay {
+
+	height: 225px;
+
+}
+
+.page.app .background {
+
+	height: 85px;
+
+}
+
+.page.app.top .screenshot {
+
+	top: 113px;
+
+}
+
+.page.app .screenshot {
+
+	position: absolute;
+	left: 42px;
+	top: 36px;
+	z-index: 2;
+
+}
+
+.page.app:hover .screenshot {
+
+}
+
+.page.app .description {
+
+	position: absolute;
+	left: 290px;
+	top: 25px;
+	width: 395px;
+	font-family: "Lucida Grande", "Arial", "Sans Serif";
+	font-size: 13px;
+	color: #ffffff;
+	text-shadow: 1px 1px #333333;
+	text-align: justify;
+
+}
+
+.page.app .app-store-button {
+
+	width: 145px;
+	height: 49px;
+	background-image: url(/images/app-store-button.png);
+	background-position: top left;
+	position: absolute;
+	left: 289px;
+	top: 7px;
+
+}
+
+.page.app .app-store-button:hover {
+
+	background-position: bottom left;
+
+}
+
 .content {
-  padding: 10px;
+
+	margin: 0 50px;
+	font-family: "Lucida Grande", "Arial", "Sans Serif";
+	font-size: 12px;
+	color: #333;
+	position: relative;
+	text-align: justify;
+	float: none;
+	clear: both;
+	overflow: hidden;
+
 }
- 
-ul.entries li {
-  position: relative;
-  margin: 20px auto;
-  padding: 20px;
-  background: #ececec;
-  width: 600px;
+
+h2 {
+	
+	margin: 2px 0;
+
 }
- 
-ul.entries img {
-  width: 600px;
+
+h4 {
+	
+	font-size: 10px;
+	color: #999999;
+	margin: 2px 0;
+
 }
- 
-ul.entries li h3 {
-  position: absolute;
-  bottom: -18px;
-  left: 17px;
-  font-size: 2em;
+
+#footer {
+
+	text-align: center;
+	position: relative;
+	margin: 20px 0 40px 0;
+	font-family: "Lucida Grande", "Arial", "Sans Serif";
+	font-size: 12px;
+	color: #ffffff;
+	text-shadow: 1px 1px #222222;
+
 }
-ul.entries a {
-  color: #ececec;
+
+#contact {
+
+	position: absolute;
+	top: 41px;
+	left: 280px;
+
 }
-ul.entries a:hover {
-  color: #fff;
+
+#contact a {
+
+	height: 27px;
+	float: left;
+	line-height: 100px;
+	overflow: hidden;
+	background-position: top left;
+
 }
- 
-footer {
-  font-size: 0.65em;
-  text-align: center;
+
+#contact a:hover {
+
+	background-position: bottom left;
+
+}
+
+#contact a.facebook {
+	
+	background-image: url(/images/facebook.png);
+	width: 43px;
+
+}
+
+#contact a.twitter {
+
+	background-image: url(/images/twitter.png);
+	width: 36px;
+
+}
+
+#contact a.rss {
+
+	background-image: url(/images/rss.png);
+	width: 36px;
+
+}
+
+#contact a.email {
+
+	background-image: url(/images/email.png);
+	width: 43px;
+
+}
+
+#post-nav {
+
+	height: 30px;
+	position: relative;
+
+}
+
+#post-nav .nav-older a {
+
+	display: block;
+	width: 134px;
+	height: 30px;
+	overflow: hidden;
+	background: url(/images/older-posts.png);
+	background-position: top left;
+	position: absolute;
+	left: 40px;
+	top: 0px;
+	line-height: 200px;
+
+}
+
+#post-nav .nav-older a:hover {
+
+	background-position: bottom left;
+
+}
+
+#post-nav .nav-newer a {
+
+	display: block;
+	width: 134px;
+	height: 30px;
+	overflow: hidden;
+	background: url(/images/newer-posts.png);
+	background-position: top left;
+	position: absolute;
+	right: 40px;
+	top: 0px;
+	line-height: 200px;
+
+}
+
+#post-nav .nav-newer a:hover {
+
+	background-position: bottom left;
+
+}
+
+div.imgwrapper {
+
+	display: block;
+	float: none;
+	clear: both;
+	width: 100%;
+
+}
+
+img.alignleft {
+
+	float: left;
+	margin-right: 5px;
+
+}
+
+.page.web {
+
+	position: relative;
+
+}
+
+.page.web {
+
+	text-decoration: none;
+
+}
+
+.page.web.video {
+
+	width: 730px;
+	height: 422px;
+
+}
+
+.page.web .description {
+
+	text-decoration: none;
+	position: absolute;
+	left: 0px;
+	bottom: 3px;
+	width: 650px;
+	background: url(/images/web-desc-bg.png) bottom left no-repeat;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: "Lucida Grande", "Arial", "Sans Serif";
+	overflow: hidden;
+	padding: 5px 40px 20px 40px;
+	
+}
+
+a.web {
+
+	text-decoration: none;
+
+}
+
+a.web .description {
+
+	-webkit-transition-duration: 400ms;
+	-moz-transition-duration: 400ms;
+	-o-transition-duration: 400ms;
+	-ie-transition-duration: 400mx
+	transition-duration: 400ms;
+	
+	height: 50px;
+	opacity: 0;
+	
+
+}
+
+a.web:hover .description {
+	
+	height: 70px;	
+	opacity: 1;
+
 }
