@@ -7,13 +7,13 @@ permalink: /:categories/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
 
-title : Jekyll Bootstrap
-tagline: Site Tagline
-author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+title: Collective Cognition
+tagline:
+author:
+  name: William Blanchette
+  email: wb@collectivecognition.com
+  github: collectivecognition
+  twitter: wblanchette
+  feedburner: 
 
 production_url : http://collectivecognition.github.io/collectivecognition.com
