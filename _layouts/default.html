@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
 
-<base href="{% if site.url contains "localhost" %}{{site.production_url}}{% else %}/{% endif %}"/>
+<base href="{% if site.url contains "localhost" %}{{site.production_url}}{% else %}{{page.url}}{% endif %}"/>
 
 <title>{% if page.title %} {{ page.title }} | {% endif %} Collective Cognition</title>
 
