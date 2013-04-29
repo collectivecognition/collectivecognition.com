@@ -2,6 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
 
+<base href="{% if site.url contains "localhost" %}{{site.production_url}}{% else %}/{% endif %}"/>
+
 <title>{% if page.title %} {{ page.title }} | {% endif %} Collective Cognition</title>
 
 <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
@@ -28,7 +30,7 @@
 		<div class="bar light">
 			<div class="container">
 				<div id="content">
-					{{ content }}
+					{{content}}
 				</div>
 			</div>
 		</div>
