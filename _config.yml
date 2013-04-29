@@ -1,4 +1,4 @@
-audo: true
+auto: true
 safe: true
 source: ./
 destination: ./_build
