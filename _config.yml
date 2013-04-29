@@ -3,7 +3,7 @@ safe: true
 source: ./
 destination: ./_build
 lsi: false
-permalink: /:categories/:title
+permalink: /blog/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
 
