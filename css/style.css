@@ -43,7 +43,7 @@ a img {
 
 .header {
 
-	background: url(/images/header.png);
+	background: url(../images/header.png);
 	position: relative;
 	height: 36px;
 
@@ -51,7 +51,7 @@ a img {
 
 .page.top .header.blank {
 
-	background: url(/images/header.png);
+	background: url(../images/header.png);
 	position: relative;
 	height: 36px;
 
@@ -59,28 +59,28 @@ a img {
 
 .page.top .header {
 	
-	background: url(/images/header-top.png);
+	background: url(../images/header-top.png);
 	height: 113px;
 
 }
 
 .page.white .header {
 
-	background: url(/images/header-white.png);
+	background: url(../images/header-white.png);
 	height: 36px;
 
 }
 
 .page.white.top .header {
 
-	background: url(/images/header-white-top.png);
+	background: url(../images/header-white-top.png);
 	height: 113px;
 
 }
 
 .header-overlay {
 
-	background: url(/images/header-overlay.png);
+	background: url(../images/header-overlay.png);
 	position: relative;
 	height: 36px;
 	
@@ -88,35 +88,35 @@ a img {
 
 .page.top .header-overlay {
 	
-	background: url(/images/header-overlay-top.png) bottom left;
+	background: url(../images/header-overlay-top.png) bottom left;
 	height: 113px;
 
 }
 
 .background {
 
-	background: url(/images/background.png);
+	background: url(../images/background.png);
 	position: relative;
 
 }
 
 .page.white .background {
 
-	background: url(/images/background-white.png);
+	background: url(../images/background-white.png);
 	position: relative;
 
 }
 
 .background-overlay {
 
-	background: url(/images/background-overlay.png);
+	background: url(../images/background-overlay.png);
 	position: relative;
 
 }
 
 .footer {
 
-	background: url(/images/footer.png);
+	background: url(../images/footer.png);
 	height: 42px;
 	position: relative;
 
@@ -124,7 +124,7 @@ a img {
 
 .page.white .footer {
 
-	background: url(/images/footer-white.png);
+	background: url(../images/footer-white.png);
 	height: 42px;
 	position: relative;
 
@@ -132,7 +132,7 @@ a img {
 
 .footer-overlay {
 
-	background: url(/images/footer-overlay.png);
+	background: url(../images/footer-overlay.png);
 	height: 11px;
 	position: relative;
 
@@ -142,7 +142,7 @@ a img {
 
 	width: 252px;
 	height: 92px;
-	background: url(/images/logo.png);
+	background: url(../images/logo.png);
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -226,7 +226,7 @@ a img {
 
 	width: 145px;
 	height: 49px;
-	background-image: url(/images/app-store-button.png);
+	background-image: url(../images/app-store-button.png);
 	background-position: top left;
 	position: absolute;
 	left: 289px;
@@ -306,28 +306,28 @@ h4 {
 
 #contact a.facebook {
 	
-	background-image: url(/images/facebook.png);
+	background-image: url(../images/facebook.png);
 	width: 43px;
 
 }
 
 #contact a.twitter {
 
-	background-image: url(/images/twitter.png);
+	background-image: url(../images/twitter.png);
 	width: 36px;
 
 }
 
 #contact a.rss {
 
-	background-image: url(/images/rss.png);
+	background-image: url(../images/rss.png);
 	width: 36px;
 
 }
 
 #contact a.email {
 
-	background-image: url(/images/email.png);
+	background-image: url(../images/email.png);
 	width: 43px;
 
 }
@@ -345,7 +345,7 @@ h4 {
 	width: 134px;
 	height: 30px;
 	overflow: hidden;
-	background: url(/images/older-posts.png);
+	background: url(../images/older-posts.png);
 	background-position: top left;
 	position: absolute;
 	left: 40px;
@@ -366,7 +366,7 @@ h4 {
 	width: 134px;
 	height: 30px;
 	overflow: hidden;
-	background: url(/images/newer-posts.png);
+	background: url(../images/newer-posts.png);
 	background-position: top left;
 	position: absolute;
 	right: 40px;
@@ -423,7 +423,7 @@ img.alignleft {
 	left: 0px;
 	bottom: 3px;
 	width: 650px;
-	background: url(/images/web-desc-bg.png) bottom left no-repeat;
+	background: url(../images/web-desc-bg.png) bottom left no-repeat;
 	color: #ffffff;
 	font-size: 12px;
 	font-weight: bold;
