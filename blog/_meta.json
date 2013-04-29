@@ -3,5 +3,10 @@
 		"date": "November 21, 2012",
 		"title": "New Site Launch",
 		"content": "new-site-launch"
+	},
+	{
+		"date": "November 21, 2012",
+		"title": "Intro To Redis",
+		"content": "intro-to-redis"
 	}
 ]
