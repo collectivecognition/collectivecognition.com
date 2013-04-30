@@ -471,3 +471,19 @@ a.web:hover .description {
 .content.game img.last {
 	margin-right: 0px;
 }
+
+.content.game h2 a {
+	display: block;
+	width: 109px;
+	height: 58px;
+	font-family: "Lucida Grande", Arial, "Sans Serif";
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	text-shadow: #000 -1px -1px;
+	background: url(../images/games-button.png);
+}
+
+.content.game h2 a:hover{
+	background-position: bottom left;
+}
