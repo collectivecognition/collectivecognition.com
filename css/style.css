@@ -475,15 +475,26 @@ a.web:hover .description {
 .content.game h2 a {
 	display: block;
 	width: 109px;
-	height: 58px;
+	height: 29px;
 	font-family: "Lucida Grande", Arial, "Sans Serif";
 	font-size: 14px;
 	font-weight: bold;
+	text-align: center;
+	line-height: 29px;
+	text-decoration: none;
 	color: #fff;
 	text-shadow: #000 -1px -1px;
 	background: url(../images/games-button.png);
+	margin-left: 4px;
+	float: left;
 }
 
 .content.game h2 a:hover{
 	background-position: bottom left;
+}
+
+.content.game h2 buttons {
+	position: absolute;
+	right: 0px;
+	top: 0px;
 }
