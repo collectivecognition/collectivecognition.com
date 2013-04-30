@@ -497,7 +497,7 @@ a.web:hover .description {
 	background-position: bottom left;
 }
 
-.content.game h2 buttons {
+.content.game h2 .buttons {
 	position: absolute;
 	right: 0px;
 	top: 0px;
