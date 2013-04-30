@@ -472,12 +472,16 @@ a.web:hover .description {
 	margin-right: 0px;
 }
 
+.content.game h2 {
+	float: none;
+}
+
 .content.game h2 a {
 	display: block;
 	width: 109px;
 	height: 29px;
 	font-family: "Lucida Grande", Arial, "Sans Serif";
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: bold;
 	text-align: center;
 	line-height: 29px;
