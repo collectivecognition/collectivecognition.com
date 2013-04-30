@@ -460,8 +460,14 @@ a.web:hover .description {
 
 }
 
-.hr {
-	width: 100%;
-	height: 5px;
-	background: url(../images/hr.png) top left repeat-x;
+.content.game img {
+	margin: 5px;
+}
+
+.content.game img.first {
+	margin-left: 0px;
+}
+
+.content.game img.last {
+	margin-right: 0px;
 }
