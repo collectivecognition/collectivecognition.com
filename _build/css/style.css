@@ -472,18 +472,33 @@ a.web:hover .description {
 	margin-right: 0px;
 }
 
+.content.game h2 {
+	float: none;
+}
+
 .content.game h2 a {
 	display: block;
-	width: 109px;
-	height: 58px;
+	width: 75px;
+	height: 20px;
 	font-family: "Lucida Grande", Arial, "Sans Serif";
-	font-size: 14px;
+	font-size: 11px;
 	font-weight: bold;
+	text-align: center;
+	line-height: 20px;
+	text-decoration: none;
 	color: #fff;
 	text-shadow: #000 -1px -1px;
 	background: url(../images/games-button.png);
+	margin-left: 4px;
+	float: left;
 }
 
 .content.game h2 a:hover{
 	background-position: bottom left;
+}
+
+.content.game h2 .buttons {
+	position: absolute;
+	right: 0px;
+	top: 0px;
 }
