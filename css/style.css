@@ -482,7 +482,7 @@ a.web:hover .description {
 	height: 20px;
 	font-family: "Lucida Grande", Arial, "Sans Serif";
 	font-size: 11px;
-	font-weight: bold;
+	font-weight: normal;
 	text-align: center;
 	line-height: 20px;
 	text-decoration: none;
