@@ -17,3 +17,9 @@ author:
   feedburner: 
 
 url: http://collectivecognition.com
+
+mini_magick:
+    thumbnail:
+        source: images/blog
+        destination: images/blog/thumbnails
+        resize: "630x400"
