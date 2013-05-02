@@ -1,7 +1,6 @@
 auto: true
 safe: false
 source: ./
-destination: ./_build
 lsi: false
 permalink: /blog/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
