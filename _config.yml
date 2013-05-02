@@ -1,5 +1,5 @@
 auto: true
-safe: true
+safe: false
 source: ./
 destination: ./_build
 lsi: false
@@ -21,5 +21,5 @@ url: http://collectivecognition.com
 mini_magick:
     thumbnail:
         source: images/blog
-        destination: images/blog/thumbnails
+        destination: images/blog-thumbnails
         resize: "630x400"
