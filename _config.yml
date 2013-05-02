@@ -20,6 +20,6 @@ url: http://collectivecognition.com
 
 mini_magick:
     thumbnail:
-        source: images/blog
+        source: images/blog/original
         destination: images/blog/thumbnails
         resize: "630x400"
