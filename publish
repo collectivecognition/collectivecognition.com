@@ -1,6 +1,8 @@
 #!/bin/sh
-git checkout master
 jekyll --no-auto
+git add -A
+git commit -a
+git push
 cp -R _site /tmp
 git checkout gh-pages
 cp -R /tmp/_site/* .
