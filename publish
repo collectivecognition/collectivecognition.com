@@ -1,9 +1,9 @@
 #!/bin/sh
 jekyll --no-auto
+mv _site /tmp
 git add -A
 git commit -a
 git push
-cp -R _site /tmp
 git checkout gh-pages
 cp -R /tmp/_site/* .
 git add -A
