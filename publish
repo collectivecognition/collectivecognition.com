@@ -1,5 +1,6 @@
 #!/bin/sh
 jekyll --no-auto
+rm -rf /tmp/_site
 mv _site /tmp
 git add -A
 git commit -a
@@ -9,3 +10,4 @@ cp -R /tmp/_site/* .
 git add -A
 git commit -a
 git push
+git checkout master
