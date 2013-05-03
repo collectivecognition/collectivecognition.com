@@ -22,3 +22,7 @@ mini_magick:
         source: images/blog/original
         destination: images/blog/thumbnails
         resize: "630x400"
+    games:
+        source: images/games/original
+        destination: images/games/thumbnails
+        resize: "200x122"
