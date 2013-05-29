@@ -4,7 +4,7 @@
 
 <base href="http://collectivecognition.com"/>
 
-<title> Solus |  Collective Cognition</title>
+<title> Bare Minimum Javascript Tests |  Collective Cognition</title>
 
 <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
 <meta name="robots" content="index, follow" />
@@ -52,12 +52,23 @@
 			
 				<div class='content'>
 					
-					<h2>Solus</h2>
-					<h4><em>Posted on 01 May 2013 by William Blanchette</em></h4>
+					<h2>Bare Minimum Javascript Tests</h2>
+					<h4><em>Posted on 28 May 2013 by William Blanchette</em></h4>
 					
 					<p>
-					<a rel='shadowbox' href='/images/blog/original/solus-wip-2013-5-1.jpg'><img src='/images/blog/thumbnails/solus-wip-2013-5-1.jpg' /></a>
-<p>First screenshot of a game project I&#8217;m working on called Solus. One day, it will grow up to be a procedurally generated space trading / combat / exploration simulator. Right now, it&#8217;s some boxes that click together into a vaguely ship-looking shape.</p>
+					<p>I had a need to write some quick and dirty tests for a javascript library I was working on and whipped up a minimal (one line) assertion function which fills all of my testing requirements on simple projects:</p>
+
+<pre><code>var assert = function(test, description){ console.log(&quot;[&quot; + (test ? &quot;PASS&quot; : &quot;FAIL&quot;) + &quot;] &quot; + description); };</code></pre>
+
+<p>Assertions can be made like so:</p>
+
+<pre><code>assert(true !== false, &quot;True is not false&quot;);</code></pre>
+
+<p>will result in:</p>
+
+<pre><code>[TRUE] True is not false</code></pre>
+
+<p>Throw the assert function and your tests together into <code>someTests.js</code> and execute them: <code>node someTests</code>.</p>
 					</p>
 				
 				</div>
@@ -66,8 +77,8 @@
 			<div class='footer'>
 			</div>
 			<div id="post-nav">
-				<div class="nav-older"><a href="/blog/added-games-page">&lt; Previous</a></div>
-				<div class="nav-newer"><a href="/blog/shadowbox-inlined">Next &gt;</a></div>
+				<div class="nav-older"><a href="/blog/colour.js">&lt; Previous</a></div>
+				
 			</div>
 				</div>
 			</div>

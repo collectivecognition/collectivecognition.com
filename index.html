@@ -52,20 +52,23 @@
 
 				<div class='content'>
 
-					<h2>Colour.js</h2>
-					<h4><em>Posted on 26 May 2013 by William Blanchette</em></h4>
+					<h2>Bare Minimum Javascript Tests</h2>
+					<h4><em>Posted on 28 May 2013 by William Blanchette</em></h4>
 
 					<p>
-					<p>I&#8217;ve checked in the first version of colour.js to <a href='http://github.com/collectivecognition/colour.js'>github</a>.</p>
+					<p>I had a need to write some quick and dirty tests for a javascript library I was working on and whipped up a minimal (one line) assertion function which fills all of my testing requirements on simple projects:</p>
 
-<p>It&#8217;s a javascript library (actually just a single class) for converting and playing with colour values. It lets you do things like this:</p>
+<pre><code>var assert = function(test, description){ console.log(&quot;[&quot; + (test ? &quot;PASS&quot; : &quot;FAIL&quot;) + &quot;] &quot; + description); };</code></pre>
 
-<pre><code>var colour = new Colour(el.style.backgroundColor);
-el.style.backgroundColor = colour.l(colour.l() - 0.1);</code></pre>
+<p>Assertions can be made like so:</p>
 
-<p>which will lighten the background colour of the element by 10%.</p>
+<pre><code>assert(true !== false, &quot;True is not false&quot;);</code></pre>
 
-<p>The library handles parsing, manipulating and outputting colours in hex, rgb, rgba, hsl and hsla currently, with planned support for w3c colour names in the future.</p>
+<p>will result in:</p>
+
+<pre><code>[TRUE] True is not false</code></pre>
+
+<p>Throw the assert function and your tests together into <code>someTests.js</code> and execute them: <code>node someTests</code>.</p>
 					</p>
 
 				</div>
@@ -74,7 +77,7 @@ el.style.backgroundColor = colour.l(colour.l() - 0.1);</code></pre>
 			<div class='footer'>
 			</div>
 			<div id="post-nav">
-				<div class="nav-older"><a href="/blog/shadowbox-inlined">&lt; Previous</a></div>
+				<div class="nav-older"><a href="/blog/colour.js">&lt; Previous</a></div>
 				
 			</div>
 				</div>
