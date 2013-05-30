@@ -52,23 +52,22 @@
 
 				<div class='content'>
 
-					<h2>Bare Minimum Javascript Tests</h2>
-					<h4><em>Posted on 28 May 2013 by William Blanchette</em></h4>
+					<h2>Socket.io And Node.js Clustering</h2>
+					<h4><em>Posted on 29 May 2013 by William Blanchette</em></h4>
 
 					<p>
-					<p>I had a need to write some quick and dirty tests for a javascript library I was working on and whipped up a minimal (one line) assertion function which fills all of my testing requirements on simple projects:</p>
+					<p>I ran into a problem while working on chat.js, in the form of alot of log-spam from socket.io that looked something like this:</p>
 
-<pre><code>var assert = function(test, description){ console.log(&quot;[&quot; + (test ? &quot;PASS&quot; : &quot;FAIL&quot;) + &quot;] &quot; + description); };</code></pre>
-
-<p>Assertions can be made like so:</p>
-
-<pre><code>assert(true !== false, &quot;True is not false&quot;);</code></pre>
-
-<p>will result in:</p>
-
-<pre><code>[TRUE] True is not false</code></pre>
-
-<p>Throw the assert function and your tests together into <code>someTests.js</code> and execute them: <code>node someTests</code>.</p>
+<pre><code>info  - handshake authorized DL6P-B6mDjt1hrhM3VYw
+debug - setting request GET /socket.io/1/websocket/DL6P-B6mDjt1hrhM3VYw
+debug - set heartbeat interval for client DL6P-B6mDjt1hrhM3VYw
+debug - websocket writing 7:::1+0
+warn  - client not handshaken client should reconnect
+info  - transport end (error)
+debug - set close timeout for client DL6P-B6mDjt1hrhM3VYw
+debug - cleared close timeout for client DL6P-B6mDjt1hrhM3VYw
+debug - cleared heartbeat interval for client DL6P-B6mDjt1hrhM3VYw
+debug - discarding transport</code></pre>
 					</p>
 
 				</div>
@@ -77,7 +76,7 @@
 			<div class='footer'>
 			</div>
 			<div id="post-nav">
-				<div class="nav-older"><a href="/blog/colour.js">&lt; Previous</a></div>
+				<div class="nav-older"><a href="/blog/bare-minimum-javascript-tests">&lt; Previous</a></div>
 				
 			</div>
 				</div>
