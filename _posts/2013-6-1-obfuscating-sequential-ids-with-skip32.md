@@ -13,7 +13,16 @@ A sample implementation using node.js is below:
 	skip32 = new skip32([0x9b, 0x21, 0x96, 0xe, 0x1a, 0xcf, 0x24, 0x5f, 0x14, 0x93]);
 	
 	var id = 0;
-	var generateID = function(callback){
+	var generateID = function(){
 		id++;
 		return(skip32.encrypt(id).toString(16));
 	}
+	
+Calling `generateID` repeatedly will result in a series of obfuscated sequential IDs:
+
+	console.log(generateID());
+	# 3d4a6194
+	console.log(generateID());
+	# 23e8cd4b
+	
+Note that the array passed to the skip32 constructor is a key in the form of a byte array and can be up to 10 bytes in length. You'll want to change this for your own purposes and store it securely like any key.
