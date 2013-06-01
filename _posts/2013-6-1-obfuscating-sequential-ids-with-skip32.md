@@ -5,7 +5,7 @@ Generally, ID generation schemes fall into one of two camps: sequential and rand
 
 Sequential provide obvious ease of implementation, where a random scheme will provide non-guessable IDs and a more complicated implementation due to the need to protect against collisions.
 
-One alternative that can give some of the best of both worlds is to use a hybrid approach where you generate sequential IDs, but encrypt them for display to the end-user using a non-trivial one-way encryption algorithm such as (skip32)[https://npmjs.org/package/skip32].
+One alternative that can give some of the best of both worlds is to use a hybrid approach where you generate sequential IDs, but encrypt them for display to the end-user using a non-trivial one-way encryption algorithm such as [skip32](https://npmjs.org/package/skip32).
 
 A sample implementation using node.js is below:
 
