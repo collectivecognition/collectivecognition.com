@@ -4,7 +4,7 @@
 
 <base href="http://collectivecognition.com"/>
 
-<title> Collective Cognition</title>
+<title> Socket.io And Node.js Clustering copy |  Collective Cognition</title>
 
 <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
 <meta name="robots" content="index, follow" />
@@ -34,9 +34,9 @@
 			<div class="container">
 				<div id="content">
 							<div class='page white top'>
-
+			
 			<div class='header'>
-
+			
 								<a href='http://collectivecognition.com' id='logo'>Collective Cognition</a>
 								
 				<div id='menu'>
@@ -47,42 +47,42 @@
 					<a href='http://github.com/collectivecognition?tab=repositories'>github</a>
 					
 				</div>
-
+				
 			</div>
 			<div class='background'>
-
+			
 				<div class='content'>
-
-					<h2>Obfuscating Sequential Ids With Skip32</h2>
-					<h4><em>Posted on 01 June 2013 by William Blanchette</em></h4>
-
+					
+					<h2>Socket.io And Node.js Clustering copy</h2>
+					<h4><em>Posted on 29 May 2013 by William Blanchette</em></h4>
+					
 					<p>
-					<p>Generally, ID generation schemes fall into one of two camps: sequential and random.</p>
+					<p>I ran into a problem while working on chat.js, in the form of alot of log-spam from socket.io that looked something like this:</p>
 
-<p>Sequential provide obvious ease of implementation, where a random scheme will provide non-guessable IDs and a more complicated implementation due to the need to protect against collisions.</p>
+<pre><code>info  - handshake authorized DL6P-B6mDjt1hrhM3VYw
+debug - setting request GET /socket.io/1/websocket/DL6P-B6mDjt1hrhM3VYw
+debug - set heartbeat interval for client DL6P-B6mDjt1hrhM3VYw
+debug - websocket writing 7:::1+0
+warn  - client not handshaken client should reconnect
+info  - transport end (error)
+debug - set close timeout for client DL6P-B6mDjt1hrhM3VYw
+debug - cleared close timeout for client DL6P-B6mDjt1hrhM3VYw
+debug - cleared heartbeat interval for client DL6P-B6mDjt1hrhM3VYw
+debug - discarding transport</code></pre>
 
-<p>One alternative that can give some of the best of both worlds is to use a hybrid approach where you generate sequential IDs, but encrypt them for display to the end-user using a non-trivial one-way encryption algorithm such as (skip32)<span>https://npmjs.org/package/skip32</span>.</p>
+<p>The problem turned out to be due to my use of the (still experimental) <code>cluster</code> API causing a race condition in socket.io and causing erratic behaviour in my application.</p>
 
-<p>A sample implementation using node.js is below:</p>
-
-<pre><code>var skip32 = new require(&quot;skip32&quot;).Skip32;
-skip32 = new skip32([0x9b, 0x21, 0x96, 0xe, 0x1a, 0xcf, 0x24, 0x5f, 0x14, 0x93]);
-
-var id = 0;
-var generateID = function(callback){
-	id++;
-	return(skip32.encrypt(id).toString(16));
-}</code></pre>
+<p>Luckily, multiple-cpu support isn&#8217;t a huge requirement for me at this time. Just a heads up for anyone else having similar problems.</p>
 					</p>
-
+				
 				</div>
-
+			
 			</div>
 			<div class='footer'>
 			</div>
 			<div id="post-nav">
-				<div class="nav-older"><a href="/blog/socket.io-and-node.js-clustering+copy">&lt; Previous</a></div>
-				
+				<div class="nav-older"><a href="/blog/bare-minimum-javascript-tests">&lt; Previous</a></div>
+				<div class="nav-newer"><a href="/blog/obfuscating-sequential-ids-with-skip32">Next &gt;</a></div>
 			</div>
 				</div>
 			</div>
