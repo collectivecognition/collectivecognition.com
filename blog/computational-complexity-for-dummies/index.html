@@ -4,7 +4,7 @@
 
 <base href="http://collectivecognition.com"/>
 
-<title> Keeping Ghpages In Sync With Master |  Collective Cognition</title>
+<title> Computational Complexity For Dummies |  Collective Cognition</title>
 
 <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
 <meta name="robots" content="index, follow" />
@@ -53,37 +53,13 @@
 			
 				<div class='content'>
 					
-					<h2>Keeping Ghpages In Sync With Master</h2>
-					<h4><em>Posted on 09 July 2013 by William Blanchette</em></h4>
+					<h2>Computational Complexity For Dummies</h2>
+					<h4><em>Posted on 12 July 2013 by William Blanchette</em></h4>
 					
 					<p>
-					<p>For simple, static web projects, you may simply want to keep your gh-pages branch in sync with the master branch.</p>
+					<p>Dionysis &#8220;dionyziz&#8221; Zindros has written a (great post on discrete.gr)[http://discrete.gr/complexity/] tackling the topic of algorithm complexity analysis for those of us who come from a non-CS background.</p>
 
-<p>It turns out this is exceedingly simple to do, adding only a few commands to your workflow.</p>
-
-<p>First, while your master branch is checked out, make sure all of your changes are committed:</p>
-
-<pre><code>git commit -a -m &quot;Some changes&quot;</code></pre>
-
-<p>Now, if you haven&#8217;t already, create the gh-pages branch:</p>
-
-<pre><code>git checkout -b gh-pages</code></pre>
-
-<p>If you&#8217;ve already got a branch set up, just switch to it</p>
-
-<pre><code>git checkout gh-pages</code></pre>
-
-<p>The git <code>rebase</code> command lets you copy the contents of one branch to another:</p>
-
-<pre><code>git rebase master</code></pre>
-
-<p>Now, push out the changes in both branches:</p>
-
-<pre><code>git push --all</code></pre>
-
-<p>Make sure to switch back to the master branch when you&#8217;re done:</p>
-
-<pre><code>git checkout master</code></pre>
+<p>It&#8217;s very well written and provides a great overview of the concepts involved.</p>
 					</p>
 				
 				</div>
@@ -92,8 +68,8 @@
 			<div class='footer'>
 			</div>
 			<div id="post-nav">
-				<div class="nav-older"><a href="/blog/obfuscating-sequential-ids-with-skip32">&lt; Previous</a></div>
-				<div class="nav-newer"><a href="/blog/computational-complexity-for-dummies">Next &gt;</a></div>
+				<div class="nav-older"><a href="/blog/keeping-ghpages-in-sync-with-master">&lt; Previous</a></div>
+				
 			</div>
 				</div>
 			</div>
