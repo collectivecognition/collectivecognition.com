@@ -1,5 +1,6 @@
 - [ ] Fix tiling on backgrounds of boxes on app page
-- [ ] Add web projects page
 - [ ] Add contact information (github, email, linkedin, etc..)
-- [ ] Add RSS feed
+- [ ] Make responsive or at least more mobile-friendly
+- [X] Add web projects page
+- [X] Add RSS feed
 - [X] Add games page
