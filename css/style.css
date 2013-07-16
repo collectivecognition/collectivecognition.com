@@ -413,7 +413,15 @@ a.web:hover .description {
 .content.web .item img {
 	position: relative;
 	-webkit-transition-duration: 100ms;
+	-moz-transition-duration: 100ms;
+	-ie-transition-duration: 100ms;
+	-o-transition-duration: 100ms;
+	transition-duration: 100ms;
 	-webkit-transition-timing-function: ease-in-out;
+	-moz-transition-timing-function: ease-in-out;
+	-ie-transition-timing-function: ease-in-out;
+	-o-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
 }
 
 .content.web .item .links {
@@ -446,7 +454,15 @@ a.web:hover .description {
 	-o-border-radius: 3px;
 	border-radius: 3px;
 	-webkit-transition-duration: 15ms;
+	-moz-transition-duration: 15ms;
+	-ie-transition-duration: 15ms;
+	-o-transition-duration: 15ms;
+	transition-duration: 15ms;
 	-webkit-transition-timing-function: ease-in-out;
+	-moz-transition-timing-function: ease-in-out;
+	-ie-transition-timing-function: ease-in-out;
+	-o-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
 }
 
 .content.web .item a:hover {
