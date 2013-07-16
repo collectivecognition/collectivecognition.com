@@ -7,6 +7,14 @@
 		<atom:link href="http://collectivecognition.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Rss Feed And New Portfolio Page</title>
+				<description>&lt;p&gt;I&amp;#8217;ve made a few small updates to the site today, including the addition of an &lt;a href='/feed'&gt;RSS feed&lt;/a&gt; and a new page to house my &lt;a href='/web'&gt;web portfolio&lt;/a&gt;. There are only a few projects listed for now, but I&amp;#8217;ll be updating it constantly as I bring projects over to the new infrastructure I&amp;#8217;m in the process of building.&lt;/p&gt;</description>
+				<pubDate>Tue, 16 Jul 2013 00:00:00 -0400</pubDate>
+				<link>http://collectivecognition.com/blog/rss-feed-and-new-portfolio-page</link>
+				<guid isPermaLink="true">http://collectivecognition.com/blog/rss-feed-and-new-portfolio-page</guid>
+			</item>
+		
+			<item>
 				<title>Computational Complexity For Dummies</title>
 				<description>&lt;p&gt;Dionysis &amp;#8220;dionyziz&amp;#8221; Zindros has written a &lt;a href='http://discrete.gr/complexity/'&gt;great post on discrete.gr&lt;/a&gt; tackling the topic of algorithm complexity analysis for those of us who come from a non-CS background.&lt;/p&gt;
 
@@ -183,20 +191,6 @@ el.style.backgroundColor = colour.l(colour.l() - 0.1);&lt;/code&gt;&lt;/pre&gt;
 				<pubDate>Tue, 30 Apr 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/added-games-page</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/added-games-page</guid>
-			</item>
-		
-			<item>
-				<title>Github Pages Migration</title>
-				<description>&lt;p&gt;This site has been languishing of late and I have lots of things I&amp;#8217;d like to add. Mostly this is due to the fact that I&amp;#8217;ve grown apart from Wordpress and cringe a little whenever I think about all the steps involved in making changes to the existing site.&lt;/p&gt;
-
-&lt;p&gt;Today I migrated the site over to Github pages, using &lt;a href='https://github.com/mojombo/jekyll'&gt;jekyll&lt;/a&gt;. Jekyll is a lot like my Cushion framework, but obviously more mature and widely supported, with a wealth of plugins and other tidbits to borrow when I&amp;#8217;m feeling lazy.&lt;/p&gt;
-
-&lt;p&gt;Updates are now a simple matter of opening up my &lt;a href='http://panic.com/coda'&gt;favourite text editor&lt;/a&gt;, writing a text (or markdown, or HTML) file, and doing a git push.&lt;/p&gt;
-
-&lt;p&gt;Expect to see more frequent updates as I start posting all the stuff I&amp;#8217;ve been working on.&lt;/p&gt;</description>
-				<pubDate>Mon, 29 Apr 2013 00:00:00 -0400</pubDate>
-				<link>http://collectivecognition.com/blog/github-pages-migration</link>
-				<guid isPermaLink="true">http://collectivecognition.com/blog/github-pages-migration</guid>
 			</item>
 		
 	</channel>
