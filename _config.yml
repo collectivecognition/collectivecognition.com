@@ -15,7 +15,7 @@ author:
   twitter: wblanchette
   feedburner: 
 
-url: http://collectivecognition.com
+url: http://localhost:4000
 
 mini_magick:
     thumbnail:
