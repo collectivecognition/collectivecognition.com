@@ -162,7 +162,7 @@ el.style.backgroundColor = colour.l(colour.l() - 0.1);&lt;/code&gt;&lt;/pre&gt;
 		
 			<item>
 				<title>Solus</title>
-				<description>&lt;a href='/images/blog/original/solus-wip-2013-5-1.jpg' rel='shadowbox'&gt;&lt;img src='/images/blog/thumbnails/solus-wip-2013-5-1.jpg' /&gt;&lt;/a&gt;
+				<description>&lt;a rel='shadowbox' href='/images/blog/original/solus-wip-2013-5-1.jpg'&gt;&lt;img src='/images/blog/thumbnails/solus-wip-2013-5-1.jpg' /&gt;&lt;/a&gt;
 &lt;p&gt;First screenshot of a game project I&amp;#8217;m working on called Solus. One day, it will grow up to be a procedurally generated space trading / combat / exploration simulator. Right now, it&amp;#8217;s some boxes that click together into a vaguely ship-looking shape.&lt;/p&gt;</description>
 				<pubDate>Wed, 01 May 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/solus</link>
