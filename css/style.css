@@ -488,5 +488,9 @@ code {
 	background: #eee;
 	padding: 3px;
 	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ie-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
 	border: 1px solid #ddd;
 }
