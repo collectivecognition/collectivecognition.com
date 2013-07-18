@@ -484,6 +484,7 @@ a.web:hover .description {
 }
 
 code {
+	display: inline-block;
 	background: #eee;
 	padding: 3px;
 	-webkit-border-radius: 3px;
