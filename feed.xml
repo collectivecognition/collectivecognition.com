@@ -7,6 +7,14 @@
 		<atom:link href="http://collectivecognition.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Vr City</title>
+				<description>&lt;a href='/images/blog/original/vrcity-wip-2013-7-31.jpg' rel='shadowbox'&gt;&lt;img src='/images/blog/thumbnails/vrcity-wip-2013-7-31.jpg' /&gt;&lt;/a&gt;</description>
+				<pubDate>Wed, 31 Jul 2013 00:00:00 -0400</pubDate>
+				<link>http://collectivecognition.com/blog/VR-City</link>
+				<guid isPermaLink="true">http://collectivecognition.com/blog/VR-City</guid>
+			</item>
+		
+			<item>
 				<title>Rss Feed And New Portfolio Page</title>
 				<description>&lt;p&gt;I&amp;#8217;ve made a few small updates to the site today, including the addition of an &lt;a href='/feed'&gt;RSS feed&lt;/a&gt; and a new page to house my &lt;a href='/web'&gt;web portfolio&lt;/a&gt;. There are only a few projects listed for now, but I&amp;#8217;ll be updating it constantly as I bring projects over to the new infrastructure I&amp;#8217;m in the process of building.&lt;/p&gt;</description>
 				<pubDate>Tue, 16 Jul 2013 00:00:00 -0400</pubDate>
@@ -162,35 +170,11 @@ el.style.backgroundColor = colour.l(colour.l() - 0.1);&lt;/code&gt;&lt;/pre&gt;
 		
 			<item>
 				<title>Solus</title>
-				<description>&lt;a rel='shadowbox' href='/images/blog/original/solus-wip-2013-5-1.jpg'&gt;&lt;img src='/images/blog/thumbnails/solus-wip-2013-5-1.jpg' /&gt;&lt;/a&gt;
+				<description>&lt;a href='/images/blog/original/solus-wip-2013-5-1.jpg' rel='shadowbox'&gt;&lt;img src='/images/blog/thumbnails/solus-wip-2013-5-1.jpg' /&gt;&lt;/a&gt;
 &lt;p&gt;First screenshot of a game project I&amp;#8217;m working on called Solus. One day, it will grow up to be a procedurally generated space trading / combat / exploration simulator. Right now, it&amp;#8217;s some boxes that click together into a vaguely ship-looking shape.&lt;/p&gt;</description>
 				<pubDate>Wed, 01 May 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/solus</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/solus</guid>
-			</item>
-		
-			<item>
-				<title>Added Games Page</title>
-				<description>&lt;p&gt;I&amp;#8217;ve added a new &lt;a href='/games'&gt;games&lt;/a&gt; page to house my various game projects.&lt;/p&gt;
-
-&lt;p&gt;The first entry is Zenbox, a minimalist puzzle game I created for the latest &lt;a href='http://www.ludumdare.com'&gt;Ludum Dare&lt;/a&gt; 48 hour game development challenge.&lt;/p&gt;
-
-&lt;p&gt;All things considered, I think it came out well. Due to some unexpectedly awesome weather I decided to go camping the night before the competition, losing quite a few valuable hours. As there&amp;#8217;s no cell service where I was camping, I wasn&amp;#8217;t aware of the theme until getting back home which cost me even more hours spent brainstorming a game concept that fit the theme. Luckily the theme turned out to be an easy one: minimalism.&lt;/p&gt;
-
-&lt;p&gt;The first entry in Google for minimalism is a Wikipedia page, a short way down that page is an entry on Zen Buddhism. It wasn&amp;#8217;t a huge leap of logic from there to the idea of a Zen garden / sandbox.&lt;/p&gt;
-
-&lt;p&gt;I had the basic gameplay stubbed out and graphics done by midnight on the first day and got some sleep, leaving most of the bigger challenges to deal with on the second day, including coming up with what the win conditions for the puzzle would be and all of the polish required to make the thing actually playable / enjoyable.&lt;/p&gt;
-
-&lt;p&gt;From a code perspective, the most difficult bit was definitely the loop detection algorithm which reminds me a bit of one of those tricky job interview questions involving linked lists. Had I been more organized from the start (as always) this probably would have been cleaner, but I&amp;#8217;m happy with the result.&lt;/p&gt;
-
-&lt;p&gt;The controls were also quite tricky to nail down, and although I&amp;#8217;m not 100% happy with the result they are very usable (if fiddly) and are definitely a huge improvement on the first few iterations I tried, which included keyboard-only navigation.&lt;/p&gt;
-
-&lt;p&gt;One interesting challenge with this project was making sure that all scenarios were actually completable, while still being at least somewhat challenging. In an early version of the game I discovered (with some help from my fiance) that the puzzle was actually impossible to complete with an odd number of spaces on the board! The fix for this was easy enough: use only stones which occupy an even number of squares, but it&amp;#8217;s a good idea of the sort of non-intuitive bits of logic required by puzzle and game design in general.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#8217;d recommend Ludum Dare to anyone who wants to stretch their game / software design and development muscles in a fun, intensive burst and participate in an awesome community. I&amp;#8217;ll definitely be taking part when the next competition starts in four months.&lt;/p&gt;</description>
-				<pubDate>Tue, 30 Apr 2013 00:00:00 -0400</pubDate>
-				<link>http://collectivecognition.com/blog/added-games-page</link>
-				<guid isPermaLink="true">http://collectivecognition.com/blog/added-games-page</guid>
 			</item>
 		
 	</channel>
