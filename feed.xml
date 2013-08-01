@@ -8,7 +8,7 @@
 		
 			<item>
 				<title>Vr City</title>
-				<description>&lt;a rel='shadowbox' href='/images/blog/original/vrcity-wip-2013-7-31.jpg'&gt;&lt;img src='/images/blog/thumbnails/vrcity-wip-2013-7-31.jpg' /&gt;&lt;/a&gt;</description>
+				<description>&lt;a href='/images/blog/original/vrcity-wip-2013-7-31.jpg' rel='shadowbox'&gt;&lt;img src='/images/blog/thumbnails/vrcity-wip-2013-7-31.jpg' /&gt;&lt;/a&gt;&lt;p&gt;Some very early work on a procedurally generated city for the Oculus Rift.&lt;/p&gt;</description>
 				<pubDate>Wed, 31 Jul 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/VR-City</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/VR-City</guid>
@@ -170,7 +170,7 @@ el.style.backgroundColor = colour.l(colour.l() - 0.1);&lt;/code&gt;&lt;/pre&gt;
 		
 			<item>
 				<title>Solus</title>
-				<description>&lt;a rel='shadowbox' href='/images/blog/original/solus-wip-2013-5-1.jpg'&gt;&lt;img src='/images/blog/thumbnails/solus-wip-2013-5-1.jpg' /&gt;&lt;/a&gt;
+				<description>&lt;a href='/images/blog/original/solus-wip-2013-5-1.jpg' rel='shadowbox'&gt;&lt;img src='/images/blog/thumbnails/solus-wip-2013-5-1.jpg' /&gt;&lt;/a&gt;
 &lt;p&gt;First screenshot of a game project I&amp;#8217;m working on called Solus. One day, it will grow up to be a procedurally generated space trading / combat / exploration simulator. Right now, it&amp;#8217;s some boxes that click together into a vaguely ship-looking shape.&lt;/p&gt;</description>
 				<pubDate>Wed, 01 May 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/solus</link>
