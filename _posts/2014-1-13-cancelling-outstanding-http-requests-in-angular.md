@@ -12,10 +12,14 @@ Here's a quick example implementation that demonstrates cancelling multiple outs
     angular.module("App").
         controller("SomeCtrl", ["$scope", $http", $q", function($scope, $http, $q){
             // Initiate a long running http request
-            $http.get("http://example.com/endpoint", {timeout: $scope.canceler.promise});
+            $http.get("http://example.com/endpoint", {
+                timeout: $scope.canceler.promise
+            });
 
             // And another one
-            $http.get("http://example.com/another_endpoint", {timeout: $scope.canceler.promise});
+            $http.get("http://example.com/another_endpoint", {
+                timeout: $scope.canceler.promise
+            });
 
             // Wait for the controller to be destroyed
             $scope.$on("$destroy", function(){
