@@ -7,8 +7,39 @@
 		<atom:link href="http://collectivecognition.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Cancelling Outstanding Http Requests In Angular</title>
+				<description>&lt;p&gt;While working on an angular.js project recently I ran into issues with long running http requests initiated by controllers that had since been destroyed causing subsequent requests to be delayed until they completed. To further complicate things, each browser support a different number of concurrent http requests, so behavior can is often erratic.&lt;/p&gt;
+
+&lt;p&gt;In a traditional web application, these requests would be destroyed by the browser when navigating to a new page, but in a single page web application no such cleanup happens and we’re left to handle things on our own.&lt;/p&gt;
+
+&lt;p&gt;Luckily a recent build of angular added support for cancelling of outstanding $http requests via the &lt;code&gt;timeout&lt;/code&gt; options.&lt;/p&gt;
+
+&lt;p&gt;Here’s a quick example implementation that demonstrates cancelling multiple outstanding $http requests when the controller is destroyed (such as when navigating to a new view):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;angular.module(&amp;quot;App&amp;quot;).
+    controller(&amp;quot;SomeCtrl&amp;quot;, [&amp;quot;$scope&amp;quot;, $http&amp;quot;, $q&amp;quot;, function($scope, $http, $q){
+        // Initiate a long running http request
+        $http.get(&amp;quot;http://example.com/endpoint&amp;quot;, {timeout: $scope.canceler.promise});
+
+        // And another one
+        $http.get(&amp;quot;http://example.com/another_endpoint&amp;quot;, {timeout: $scope.canceler.promise});
+
+        // Wait for the controller to be destroyed
+        $scope.$on(&amp;quot;$destroy&amp;quot;, function(){
+            // Cancel all outstanding $http requests
+            // Multiple requests can share the same timeout promise
+            $scope.canceler.resolve();
+        });
+    }]);&lt;/code&gt;&lt;/pre&gt;</description>
+				<pubDate>Mon, 13 Jan 2014 00:00:00 -0500</pubDate>
+				<link>http://collectivecognition.com/blog/cancelling-outstanding-http-requests-in-angular</link>
+				<guid isPermaLink="true">http://collectivecognition.com/blog/cancelling-outstanding-http-requests-in-angular</guid>
+			</item>
+		
+			<item>
 				<title>Vr City</title>
-				<description>&lt;a href='/images/blog/original/vrcity-wip-2013-7-31.jpg' rel='shadowbox'&gt;&lt;img src='/images/blog/thumbnails/vrcity-wip-2013-7-31.jpg' /&gt;&lt;/a&gt;&lt;p&gt;Some very early work on a procedurally generated city for the Oculus Rift.&lt;/p&gt;</description>
+				<description>&lt;p&gt;&lt;a href=&#39;/images/blog/original/vrcity-wip-2013-7-31.jpg&#39; rel=&#39;shadowbox&#39;&gt;&lt;img src=&#39;/images/blog/thumbnails/vrcity-wip-2013-7-31.jpg&#39; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Some very early work on a procedurally generated city for the Oculus Rift.&lt;/p&gt;</description>
 				<pubDate>Wed, 31 Jul 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/VR-City</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/VR-City</guid>
@@ -16,7 +47,7 @@
 		
 			<item>
 				<title>Rss Feed And New Portfolio Page</title>
-				<description>&lt;p&gt;I&amp;#8217;ve made a few small updates to the site today, including the addition of an &lt;a href='/feed'&gt;RSS feed&lt;/a&gt; and a new page to house my &lt;a href='/web'&gt;web portfolio&lt;/a&gt;. There are only a few projects listed for now, but I&amp;#8217;ll be updating it constantly as I bring projects over to the new infrastructure I&amp;#8217;m in the process of building.&lt;/p&gt;</description>
+				<description>&lt;p&gt;I’ve made a few small updates to the site today, including the addition of an &lt;a href=&quot;/feed&quot;&gt;RSS feed&lt;/a&gt; and a new page to house my &lt;a href=&quot;/web&quot;&gt;web portfolio&lt;/a&gt;. There are only a few projects listed for now, but I’ll be updating it constantly as I bring projects over to the new infrastructure I’m in the process of building.&lt;/p&gt;</description>
 				<pubDate>Tue, 16 Jul 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/rss-feed-and-new-portfolio-page</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/rss-feed-and-new-portfolio-page</guid>
@@ -24,9 +55,9 @@
 		
 			<item>
 				<title>Computational Complexity For Dummies</title>
-				<description>&lt;p&gt;Dionysis &amp;#8220;dionyziz&amp;#8221; Zindros has written a &lt;a href='http://discrete.gr/complexity/'&gt;great post on discrete.gr&lt;/a&gt; tackling the topic of algorithm complexity analysis for those of us who come from a non-CS background.&lt;/p&gt;
+				<description>&lt;p&gt;Dionysis “dionyziz” Zindros has written a &lt;a href=&quot;http://discrete.gr/complexity/&quot;&gt;great post on discrete.gr&lt;/a&gt; tackling the topic of algorithm complexity analysis for those of us who come from a non-CS background.&lt;/p&gt;
 
-&lt;p&gt;It&amp;#8217;s very well written and provides a great overview of the concepts involved.&lt;/p&gt;</description>
+&lt;p&gt;It’s very well written and provides a great overview of the concepts involved.&lt;/p&gt;</description>
 				<pubDate>Fri, 12 Jul 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/computational-complexity-for-dummies</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/computational-complexity-for-dummies</guid>
@@ -42,11 +73,11 @@
 
 &lt;pre&gt;&lt;code&gt;git commit -a -m &amp;quot;Some changes&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Now, if you haven&amp;#8217;t already, create the gh-pages branch:&lt;/p&gt;
+&lt;p&gt;Now, if you haven’t already, create the gh-pages branch:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;git checkout -b gh-pages&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;If you&amp;#8217;ve already got a branch set up, just switch to it&lt;/p&gt;
+&lt;p&gt;If you’ve already got a branch set up, just switch to it&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;git checkout gh-pages&lt;/code&gt;&lt;/pre&gt;
 
@@ -58,7 +89,7 @@
 
 &lt;pre&gt;&lt;code&gt;git push --all&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Make sure to switch back to the master branch when you&amp;#8217;re done:&lt;/p&gt;
+&lt;p&gt;Make sure to switch back to the master branch when you’re done:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;git checkout master&lt;/code&gt;&lt;/pre&gt;</description>
 				<pubDate>Tue, 09 Jul 2013 00:00:00 -0400</pubDate>
@@ -72,7 +103,7 @@
 
 &lt;p&gt;Sequential provide obvious ease of implementation, where a random scheme will provide non-guessable IDs and a more complicated implementation due to the need to protect against collisions.&lt;/p&gt;
 
-&lt;p&gt;One alternative that can give some of the best of both worlds is to use a hybrid approach where you generate sequential IDs, but encrypt them for display to the end-user using a non-trivial one-way encryption algorithm such as &lt;a href='https://npmjs.org/package/skip32'&gt;skip32&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One alternative that can give some of the best of both worlds is to use a hybrid approach where you generate sequential IDs, but encrypt them for display to the end-user using a non-trivial one-way encryption algorithm such as &lt;a href=&quot;https://npmjs.org/package/skip32&quot;&gt;skip32&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;A sample implementation using node.js is below:&lt;/p&gt;
 
@@ -92,7 +123,7 @@ var generateID = function(){
 console.log(generateID());
 # 23e8cd4b&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Note that the array passed to the skip32 constructor is a key in the form of a byte array and can be up to 10 bytes in length. You&amp;#8217;ll want to change this for your own purposes and store it securely like any key.&lt;/p&gt;</description>
+&lt;p&gt;Note that the array passed to the skip32 constructor is a key in the form of a byte array and can be up to 10 bytes in length. You’ll want to change this for your own purposes and store it securely like any key.&lt;/p&gt;</description>
 				<pubDate>Sat, 01 Jun 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/obfuscating-sequential-ids-with-skip32</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/obfuscating-sequential-ids-with-skip32</guid>
@@ -115,7 +146,7 @@ debug - discarding transport&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The problem turned out to be due to my use of the (still experimental) &lt;code&gt;cluster&lt;/code&gt; API causing a race condition in socket.io and causing erratic behaviour in my application.&lt;/p&gt;
 
-&lt;p&gt;Luckily, multiple-cpu support isn&amp;#8217;t a huge requirement for me at this time. Just a heads up for anyone else having similar problems.&lt;/p&gt;</description>
+&lt;p&gt;Luckily, multiple-cpu support isn’t a huge requirement for me at this time. Just a heads up for anyone else having similar problems.&lt;/p&gt;</description>
 				<pubDate>Wed, 29 May 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/socket.io-and-node.js-clustering</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/socket.io-and-node.js-clustering</guid>
@@ -143,9 +174,9 @@ debug - discarding transport&lt;/code&gt;&lt;/pre&gt;
 		
 			<item>
 				<title>Colour.js</title>
-				<description>&lt;p&gt;I&amp;#8217;ve checked in the first version of colour.js to &lt;a href='http://github.com/collectivecognition/colour.js'&gt;github&lt;/a&gt;.&lt;/p&gt;
+				<description>&lt;p&gt;I’ve checked in the first version of colour.js to &lt;a href=&quot;http://github.com/collectivecognition/colour.js&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;It&amp;#8217;s a javascript library (actually just a single class) for converting and playing with colour values. It lets you do things like this:&lt;/p&gt;
+&lt;p&gt;It’s a javascript library (actually just a single class) for converting and playing with colour values. It lets you do things like this:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;var colour = new Colour(el.style.backgroundColor);
 el.style.backgroundColor = colour.l(colour.l() - 0.1);&lt;/code&gt;&lt;/pre&gt;
@@ -160,21 +191,12 @@ el.style.backgroundColor = colour.l(colour.l() - 0.1);&lt;/code&gt;&lt;/pre&gt;
 		
 			<item>
 				<title>Shadowbox Inlined</title>
-				<description>&lt;p&gt;I whipped up a quick version of the &lt;a href='http://shadowbox-js.com'&gt;Shadowbox&lt;/a&gt; lightbox script which has all images and css injected inline into the javascript code, allowing for that single script to include all assets required.&lt;/p&gt;
+				<description>&lt;p&gt;I whipped up a quick version of the &lt;a href=&#39;http://shadowbox-js.com&#39;&gt;Shadowbox&lt;/a&gt; lightbox script which has all images and css injected inline into the javascript code, allowing for that single script to include all assets required.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href='https://github.com/collectivecognition/shadowbox-inlined'&gt;Github project&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;p&gt;Check out the &lt;a href=&#39;https://github.com/collectivecognition/shadowbox-inlined&#39;&gt;Github project&lt;/a&gt;.&lt;/p&gt;</description>
 				<pubDate>Fri, 03 May 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/shadowbox-inlined</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/shadowbox-inlined</guid>
-			</item>
-		
-			<item>
-				<title>Solus</title>
-				<description>&lt;a href='/images/blog/original/solus-wip-2013-5-1.jpg' rel='shadowbox'&gt;&lt;img src='/images/blog/thumbnails/solus-wip-2013-5-1.jpg' /&gt;&lt;/a&gt;
-&lt;p&gt;First screenshot of a game project I&amp;#8217;m working on called Solus. One day, it will grow up to be a procedurally generated space trading / combat / exploration simulator. Right now, it&amp;#8217;s some boxes that click together into a vaguely ship-looking shape.&lt;/p&gt;</description>
-				<pubDate>Wed, 01 May 2013 00:00:00 -0400</pubDate>
-				<link>http://collectivecognition.com/blog/solus</link>
-				<guid isPermaLink="true">http://collectivecognition.com/blog/solus</guid>
 			</item>
 		
 	</channel>

@@ -53,11 +53,33 @@
 
 				<div class='content'>
 
-					<h2>Vr City</h2>
-					<h4><em>Posted on 31 July 2013 by William Blanchette</em></h4>
+					<h2>Cancelling Outstanding Http Requests In Angular</h2>
+					<h4><em>Posted on 13 January 2014 by William Blanchette</em></h4>
 
 					<p>
-					<a href='/images/blog/original/vrcity-wip-2013-7-31.jpg' rel='shadowbox'><img src='/images/blog/thumbnails/vrcity-wip-2013-7-31.jpg' /></a><p>Some very early work on a procedurally generated city for the Oculus Rift.</p>
+					<p>While working on an angular.js project recently I ran into issues with long running http requests initiated by controllers that had since been destroyed causing subsequent requests to be delayed until they completed. To further complicate things, each browser support a different number of concurrent http requests, so behavior can is often erratic.</p>
+
+<p>In a traditional web application, these requests would be destroyed by the browser when navigating to a new page, but in a single page web application no such cleanup happens and we’re left to handle things on our own.</p>
+
+<p>Luckily a recent build of angular added support for cancelling of outstanding $http requests via the <code>timeout</code> options.</p>
+
+<p>Here’s a quick example implementation that demonstrates cancelling multiple outstanding $http requests when the controller is destroyed (such as when navigating to a new view):</p>
+
+<pre><code>angular.module(&quot;App&quot;).
+    controller(&quot;SomeCtrl&quot;, [&quot;$scope&quot;, $http&quot;, $q&quot;, function($scope, $http, $q){
+        // Initiate a long running http request
+        $http.get(&quot;http://example.com/endpoint&quot;, {timeout: $scope.canceler.promise});
+
+        // And another one
+        $http.get(&quot;http://example.com/another_endpoint&quot;, {timeout: $scope.canceler.promise});
+
+        // Wait for the controller to be destroyed
+        $scope.$on(&quot;$destroy&quot;, function(){
+            // Cancel all outstanding $http requests
+            // Multiple requests can share the same timeout promise
+            $scope.canceler.resolve();
+        });
+    }]);</code></pre>
 					</p>
 
 				</div>
@@ -66,14 +88,14 @@
 			<div class='footer'>
 			</div>
 			<div id="post-nav">
-				<div class="nav-older"><a href="/blog/rss-feed-and-new-portfolio-page">&lt; Previous</a></div>
+				<div class="nav-older"><a href="/blog/VR-City">&lt; Previous</a></div>
 				
 			</div>
 				</div>
 			</div>
 		</div>
 		
-		<div id='footer'>&copy; 2013 Collective Cognition, all rights reserved - <a href="http://collectivecognition.com/feed">RSS Feed</a></div>
+		<div id='footer'>&copy; 2014 Collective Cognition, all rights reserved - <a href="http://collectivecognition.com/feed">RSS Feed</a></div>
 
 	</div>
 
