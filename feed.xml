@@ -19,10 +19,14 @@
 &lt;pre&gt;&lt;code&gt;angular.module(&amp;quot;App&amp;quot;).
     controller(&amp;quot;SomeCtrl&amp;quot;, [&amp;quot;$scope&amp;quot;, $http&amp;quot;, $q&amp;quot;, function($scope, $http, $q){
         // Initiate a long running http request
-        $http.get(&amp;quot;http://example.com/endpoint&amp;quot;, {timeout: $scope.canceler.promise});
+        $http.get(&amp;quot;http://example.com/endpoint&amp;quot;, {
+            timeout: $scope.canceler.promise
+        });
 
         // And another one
-        $http.get(&amp;quot;http://example.com/another_endpoint&amp;quot;, {timeout: $scope.canceler.promise});
+        $http.get(&amp;quot;http://example.com/another_endpoint&amp;quot;, {
+            timeout: $scope.canceler.promise
+        });
 
         // Wait for the controller to be destroyed
         $scope.$on(&amp;quot;$destroy&amp;quot;, function(){
