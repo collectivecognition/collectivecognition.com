@@ -2,7 +2,7 @@
 echo Pulling..
 git pull
 echo Running Jekyll to generate site..
-jekyll --no-auto
+jekyll build
 echo Making backup of Jekyll site..
 rm -rf /tmp/_site
 mv _site /tmp
