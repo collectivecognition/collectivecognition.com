@@ -5,7 +5,7 @@ While working on an angular.js project recently I ran into issues with long runn
 
 In a traditional web application, these requests would be destroyed by the browser when navigating to a new page, but in a single page web application no such cleanup happens and we're left to handle things on our own.
 
-Luckily a recent build of angular added support for cancelling of outstanding $http requests via the `timeout` options.
+Luckily a recent build of angular added support for cancelling of outstanding $http requests via the `timeout` option.
 
 Here's a quick example implementation that demonstrates cancelling multiple outstanding $http requests when the controller is destroyed (such as when navigating to a new view):
 
