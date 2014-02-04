@@ -7,6 +7,57 @@
 		<atom:link href="http://collectivecognition.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Mock Http Backends In Angular</title>
+				<description>&lt;p&gt;A quick introduction to implementing mock-HTTP backends in angular.js, a great technique that can help development in the absense of a backend, offline development, end-to-end testing and more.&lt;/p&gt;
+
+&lt;p&gt;Include both &lt;code&gt;angular&lt;/code&gt; and the &lt;code&gt;angular-mocks&lt;/code&gt; library:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script src=&amp;quot;js/lib/angular.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;js/lib/angular-mocks.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Conditionally inject &lt;code&gt;angular-mocks&lt;/code&gt; into your application module. I like to configure things this way to allow easily switching between live and mock backends when developing, testing, etc..&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CONFIG = {
+    useMocks: true
+};
+
+var yourApp = angular.module(&amp;quot;YourApp&amp;quot;, [CONFIG.useMocks ? &amp;quot;ngMockE2E&amp;quot; :function(){ }]);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, let’s intercept some HTTP requests!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;yourApp.run([&amp;quot;$httpBackend&amp;quot;, function($httpBackend){
+    if(CONFIG.useMocks){
+
+        // Respond to requests to `/foo` with `{&amp;quot;foo&amp;quot;: &amp;quot;bar&amp;quot;}`:
+
+        $httpBackend.whenGET(/^\/foo$/).respond(function(method, uri, body){
+                return [200, {
+                    foo: bar
+                }];
+            });
+
+        // Respond to requests to `/foo/ABC` with `{&amp;quot;foo&amp;quot;: &amp;quot;ABC&amp;quot;}`:
+        // Also throw an exception if the passed value is too short
+
+        $httpBackend.whenGET(/^\/foo/\w+$/).respond(function(method, uri, body){
+                body = JSON.parse(body);
+                
+                if(body.foo.length &amp;gt; 2){
+                    return [200, {
+                        foo: body.foo
+                    }];
+                }
+
+                return [500, &amp;quot;There was an error!&amp;quot;];
+            });
+    }
+}]);&lt;/code&gt;&lt;/pre&gt;</description>
+				<pubDate>Tue, 04 Feb 2014 00:00:00 -0500</pubDate>
+				<link>http://collectivecognition.com/blog/mock-http-backends-in-angular</link>
+				<guid isPermaLink="true">http://collectivecognition.com/blog/mock-http-backends-in-angular</guid>
+			</item>
+		
+			<item>
 				<title>Cancelling Outstanding Http Requests In Angular</title>
 				<description>&lt;p&gt;While working on an angular.js project recently I ran into issues with long running http requests initiated by controllers that had since been destroyed causing subsequent requests to be delayed until they completed. To further complicate things, each browser support a different number of concurrent http requests, so behavior can is often erratic.&lt;/p&gt;
 
@@ -191,16 +242,6 @@ el.style.backgroundColor = colour.l(colour.l() - 0.1);&lt;/code&gt;&lt;/pre&gt;
 				<pubDate>Sun, 26 May 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/colour.js</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/colour.js</guid>
-			</item>
-		
-			<item>
-				<title>Shadowbox Inlined</title>
-				<description>&lt;p&gt;I whipped up a quick version of the &lt;a href=&#39;http://shadowbox-js.com&#39;&gt;Shadowbox&lt;/a&gt; lightbox script which has all images and css injected inline into the javascript code, allowing for that single script to include all assets required.&lt;/p&gt;
-
-&lt;p&gt;Check out the &lt;a href=&#39;https://github.com/collectivecognition/shadowbox-inlined&#39;&gt;Github project&lt;/a&gt;.&lt;/p&gt;</description>
-				<pubDate>Fri, 03 May 2013 00:00:00 -0400</pubDate>
-				<link>http://collectivecognition.com/blog/shadowbox-inlined</link>
-				<guid isPermaLink="true">http://collectivecognition.com/blog/shadowbox-inlined</guid>
 			</item>
 		
 	</channel>
