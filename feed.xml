@@ -40,16 +40,16 @@ var yourApp = angular.module(&amp;quot;YourApp&amp;quot;, [CONFIG.useMocks ? &am
         // Also throw an exception if the passed value is too short
 
         $httpBackend.whenGET(/^\/foo/\w+$/).respond(function(method, uri, body){
-                body = JSON.parse(body);
-                
-                if(body.foo.length &amp;gt; 2){
-                    return [200, {
-                        foo: body.foo
-                    }];
-                }
+            body = JSON.parse(body);
+            
+            if(body.foo.length &amp;gt; 2){
+                return [200, {
+                    foo: body.foo
+                }];
+            }
 
-                return [500, &amp;quot;There was an error!&amp;quot;];
-            });
+            return [500, &amp;quot;There was an error!&amp;quot;];
+        });
     }
 }]);&lt;/code&gt;&lt;/pre&gt;</description>
 				<pubDate>Tue, 04 Feb 2014 00:00:00 -0500</pubDate>
