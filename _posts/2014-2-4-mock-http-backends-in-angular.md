@@ -9,7 +9,7 @@ Include both `angular` and the `angular-mocks` library:
     <script src="js/lib/angular.js"></script>
     <script src="js/lib/angular-mocks.js"></script>
 
-Conditionally inject `angular-mocks` into your application module. I like to configure things this way to allow easily switching between live and mock backends when developing, testing, etc..
+Bootstrap your application and conditionally inject `angular-mocks` into your application module. I like to configure things this way to allow easily switching between live and mock backends when developing, testing, etc..
 
     CONFIG = {
         useMocks: true
@@ -30,10 +30,10 @@ Now, let's intercept some HTTP requests!
                     }];
                 });
 
-            // Respond to requests to `/foo/ABC` with `{"foo": "ABC"}`:
+            // Respond to requests to `/foo/BAR` with `{"foo": "BAR"}`:
             // Also throw an exception if the passed value is too short
 
-            $httpBackend.whenGET(/^\/foo/\w+$/).respond(function(method, uri, body){
+            $httpBackend.whenGET(/^\/foo\/\w+$/).respond(function(method, uri, body){
                 body = JSON.parse(body);
                 
                 if(body.foo.length > 2){
