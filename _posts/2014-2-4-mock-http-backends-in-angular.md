@@ -34,15 +34,15 @@ Now, let's intercept some HTTP requests!
             // Also throw an exception if the passed value is too short
 
             $httpBackend.whenGET(/^\/foo/\w+$/).respond(function(method, uri, body){
-                    body = JSON.parse(body);
-                    
-                    if(body.foo.length > 2){
-                        return [200, {
-                            foo: body.foo
-                        }];
-                    }
+                body = JSON.parse(body);
+                
+                if(body.foo.length > 2){
+                    return [200, {
+                        foo: body.foo
+                    }];
+                }
 
-                    return [500, "There was an error!"];
-                });
+                return [500, "There was an error!"];
+            });
         }
     }]);
