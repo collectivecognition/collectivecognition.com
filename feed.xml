@@ -15,7 +15,7 @@
 &lt;pre&gt;&lt;code&gt;&amp;lt;script src=&amp;quot;js/lib/angular.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;script src=&amp;quot;js/lib/angular-mocks.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Conditionally inject &lt;code&gt;angular-mocks&lt;/code&gt; into your application module. I like to configure things this way to allow easily switching between live and mock backends when developing, testing, etc..&lt;/p&gt;
+&lt;p&gt;Bootstrap your application and conditionally inject &lt;code&gt;angular-mocks&lt;/code&gt; into your application module. I like to configure things this way to allow easily switching between live and mock backends when developing, testing, etc..&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;CONFIG = {
     useMocks: true
@@ -36,10 +36,10 @@ var yourApp = angular.module(&amp;quot;YourApp&amp;quot;, [CONFIG.useMocks ? &am
                 }];
             });
 
-        // Respond to requests to `/foo/ABC` with `{&amp;quot;foo&amp;quot;: &amp;quot;ABC&amp;quot;}`:
+        // Respond to requests to `/foo/BAR` with `{&amp;quot;foo&amp;quot;: &amp;quot;BAR&amp;quot;}`:
         // Also throw an exception if the passed value is too short
 
-        $httpBackend.whenGET(/^\/foo/\w+$/).respond(function(method, uri, body){
+        $httpBackend.whenGET(/^\/foo\/\w+$/).respond(function(method, uri, body){
             body = JSON.parse(body);
             
             if(body.foo.length &amp;gt; 2){
