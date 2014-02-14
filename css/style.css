@@ -382,6 +382,7 @@ img.alignleft {
 
 .content.game img {
 	margin-right: 20px;
+	float: left;
 }
 
 .content.game img.first {
