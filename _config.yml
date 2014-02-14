@@ -17,6 +17,11 @@ author:
 
 url: http://collectivecognition.com
 
+sass:
+  style: expanded
+  deploy_style: compressed
+  compile_in_place: false
+
 mini_magick:
     thumbnail:
         source: images/blog/original
