@@ -1,2 +1,2 @@
 #!/bin/sh
-jekyll --no-auto
+jekyll build
