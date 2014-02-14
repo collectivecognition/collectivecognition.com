@@ -1,12 +1,7 @@
 #!/bin/sh
-<<<<<<< HEAD
 # Install XCode developer tools
 # Install Image Magick
 # Install gems:
 gem install jekyll
 gem install mini_magick
 gem install jekyll-sass
-=======
-gem install jekyll
-gem install mini_magick
->>>>>>> d96de6951c8abec6caefc144753c8794cb470a51
