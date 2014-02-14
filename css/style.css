@@ -196,6 +196,7 @@ a img {
 	position: absolute;
 	left: 0;
 	top: 0;
+	z-index: 2;
 	width: 100%;
 	height: 100%;
 	opacity: 0;
@@ -231,7 +232,7 @@ a img {
 	color: #fff;
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9);
 	text-align: center;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
 .page.web .tile .overlay .links {
@@ -242,6 +243,14 @@ a img {
 	font-family: "Open Sans";
 	color: #fff;
 	text-align: center;
+	margin-right: 20px;
+	text-decoration: none;
+	padding: 5px;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.page.web .tile .overlay a:hover {
+	background: rgba(255, 255, 255, 0.3);
 }
 
 .page.app .app-store-button:hover {
