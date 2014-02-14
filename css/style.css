@@ -105,6 +105,16 @@ a img {
 
 #menu a:hover {
 	background: rgba(0, 0, 0, 0.3);
+	-webkit-animation: menuBounce .4s linear;
+	box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+@-webkit-keyframes menuBounce {
+    0%{ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3); opacity:1;}
+    25%{ box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3); opacity:1;}
+    50%{ box-shadow: 0 0 0 7px rgba(0, 0, 0, 0.3); opacity:1; }
+    75%{ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3); opacity:1;}
+    100%{ box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.3); opacity:1;}
 }
 
 .page.app .background-overlay {
