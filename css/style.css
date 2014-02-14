@@ -259,6 +259,10 @@ a img {
 	background: rgba(255, 255, 255, 0.2);
 }
 
+.page.web .tile .overlay a:last-child {
+	margin-right: 0;
+}
+
 .page.web .tile .overlay a:hover {
 	background: rgba(255, 255, 255, 0.3);
 }
