@@ -29,4 +29,4 @@ mini_magick:
     web:
         source: images/web/original
         destination: images/web/thumbnails
-        resize: "x200"
+        resize: "470x"
