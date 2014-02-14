@@ -1,2 +1,6 @@
 #!/bin/sh
+<<<<<<< HEAD
 jekyll start --watch
+=======
+jekyll start
+>>>>>>> d96de6951c8abec6caefc144753c8794cb470a51
