@@ -25,7 +25,7 @@ mini_magick:
     games:
         source: images/games/original
         destination: images/games/thumbnails
-        resize: "200x122"
+        resize: "293x"
     web:
         source: images/web/original
         destination: images/web/thumbnails
