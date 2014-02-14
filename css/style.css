@@ -381,11 +381,10 @@ img.alignleft {
 }
 
 .content.game img {
-	margin: 5px;
+	margin-right: 20px;
 }
 
 .content.game img.first {
-	margin-left: 0px;
 }
 
 .content.game img.last {
@@ -419,8 +418,8 @@ img.alignleft {
 
 .content.game h2 .buttons {
 	position: absolute;
-	right: 0px;
-	top: 0px;
+	right: 20px;
+	top: 20px;
 }
 
 .content.web {}
