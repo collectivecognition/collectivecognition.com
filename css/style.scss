@@ -258,10 +258,14 @@ a img {
                     font-family: "Open Sans";
                     color: #fff;
                     text-align: center;
-                    margin-right: 20px;
+                    margin-right: 10px;
                     text-decoration: none;
-                    padding: 5px;
+                    padding: 5px 10px;
                     background: rgba(255, 255, 255, 0.2);
+                    -webkit-border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    -ms-border-radius: 3px;
+                    border-radius: 3px;
 
                     &:hover {
                         background: rgba(255, 255, 255, 0.3);
