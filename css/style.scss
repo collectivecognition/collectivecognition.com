@@ -42,19 +42,6 @@ a img {
     height: 113px;
 }
 
-.page.white .background {
-    background: #fff;
-    position: relative;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
 .background-overlay {
     background: url(../images/background-overlay.png);
     position: relative;
@@ -164,6 +151,60 @@ a img {
 }
 
 .page {
+    &.blog {
+        font-size: 14px;
+        line-height: 26px;
+
+        .content {
+            background: #fff;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+            -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            -ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 0;
+        }
+
+
+        h4 {   
+            font-size: 12px;
+            color: #aaa;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        pre {
+        }
+
+        code {
+            display: inline-block;
+            font-size: 14px;
+            background: #f6f6f6;
+            padding: 3px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ie-border-radius: 3px;
+            -o-border-radius: 3px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        pre > code {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            overflow-x: auto;
+        }
+    }
+
     &.web {
         .content {
             width: 980px;
@@ -294,17 +335,6 @@ a img {
     float: none;
     clear: both;
     overflow: hidden;
-}
-
-h2 {    
-    margin: 0;
-}
-
-h4 {
-    
-    font-size: 10px;
-    color: #999999;
-    margin: 2px 0;
 }
 
 #footer {
@@ -448,25 +478,6 @@ img.alignleft {
     position: absolute;
     right: 20px;
     top: 20px;
-}
-
-code {
-    display: inline-block;
-    background: #eee;
-    padding: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ie-border-radius: 3px;
-    -o-border-radius: 3px;
-    border-radius: 3px;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-}
-
-pre > code {
-    width: 100%;
-    padding: 10px;
-    overflow-x: auto;
 }
 
 .hljs {
