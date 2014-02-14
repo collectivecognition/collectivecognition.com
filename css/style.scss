@@ -163,110 +163,117 @@ a img {
     top: 7px;
 }
 
-.page.web .content {
-    width: 980px;
-    padding: 0;
-}
+.page {
+    &.web {
+        .content {
+            width: 980px;
+            padding: 0;
+        }
 
-.page.web .tile {
-    box-sizing: border-box;
-    display: inline-block;
-    float: left;
-    position: relative;
-    z-index: 1;
-    width: 470px;
-    height: 200px;
-    overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.9);
-    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-    margin: 0 20px 20px 0;
-}
+        .tile {
+            box-sizing: border-box;
+            display: inline-block;
+            float: left;
+            position: relative;
+            z-index: 1;
+            width: 470px;
+            height: 200px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.9);
+            -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            margin: 0 20px 20px 0;
 
-.page.web .tile:before {
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    -webkit-box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.75), inset 0 -2px 5px rgba(0, 0, 0, 0.75);
-}
 
-.page.web .tile img {
-    -webkit-transition-duration: 500ms;
-    -webkit-transition-timing-function: ease-in-out;
-}
+            &:before {
+                content: " ";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                -webkit-box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.75), inset 0 -2px 5px rgba(0, 0, 0, 0.75);
+            }
 
-.page.web .tile:hover img {
-    -webkit-transform: scale(1.1);
-}
+            img {
+                -webkit-transition-duration: 500ms;
+                -webkit-transition-timing-function: ease-in-out;
+            }
 
-.page.web .tile .overlay {
-    display: table;
-    background: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    -webkit-transition-duration: 500ms;
-    -webkit-transition-timing-function: ease-in-out;
-}
+            &:hover {
+                img {
+                    -webkit-transform: scale(1.1);
+                }
 
-.page.web .tile:hover .overlay {
-    opacity: 1;
-}
+                .overlay {
+                    opacity: 1;
+                }
+            }
+        }
 
-.page.web .tile .overlay-wrapper {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 10px;
-}
+       .overlay {
+            display: table;
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            -webkit-transition-duration: 500ms;
+            -webkit-transition-timing-function: ease-in-out;
 
-.page.web .tile .overlay .title {
-    font-family: "Open Sans";
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 400;
-    color: #fff;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9);
-    margin-bottom: 10px;
-    text-align: center;
-}
+            .overlay-wrapper {
+                display: table-cell;
+                vertical-align: middle;
+                padding: 10px;
+            }
 
-.page.web .tile .overlay .description {
-    font-family: "Gentium Book Basic";
-    font-size: 18px;
-    font-weight: 400;
-    color: #fff;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9);
-    text-align: center;
-    margin-bottom: 15px;
-}
+            .title {
+                font-family: "Open Sans";
+                font-size: 24px;
+                line-height: 24px;
+                font-weight: 400;
+                color: #fff;
+                text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9);
+                margin-bottom: 10px;
+                text-align: center;
+            }
 
-.page.web .tile .overlay .links {
-    text-align: center;
-}
+            .description {
+                font-family: "Gentium Book Basic";
+                font-size: 18px;
+                font-weight: 400;
+                color: #fff;
+                text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9);
+                text-align: center;
+                margin-bottom: 15px;
+            }
 
-.page.web .tile .overlay a {
-    font-family: "Open Sans";
-    color: #fff;
-    text-align: center;
-    margin-right: 20px;
-    text-decoration: none;
-    padding: 5px;
-    background: rgba(255, 255, 255, 0.2);
-}
+            .links {
+                text-align: center;
 
-.page.web .tile .overlay a:last-child {
-    margin-right: 0;
-}
+                a {
+                    font-family: "Open Sans";
+                    color: #fff;
+                    text-align: center;
+                    margin-right: 20px;
+                    text-decoration: none;
+                    padding: 5px;
+                    background: rgba(255, 255, 255, 0.2);
 
-.page.web .tile .overlay a:hover {
-    background: rgba(255, 255, 255, 0.3);
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.3);
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .page.app .app-store-button:hover {
