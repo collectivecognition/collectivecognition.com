@@ -1,5 +1,0 @@
-This repository holds both the source and the published version of the main Collective Cognition web site. 
-
-The site is processed locally with jekyll and then a static build is pushed out to the gh-pages branch. Local processing is necessary to do some funky dynamic things such as thumbnail generation that are traditionally done on the server-side, as Github currently has no support for jekyll plugins.
-
-It makes blogging a simple matter of creating a new markdown file in my favourite editor and running a single script.
