@@ -25,7 +25,7 @@ mini_magick:
     thumbnail:
         source: images/blog/original
         destination: images/blog/thumbnails
-        resize: "690x"
+        resize: "920x"
     games:
         source: images/games/original
         destination: images/games/thumbnails
