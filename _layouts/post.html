@@ -22,9 +22,9 @@ layout: default
 				</div>
 			
 			</div>
-			<div class='footer'>
+			<div id="footer">
+				{%if page.previous %}<div class="nav-older"><a href="{{page.previous.url}}">&laquo; Previous Post</a></div>{%endif%}
+				{%if page.next %}<div class="nav-newer"><a href="{{page.next.url}}">Next Post &raquo;</a></div>{%endif%}
+				<span class="copyright">&copy; {{site.time | date: "%Y"}} Collective Cognition, all rights reserved - <a href="{{site.url}}/feed">RSS Feed</a></div>
 			</div>
-			<div id="post-nav">
-				{%if page.previous %}<div class="nav-older"><a href="{{page.previous.url}}">&lt; Previous</a></div>{%endif%}
-				{%if page.next %}<div class="nav-newer"><a href="{{page.next.url}}">Next &gt;</a></div>{%endif%}
-			</div>
+			
