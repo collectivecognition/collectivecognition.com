@@ -34,7 +34,7 @@
 		<div class="bar light">
 			<div class="container">
 				<div id="content">
-							<div class='page blog top'>
+							<div class='page top web'>
 
 			<div class='header'>
 
@@ -54,63 +54,28 @@
 			<div class='background'>
 
 				<div class='content'>
-
-					<h2>Mock Http Backends In Angular</h2>
-					<h4>Posted on 04 February 2014 by William Blanchette</h4>
-
-					<p>
-					<p>A quick introduction to implementing mock-HTTP backends in angular.js, a great technique that can help development in the absense of a backend, offline development, end-to-end testing and more.</p>
-
-<p>Include both <code>angular</code> and the <code>angular-mocks</code> library:</p>
-
-<pre><code>&lt;script src=&quot;js/lib/angular.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;js/lib/angular-mocks.js&quot;&gt;&lt;/script&gt;</code></pre>
-
-<p>Bootstrap your application and conditionally inject <code>angular-mocks</code> into your application module. I like to configure things this way to allow easily switching between live and mock backends when developing, testing, etc..</p>
-
-<pre><code>CONFIG = {
-    useMocks: true
-};
-
-var yourApp = angular.module(&quot;YourApp&quot;, [CONFIG.useMocks ? &quot;ngMockE2E&quot; :function(){ }]);</code></pre>
-
-<p>Now, let’s intercept some HTTP requests!</p>
-
-<pre><code>yourApp.run([&quot;$httpBackend&quot;, function($httpBackend){
-    if(CONFIG.useMocks){
-
-        // Respond to requests to `/foo` with `{&quot;foo&quot;: &quot;bar&quot;}`:
-
-        $httpBackend.whenGET(/^\/foo$/).respond(function(method, uri, body){
-                return [200, {
-                    foo: bar
-                }];
-            });
-
-        // Respond to requests to `/foo/BAR` with `{&quot;foo&quot;: &quot;BAR&quot;}`:
-        // Also throw an exception if the passed value is too short
-
-        $httpBackend.whenGET(/^\/foo\/\w+$/).respond(function(method, uri, body){
-            body = JSON.parse(body);
-            
-            if(body.foo.length &gt; 2){
-                return [200, {
-                    foo: body.foo
-                }];
-            }
-
-            return [500, &quot;There was an error!&quot;];
-        });
-    }
-}]);</code></pre>
-					</p>
-
+				
+					<div class='wrapper'>
+						
+						<div class='tile'>
+							<img src="/images/web/thumbnails/longos-desktop.jpg">
+							<div class="overlay">
+								<div class="overlay-wrapper">
+									<div class="title">Longo's Flyer</div>
+									<div class="description">Longo's digital flyer. Built with angular and sass.</div>
+									<div class='links'>
+										<a href='http://app.longos.com'>Site</a>
+										<a href='/images/web/original/longos-desktop' rel='lightbox'>Screenshot</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 
 			</div>
 			<div id="footer">
-				<div class="nav-older"><a href="/blog/cancelling-outstanding-http-requests-in-angular">&laquo; Previous Post</a></div>
-				
 				<span class="copyright">&copy; 2014 Collective Cognition, all rights reserved - <a href="http://collectivecognition.com/feed">RSS Feed</a></div>
 			</div>
 				</div>
