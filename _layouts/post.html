@@ -1,30 +1,7 @@
 ---
 layout: default
 ---
-		<div class='page blog top'>
-			
-			<div class='header'>
-			
-				{% include top.html %}
-				
-			</div>
-			<div class='background'>
-			
-				<div class='content'>
-					
-					<h2>{{page.title}}</h2>
-					<h4>Posted on {{page.date | date: "%d %B %Y"}} by William Blanchette</h4>
-					
-					<p>
-					{{content}}
-					</p>
-				
-				</div>
-			
-			</div>
-			<div id="footer">
-				{%if page.previous %}<div class="nav-older"><a href="{{page.previous.url}}">&laquo; Previous Post</a></div>{%endif%}
-				{%if page.next %}<div class="nav-newer"><a href="{{page.next.url}}">Next Post &raquo;</a></div>{%endif%}
-				<span class="copyright">&copy; {{site.time | date: "%Y"}} Collective Cognition, all rights reserved - <a href="{{site.url}}/feed">RSS Feed</a></div>
-			</div>
-			
+
+{% assign post = page %}
+
+{% include post.html %}
