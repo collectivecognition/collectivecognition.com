@@ -1,23 +1,16 @@
 ---
 layout: default
 ---
-		<div class='page blog top'>
-			
-			<div class='header'>
-			
-				{% include top.html %}
-				
-			</div>
-			<div class='background white'>
-			
-				<div class='content'>
-					
-					<h2></h2>
-					<hr />
-					<h4>Posted on {{site.posts[0].date}} by William Blanchette</h4>
-					
-					{{site.posts[0].content}}
-				
-				</div>
-			
-			</div>
+<div class='page {{ page.class }} top'>
+	<div class='header'>
+		{% include top.html %}
+	</div>
+	<div class='background'>
+		<div class='content'>
+			{{content}}
+		</div>
+	</div>
+	<div id="footer">
+		<span class="copyright">&copy; {{site.time | date: "%Y"}} Collective Cognition, all rights reserved - <a href="{{site.url}}/feed">RSS Feed</a></div>
+	</div>
+</div>

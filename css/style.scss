@@ -1,5 +1,5 @@
-// @import url(//fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
-// @import url(//fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
+@import url(//fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700);
 
 $bg: #515151;
 
@@ -159,10 +159,7 @@ a img {
 }
 
 .page {
-    &.blog {
-        font-size: 14px;
-        line-height: 26px;
-
+    &.white {
         .content {
             background: #fff;
             -webkit-border-radius: 3px;
@@ -174,6 +171,11 @@ a img {
             -ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
+    }
+
+    &.blog {
+        font-size: 14px;
+        line-height: 26px;
 
         h2 {
             font-size: 22px;
@@ -349,6 +351,52 @@ a img {
             }
         }
     }
+
+    &.games {
+        img {
+            margin-right: 20px;
+            float: left;
+        }
+
+        img.first {
+        }
+
+        img.last {
+            margin-right: 0px;
+        }
+
+        h2 {
+            float: none;
+            margin: 0 0 20px 0;
+        }
+
+        h2 a {
+            display: block;
+            width: 100px;
+            height: 20px;
+            font-family: "Lucida Grande", Arial, "Sans Serif";
+            font-size: 11px;
+            font-weight: normal;
+            text-align: center;
+            line-height: 20px;
+            text-decoration: none;
+            color: #fff;
+            text-shadow: #000 -1px -1px;
+            background: url(../images/games-button.png);
+            margin-left: 4px;
+            float: left;
+        }
+
+        h2 a:hover{
+            background-position: bottom left;
+        }
+
+        h2 .buttons {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+    }
 }
 
 .page.app .app-store-button:hover {
@@ -428,8 +476,8 @@ a img {
         a {
             display: inline-block;
             font-family: "Open Sans", "Sans Serif";
-            font-size: 14px;
-            font-weight: 400px;
+            font-size: 18px;
+            font-weight: 400;
             color: #ffffff;
             text-shadow: 1px 1px #333333;
             padding: 10px;
@@ -480,49 +528,6 @@ div.imgwrapper {
 img.alignleft {
     float: left;
     margin-right: 5px;
-}
-
-.content.game img {
-    margin-right: 20px;
-    float: left;
-}
-
-.content.game img.first {
-}
-
-.content.game img.last {
-    margin-right: 0px;
-}
-
-.content.game h2 {
-    float: none;
-}
-
-.content.game h2 a {
-    display: block;
-    width: 100px;
-    height: 20px;
-    font-family: "Lucida Grande", Arial, "Sans Serif";
-    font-size: 11px;
-    font-weight: normal;
-    text-align: center;
-    line-height: 20px;
-    text-decoration: none;
-    color: #fff;
-    text-shadow: #000 -1px -1px;
-    background: url(../images/games-button.png);
-    margin-left: 4px;
-    float: left;
-}
-
-.content.game h2 a:hover{
-    background-position: bottom left;
-}
-
-.content.game h2 .buttons {
-    position: absolute;
-    right: 20px;
-    top: 20px;
 }
 
 .hljs {
