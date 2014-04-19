@@ -52,44 +52,13 @@
 	</div>
 	<div class='background'>
 		<div class='content'>
-			<h2>Mock Http Backends In Angular</h2>
-			<h4>Posted on 04 February 2014 by William Blanchette</h4>
-			<p><p>A quick introduction to implementing mock-HTTP backends in angular.js, a great technique that can help development in the absense of a backend, offline development, end-to-end testing and more.</p><p>Include both <code>angular</code> and the <code>angular-mocks</code> library:</p><pre><code>&lt;script src=&quot;js/lib/angular.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;js/lib/angular-mocks.js&quot;&gt;&lt;/script&gt;</code></pre><p>Bootstrap your application and conditionally inject <code>angular-mocks</code> into your application module. I like to configure things this way to allow easily switching between live and mock backends when developing, testing, etc..</p><pre><code>CONFIG = {
-    useMocks: true
-};
-
-var yourApp = angular.module(&quot;YourApp&quot;, [CONFIG.useMocks ? &quot;ngMockE2E&quot; :function(){ }]);</code></pre><p>Now, let’s intercept some HTTP requests!</p><pre><code>yourApp.run([&quot;$httpBackend&quot;, function($httpBackend){
-    if(CONFIG.useMocks){
-
-        // Respond to requests to `/foo` with `{&quot;foo&quot;: &quot;bar&quot;}`:
-
-        $httpBackend.whenGET(/^\/foo$/).respond(function(method, uri, body){
-                return [200, {
-                    foo: bar
-                }];
-            });
-
-        // Respond to requests to `/foo/BAR` with `{&quot;foo&quot;: &quot;BAR&quot;}`:
-        // Also throw an exception if the passed value is too short
-
-        $httpBackend.whenGET(/^\/foo\/\w+$/).respond(function(method, uri, body){
-            body = JSON.parse(body);
-            
-            if(body.foo.length &gt; 2){
-                return [200, {
-                    foo: body.foo
-                }];
-            }
-
-            return [500, &quot;There was an error!&quot;];
-        });
-    }
-}]);</code></pre></p>
+			<h2>Awesome Screenshots In Awesomewm</h2>
+			<h4>Posted on 18 April 2014 by William Blanchette</h4>
+			<p><p>I’ve been experimenting with setting up an <a href='https://www.archlinux.org'>arch linux</a> work environment on my laptop this weekend and one of the things I found myself missing almost immediately from OSX was the handy-dandy built in screenshot functionality.</p><p>In the spirit of open source, I whipped up a quick lua key-binding for <a href='http://awesome.naquadah.org/'>awesome window manager</a>.</p><p>Just place the following in an apppropriate place in your <code>~/.config/rc.lua</code> file:</p><pre><code>awful.key({ modkey, }, &quot;p&quot;, function () awful.util.spawn_with_shell(&quot;FILENAME=/tmp/$(date +%m-%d-%y-%H-%M-%S).png; import -window root \&quot;$FILENAME\&quot;; gimp \&quot;$FILENAME\&quot;&quot;) end)</code></pre><p>You’ll need <a href='http://www.imagemagick.org/'>imagemagick</a> to take the actual screenshot and <a href='http://www.gimp.org/'>gimp</a> to view / edit it.</p><p>Install them like so:</p><pre><code>sudo pacman -S imagemagick gimp</code></pre><p>You can restart <code>awesome</code> by pressing <code>mod4-shift-r</code>, by default.</p><p>Now just press <code>mod4-p</code> and a screenshot of your current view will auto-magically be opened in gimp.</p></p>
 		</div>
 	</div>
 	<div id="footer">
-		<div class="nav-older"><a href="/blog/cancelling-outstanding-http-requests-in-angular">&laquo; Previous Post</a></div>
+		<div class="nav-older"><a href="/blog/mock-http-backends-in-angular">&laquo; Previous Post</a></div>
 		
 		<span class="copyright">&copy; 2014 Collective Cognition, all rights reserved - <a href="http://collectivecognition.com/feed">RSS Feed</a></div>
 	</div>

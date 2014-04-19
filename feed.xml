@@ -7,6 +7,30 @@
 		<atom:link href="http://collectivecognition.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Awesome Screenshots In Awesomewm</title>
+				<description>&lt;p&gt;I’ve been experimenting with setting up an &lt;a href=&#39;https://www.archlinux.org&#39;&gt;arch linux&lt;/a&gt; work environment on my laptop this weekend and one of the things I found myself missing almost immediately from OSX was the handy-dandy built in screenshot functionality.&lt;/p&gt;
+
+&lt;p&gt;In the spirit of open source, I whipped up a quick lua key-binding for &lt;a href=&#39;http://awesome.naquadah.org/&#39;&gt;awesome window manager&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Just place the following in an apppropriate place in your &lt;code&gt;~/.config/rc.lua&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;awful.key({ modkey, }, &amp;quot;p&amp;quot;, function () awful.util.spawn_with_shell(&amp;quot;FILENAME=/tmp/$(date +%m-%d-%y-%H-%M-%S).png; import -window root \&amp;quot;$FILENAME\&amp;quot;; gimp \&amp;quot;$FILENAME\&amp;quot;&amp;quot;) end)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You’ll need &lt;a href=&#39;http://www.imagemagick.org/&#39;&gt;imagemagick&lt;/a&gt; to take the actual screenshot and &lt;a href=&#39;http://www.gimp.org/&#39;&gt;gimp&lt;/a&gt; to view / edit it.&lt;/p&gt;
+
+&lt;p&gt;Install them like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo pacman -S imagemagick gimp&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can restart &lt;code&gt;awesome&lt;/code&gt; by pressing &lt;code&gt;mod4-shift-r&lt;/code&gt;, by default.&lt;/p&gt;
+
+&lt;p&gt;Now just press &lt;code&gt;mod4-p&lt;/code&gt; and a screenshot of your current view will auto-magically be opened in gimp.&lt;/p&gt;</description>
+				<pubDate>Fri, 18 Apr 2014 00:00:00 -0400</pubDate>
+				<link>http://collectivecognition.com/blog/awesome-screenshots-in-awesomewm</link>
+				<guid isPermaLink="true">http://collectivecognition.com/blog/awesome-screenshots-in-awesomewm</guid>
+			</item>
+		
+			<item>
 				<title>Mock Http Backends In Angular</title>
 				<description>&lt;p&gt;A quick introduction to implementing mock-HTTP backends in angular.js, a great technique that can help development in the absense of a backend, offline development, end-to-end testing and more.&lt;/p&gt;
 
@@ -225,23 +249,6 @@ debug - discarding transport&lt;/code&gt;&lt;/pre&gt;
 				<pubDate>Tue, 28 May 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/bare-minimum-javascript-tests</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/bare-minimum-javascript-tests</guid>
-			</item>
-		
-			<item>
-				<title>Colour.js</title>
-				<description>&lt;p&gt;I’ve checked in the first version of colour.js to &lt;a href=&quot;http://github.com/collectivecognition/colour.js&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It’s a javascript library (actually just a single class) for converting and playing with colour values. It lets you do things like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;var colour = new Colour(el.style.backgroundColor);
-el.style.backgroundColor = colour.l(colour.l() - 0.1);&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;which will lighten the background colour of the element by 10%.&lt;/p&gt;
-
-&lt;p&gt;The library handles parsing, manipulating and outputting colours in hex, rgb, rgba, hsl and hsla currently, with planned support for w3c colour names in the future.&lt;/p&gt;</description>
-				<pubDate>Sun, 26 May 2013 00:00:00 -0400</pubDate>
-				<link>http://collectivecognition.com/blog/colour.js</link>
-				<guid isPermaLink="true">http://collectivecognition.com/blog/colour.js</guid>
 			</item>
 		
 	</channel>
