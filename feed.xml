@@ -14,7 +14,8 @@
 
 &lt;p&gt;Just place the following in an apppropriate place in your &lt;code&gt;~/.config/rc.lua&lt;/code&gt; file:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;awful.key({ modkey, }, &amp;quot;p&amp;quot;, function () awful.util.spawn_with_shell(&amp;quot;FILENAME=/tmp/$(date +%m-%d-%y-%H-%M-%S).png; import -window root \&amp;quot;$FILENAME\&amp;quot;; gimp \&amp;quot;$FILENAME\&amp;quot;&amp;quot;) end)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;awful.key({ modkey, }, &amp;quot;p&amp;quot;, function () awful.util.spawn_with_shell(&amp;quot;FILENAME=/tmp/
+$(date +%m-%d-%y-%H-%M-%S).png; import -window root \&amp;quot;$FILENAME\&amp;quot;; gimp \&amp;quot;$FILENAME\&amp;quot;&amp;quot;) end)&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;You’ll need &lt;a href=&#39;http://www.imagemagick.org/&#39;&gt;imagemagick&lt;/a&gt; to take the actual screenshot and &lt;a href=&#39;http://www.gimp.org/&#39;&gt;gimp&lt;/a&gt; to view / edit it.&lt;/p&gt;
 

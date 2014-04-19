@@ -60,7 +60,8 @@
 
 <p>Just place the following in an apppropriate place in your <code>~/.config/rc.lua</code> file:</p>
 
-<pre><code>awful.key({ modkey, }, &quot;p&quot;, function () awful.util.spawn_with_shell(&quot;FILENAME=/tmp/$(date +%m-%d-%y-%H-%M-%S).png; import -window root \&quot;$FILENAME\&quot;; gimp \&quot;$FILENAME\&quot;&quot;) end)</code></pre>
+<pre><code>awful.key({ modkey, }, &quot;p&quot;, function () awful.util.spawn_with_shell(&quot;FILENAME=/tmp/
+$(date +%m-%d-%y-%H-%M-%S).png; import -window root \&quot;$FILENAME\&quot;; gimp \&quot;$FILENAME\&quot;&quot;) end)</code></pre>
 
 <p>You’ll need <a href='http://www.imagemagick.org/'>imagemagick</a> to take the actual screenshot and <a href='http://www.gimp.org/'>gimp</a> to view / edit it.</p>
 
