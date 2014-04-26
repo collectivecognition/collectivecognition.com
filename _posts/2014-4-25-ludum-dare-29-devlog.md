@@ -189,3 +189,12 @@ I also re-wrote the ore distribution code to place the ore realistically beneath
 	}
 
 <a href="/images/blog/original/ludum-dare-29-5.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-5.jpg"></a>
+
+4:19PM: Slow Going
+------------------
+
+Physics are turning into a pain in the butt (as per usual), so I've wasted a good amount of time tweaking those and I'ms till not 100% happy with the controls.
+
+I did manage to throw in a nice explosion animation when the ship collides with an asteroid and a system for breaking the ship up into it's component parts and applying random forces to them so they drift / spin away during the explosion. It looks pretty cool!
+
+<a href="/images/blog/original/ludum-dare-29-6.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-6.jpg"></a>
