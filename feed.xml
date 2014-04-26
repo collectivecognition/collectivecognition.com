@@ -195,6 +195,14 @@ public class ShipControls : MonoBehaviour {
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-29-5.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-29-5.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pm-slow-going&quot;&gt;4:19PM: Slow Going&lt;/h2&gt;
+
+&lt;p&gt;Physics are turning into a pain in the butt (as per usual), so I’ve wasted a good amount of time tweaking those and I’ms till not 100% happy with the controls.&lt;/p&gt;
+
+&lt;p&gt;I did manage to throw in a nice explosion animation when the ship collides with an asteroid and a system for breaking the ship up into it’s component parts and applying random forces to them so they drift / spin away during the explosion. It looks pretty cool!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-29-6.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-29-6.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Fri, 25 Apr 2014 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/ludum-dare-29-devlog</link>
