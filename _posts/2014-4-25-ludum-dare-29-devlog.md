@@ -198,3 +198,12 @@ Physics are turning into a pain in the butt (as per usual), so I've wasted a goo
 I did manage to throw in a nice explosion animation when the ship collides with an asteroid and a system for breaking the ship up into it's component parts and applying random forces to them so they drift / spin away during the explosion. It looks pretty cool!
 
 <a href="/images/blog/original/ludum-dare-29-6.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-6.jpg"></a>
+
+5:04PM: More Tweaking
+---------------------
+
+I've finally got the physics and controls in a place I'm happy with, and a solid idea of where I want the rest of the gameplay to go.
+
+I'm going to replace the scanning beam with more of a "pulse" which gets sent out in all directions at intervals. The scanning beam will be repurposed as a sort of mining tractor beam and become the mechanism by which the player retrives ore.
+
+Time to think about some dinner, do a few errands around the house and finish plotting my next steps.
