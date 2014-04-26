@@ -83,7 +83,25 @@ public class ShipControls : MonoBehaviour {
 
 &lt;h2 id=&quot;1040pm_wrestling_with_blog&quot;&gt;10:40PM: Wrestling With Blog&lt;/h2&gt;
 
-&lt;p&gt;Grr! My blog publishing scripts are giving me trouble. Mental note: sort this sort of thing out BEFORE the compo next time.&lt;/p&gt;</description>
+&lt;p&gt;Grr! My blog publishing scripts are giving me trouble. Mental note: sort this sort of thing out BEFORE the compo next time.&lt;/p&gt;
+
+&lt;h2 id=&quot;1105pm_so_very_tired&quot;&gt;11:05PM: So Very Tired&lt;/h2&gt;
+
+&lt;p&gt;I’ve done some more “miner” tweaking, but as it’s been a very long day and I’m having trouble keeping my eyes open, I think I’ll get some sleep and hit the ground running in the morning.&lt;/p&gt;
+
+&lt;p&gt;A few notes on my current thoughts for the direction of the game:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Randomly place asteroids around level&lt;/li&gt;
+
+&lt;li&gt;Place “ore” nuggets randomly within asteroids&lt;/li&gt;
+
+&lt;li&gt;Ship must fly by and scan for these ore nuggest&lt;/li&gt;
+
+&lt;li&gt;After locating an ore nugget, player must land on asteroid surface perpendicular to nugget and drill straight down to retrieve it&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cya in the morning!&lt;/p&gt;</description>
 				<pubDate>Fri, 25 Apr 2014 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/ludum-dare-29-devlog</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/ludum-dare-29-devlog</guid>
