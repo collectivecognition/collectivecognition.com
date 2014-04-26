@@ -83,4 +83,9 @@ A few notes on my current thoughts for the direction of the game:
 - Ship must fly by and scan for these ore nuggest
 - After locating an ore nugget, player must land on asteroid surface perpendicular to nugget and drill straight down to retrieve it
 
-Cya in the morning!
+6:68AM: Wakey Wakey
+-------------------
+
+My significant other had a brilliant idea in her dreams: Beaneath the Surfers, a game about surfers avoiding being eaten by sharks. If only LD was twice as long!
+
+Back to work, I think I'll start tackling the asteroid code.
