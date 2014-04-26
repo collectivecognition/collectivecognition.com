@@ -129,7 +129,7 @@ All in all, things are progressing nicely and I have decent confidence I'll be a
 
 <a href="/images/blog/original/ludum-dare-29-3.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-3.jpg"></a>
 
-11:32:AM: Lunch Break!
+11:32AM: Lunch Break!
 ----------------------
 
 I got a little distracted and added animated thrusters to indicate the direction / intensity of thrust and also tweaked the physics a bit.
@@ -137,3 +137,55 @@ I got a little distracted and added animated thrusters to indicate the direction
 Most of the core mechanics are in place, except "mining" the ore and collisions, so I think this is a good stopping point to take a break and go grab some lunch.
 
 <a href="/images/blog/original/ludum-dare-29-4.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-4.jpg"></a>
+
+2:24PM: Lots of Updates
+-----------------------
+
+Had a nice long lunch (Korean pork bone soup) and then got a ton of work done!
+
+Highlights are a bunch of graphics updates, including parallax backgrounds and new asteroids.
+
+I also re-wrote the ore distribution code to place the ore realistically beneath the uneven surface of the asteroids by picking. Quick code sample to illustrate the technique:
+
+	public class Asteroid : MonoBehaviour {
+		public GameObject orePrefab;
+
+		private float minDepth = 0.1f;
+		private float maxDepth = 0.5f;
+		private int minOre = 2;
+		private int maxOre = 20;
+
+		// Initialize a new asteroid
+
+		public void Start(){
+
+			// Generate a random number of ore, within the specified range
+
+			int numOre = Random.Range(minOre, maxOre);
+
+			for(int ii = 0; ii < numOre; ii++){
+
+				// Instantiate a new ore object and parent it to the asteroid
+
+				GameObject ore = (GameObject)Instantiate(orePrefab);
+				ore.transform.parent = gameObject.transform;
+
+				// Pick a random point along the outside of the asteroid collider
+
+				PolygonCollider2D p = (PolygonCollider2D)collider2D;
+				Vector2 randomPoint = p.points[Random.Range (0, p.points.Length)];
+
+				// Move it to a random depth in the specified range
+
+				float randomDepth = Random.Range(minDepth, maxDepth);
+				randomPoint = Vector2.Lerp(randomPoint, Vector2.zero, randomDepth);
+
+				// Set position of ore, making sure to place it's z in front of the asteroid
+
+				Vector3 randomPos = new Vector3(randomPoint.x, randomPoint.y, -0.0001f);
+				ore.transform.localPosition = randomPos;
+			}
+		}
+	}
+
+<a href="/images/blog/original/ludum-dare-29-5.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-5.jpg"></a>
