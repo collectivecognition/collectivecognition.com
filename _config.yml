@@ -4,6 +4,7 @@ lsi: false
 permalink: /blog/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", edit, publish, build]
 pygments: true
+markdown: kramdown
 
 title: Collective Cognition
 tagline:
