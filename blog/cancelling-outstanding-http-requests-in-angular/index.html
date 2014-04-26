@@ -62,25 +62,27 @@
 
 <p>Here’s a quick example implementation that demonstrates cancelling multiple outstanding $http requests when the controller is destroyed (such as when navigating to a new view):</p>
 
-<pre><code>angular.module(&quot;App&quot;).
-    controller(&quot;SomeCtrl&quot;, [&quot;$scope&quot;, $http&quot;, $q&quot;, function($scope, $http, $q){
+<pre><code>angular.module("App").
+    controller("SomeCtrl", ["$scope", $http", $q", function($scope, $http, $q){
         // Initiate a long running http request
-        $http.get(&quot;http://example.com/endpoint&quot;, {
+        $http.get("http://example.com/endpoint", {
             timeout: $scope.canceler.promise
         });
 
         // And another one
-        $http.get(&quot;http://example.com/another_endpoint&quot;, {
+        $http.get("http://example.com/another_endpoint", {
             timeout: $scope.canceler.promise
         });
 
         // Wait for the controller to be destroyed
-        $scope.$on(&quot;$destroy&quot;, function(){
+        $scope.$on("$destroy", function(){
             // Cancel all outstanding $http requests
             // Multiple requests can share the same timeout promise
             $scope.canceler.resolve();
         });
-    }]);</code></pre></p>
+    }]);
+</code></pre>
+</p>
 		</div>
 	</div>
 	<div id="footer">

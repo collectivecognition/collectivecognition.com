@@ -65,11 +65,13 @@ info  - transport end (error)
 debug - set close timeout for client DL6P-B6mDjt1hrhM3VYw
 debug - cleared close timeout for client DL6P-B6mDjt1hrhM3VYw
 debug - cleared heartbeat interval for client DL6P-B6mDjt1hrhM3VYw
-debug - discarding transport</code></pre>
+debug - discarding transport
+</code></pre>
 
-<p>The problem turned out to be due to my use of the (still experimental) <code>cluster</code> API causing a race condition in socket.io and causing erratic behaviour in my application.</p>
+<p>The problem turned out to be due to my use of the (still experimental) <code>cluster</code> API  causing a race condition in socket.io and causing erratic behaviour in my application.</p>
 
-<p>Luckily, multiple-cpu support isn’t a huge requirement for me at this time. Just a heads up for anyone else having similar problems.</p></p>
+<p>Luckily, multiple-cpu support isn’t a huge requirement for me at this time. Just a heads up for anyone else having similar problems.</p>
+</p>
 		</div>
 	</div>
 	<div id="footer">

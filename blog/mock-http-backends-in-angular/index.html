@@ -58,8 +58,9 @@
 
 <p>Include both <code>angular</code> and the <code>angular-mocks</code> library:</p>
 
-<pre><code>&lt;script src=&quot;js/lib/angular.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;js/lib/angular-mocks.js&quot;&gt;&lt;/script&gt;</code></pre>
+<pre><code>&lt;script src="js/lib/angular.js"&gt;&lt;/script&gt;
+&lt;script src="js/lib/angular-mocks.js"&gt;&lt;/script&gt;
+</code></pre>
 
 <p>Bootstrap your application and conditionally inject <code>angular-mocks</code> into your application module. I like to configure things this way to allow easily switching between live and mock backends when developing, testing, etc..</p>
 
@@ -67,14 +68,15 @@
     useMocks: true
 };
 
-var yourApp = angular.module(&quot;YourApp&quot;, [CONFIG.useMocks ? &quot;ngMockE2E&quot; :function(){ }]);</code></pre>
+var yourApp = angular.module("YourApp", [CONFIG.useMocks ? "ngMockE2E" :function(){ }]);
+</code></pre>
 
-<p>Now, let’s intercept some HTTP requests!</p>
+<p>Now, let’s intercept some HTTP requests! </p>
 
-<pre><code>yourApp.run([&quot;$httpBackend&quot;, function($httpBackend){
+<pre><code>yourApp.run(["$httpBackend", function($httpBackend){
     if(CONFIG.useMocks){
 
-        // Respond to requests to `/foo` with `{&quot;foo&quot;: &quot;bar&quot;}`:
+        // Respond to requests to `/foo` with `{"foo": "bar"}`:
 
         $httpBackend.whenGET(/^\/foo$/).respond(function(method, uri, body){
                 return [200, {
@@ -82,7 +84,7 @@ var yourApp = angular.module(&quot;YourApp&quot;, [CONFIG.useMocks ? &quot;ngMoc
                 }];
             });
 
-        // Respond to requests to `/foo/BAR` with `{&quot;foo&quot;: &quot;BAR&quot;}`:
+        // Respond to requests to `/foo/BAR` with `{"foo": "BAR"}`:
         // Also throw an exception if the passed value is too short
 
         $httpBackend.whenGET(/^\/foo\/\w+$/).respond(function(method, uri, body){
@@ -94,10 +96,12 @@ var yourApp = angular.module(&quot;YourApp&quot;, [CONFIG.useMocks ? &quot;ngMoc
                 }];
             }
 
-            return [500, &quot;There was an error!&quot;];
+            return [500, "There was an error!"];
         });
     }
-}]);</code></pre></p>
+}]);
+</code></pre>
+</p>
 		</div>
 	</div>
 	<div id="footer">

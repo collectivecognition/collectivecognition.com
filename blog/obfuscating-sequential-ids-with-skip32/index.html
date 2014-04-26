@@ -54,7 +54,7 @@
 		<div class='content'>
 			<h2>Obfuscating Sequential Ids With Skip32</h2>
 			<h4>Posted on 01 June 2013 by William Blanchette</h4>
-			<p><p>Generally, ID generation schemes fall into one of two camps: sequential and random.</p>
+			<p><p>Generally, ID generation schemes fall into one of two camps: sequential and random. </p>
 
 <p>Sequential provide obvious ease of implementation, where a random scheme will provide non-guessable IDs and a more complicated implementation due to the need to protect against collisions.</p>
 
@@ -62,23 +62,26 @@
 
 <p>A sample implementation using node.js is below:</p>
 
-<pre><code>var skip32 = new require(&quot;skip32&quot;).Skip32;
+<pre><code>var skip32 = new require("skip32").Skip32;
 skip32 = new skip32([0x9b, 0x21, 0x96, 0xe, 0x1a, 0xcf, 0x24, 0x5f, 0x14, 0x93]);
 
 var id = 0;
 var generateID = function(){
 	id++;
 	return(skip32.encrypt(id).toString(16));
-}</code></pre>
+}
+</code></pre>
 
 <p>Calling <code>generateID</code> repeatedly will result in a series of obfuscated sequential IDs:</p>
 
 <pre><code>console.log(generateID());
 # 3d4a6194
 console.log(generateID());
-# 23e8cd4b</code></pre>
+# 23e8cd4b
+</code></pre>
 
-<p>Note that the array passed to the skip32 constructor is a key in the form of a byte array and can be up to 10 bytes in length. You’ll want to change this for your own purposes and store it securely like any key.</p></p>
+<p>Note that the array passed to the skip32 constructor is a key in the form of a byte array and can be up to 10 bytes in length. You’ll want to change this for your own purposes and store it securely like any key.</p>
+</p>
 		</div>
 	</div>
 	<div id="footer">

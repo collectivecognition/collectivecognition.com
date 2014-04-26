@@ -54,27 +54,21 @@
 		<div class='content'>
 			<h2>Ludum Dare 29 Devlog</h2>
 			<h4>Posted on 25 April 2014 by William Blanchette</h4>
-			<p><h2 id="905pm_initial_ideas">9:05PM: Initial Ideas</h2>
+			<p><h2 id="pm-initial-ideas">9:05PM: Initial Ideas</h2>
 
 <p>The theme is Beneath The Surface. My initial thoughts:</p>
 
 <ul>
-<li>Asteroid mining (something like Dig Dug or Mr Driller?)</li>
-
-<li>Ocean exploration (fishing?)</li>
-
-<li>Oil drilling (a puzzle game maybe?)</li>
-
-<li>Peeling vegetables (could be a good use of touch controls!)</li>
-
-<li>Exploring the human psyche (psychologist simulator?)</li>
-
-<li>Crypt / tombs / catacombs (filling up with water maybe?)</li>
-
-<li>Mine carts (procedurally generated tunnels?)</li>
+  <li>Asteroid mining (something like Dig Dug or Mr Driller?)</li>
+  <li>Ocean exploration (fishing?)</li>
+  <li>Oil drilling (a puzzle game maybe?)</li>
+  <li>Peeling vegetables (could be a good use of touch controls!)</li>
+  <li>Exploring the human psyche (psychologist simulator?)</li>
+  <li>Crypt / tombs / catacombs (filling up with water maybe?)</li>
+  <li>Mine carts (procedurally generated tunnels?)</li>
 </ul>
 
-<h2 id="922pm_choosing_an_idea">9:22PM: Choosing An Idea</h2>
+<h2 id="pm-choosing-an-idea">9:22PM: Choosing An Idea</h2>
 
 <p>There were a lot of space-type themes in the final list so I was already thinking along these lines before the final theme was chosen.</p>
 
@@ -83,16 +77,14 @@
 <p>Some initial thoughts:</p>
 
 <ul>
-<li>I want this to work on mobile devices, so touch-friendly controls are a must.</li>
-
-<li>I’d like travel between asteroids to be zoomed out, with the camera zooming in for landing</li>
-
-<li>Parallax stars would be cool for the background</li>
+  <li>I want this to work on mobile devices, so touch-friendly controls are a must. </li>
+  <li>I’d like travel between asteroids to be zoomed out, with the camera zooming in for landing</li>
+  <li>Parallax stars would be cool for the background</li>
 </ul>
 
 <p>Time to start coding!</p>
 
-<h2 id="1022pm_basic_physics__controls">10:22PM: Basic Physics / Controls</h2>
+<h2 id="pm-basic-physics--controls">10:22PM: Basic Physics / Controls</h2>
 
 <p>I’ve got a placeholder ship sprite and a basic newtonian physics control setup which allows attitude adjustment (rotation) forward / reverse thrust and velocity clamping to keep things sane.</p>
 
@@ -106,9 +98,9 @@ public class ShipControls : MonoBehaviour {
 	private float maxVelocity = 2.0f;
 
 	void Update(){
-		transform.Rotate (Vector3.forward * (-Input.GetAxis(&quot;Horizontal&quot;) * rotatationSpeed * Time.deltaTime) ); 
+		transform.Rotate (Vector3.forward * (-Input.GetAxis("Horizontal") * rotatationSpeed * Time.deltaTime) ); 
 
-		float inputThrust = Input.GetAxis(&quot;Vertical&quot;);
+		float inputThrust = Input.GetAxis("Vertical");
 		thrust += inputThrust * acceleration;
 
 		Vector3 newForce = Vector3.up * thrust * Time.deltaTime;
@@ -121,37 +113,53 @@ public class ShipControls : MonoBehaviour {
 	}
 
 	void OnGUI(){
-		GUI.Label(new Rect(10, 10, 100, 25), &quot;Thrust: &quot; + thrust);
+		GUI.Label(new Rect(10, 10, 100, 25), "Thrust: " + thrust);
 	}
-}</code></pre>
+}
+</code></pre>
 
-<p><a href='/images/blog/original/ludum-dare-29-1.jpg' rel='shadowbox'><img src='/images/blog/thumbnails/ludum-dare-29-1.jpg' /></a></p>
+<p><a href="/images/blog/original/ludum-dare-29-1.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-1.jpg" /></a></p>
 
-<h2 id="1040pm_wrestling_with_blog">10:40PM: Wrestling With Blog</h2>
+<h2 id="pm-wrestling-with-blog">10:40PM: Wrestling With Blog</h2>
 
 <p>Grr! My blog publishing scripts are giving me trouble. Mental note: sort this sort of thing out BEFORE the compo next time.</p>
 
-<h2 id="1105pm_so_very_tired">11:05PM: So Very Tired</h2>
+<h2 id="pm-so-very-tired">11:05PM: So Very Tired</h2>
 
 <p>I’ve done some more “miner” tweaking, but as it’s been a very long day and I’m having trouble keeping my eyes open, I think I’ll get some sleep and hit the ground running in the morning.</p>
 
 <p>A few notes on my current thoughts for the direction of the game:</p>
 
 <ul>
-<li>Randomly place asteroids around level</li>
-
-<li>Place “ore” nuggets randomly within asteroids</li>
-
-<li>Ship must fly by and scan for these ore nuggest</li>
-
-<li>After locating an ore nugget, player must land on asteroid surface perpendicular to nugget and drill straight down to retrieve it</li>
+  <li>Randomly place asteroids around level</li>
+  <li>Place “ore” nuggets randomly within asteroids</li>
+  <li>Ship must fly by and scan for these ore nuggest</li>
+  <li>After locating an ore nugget, player must land on asteroid surface perpendicular to nugget and drill straight down to retrieve it</li>
 </ul>
 
-<h2 id="668am_wakey_wakey">6:68AM: Wakey Wakey</h2>
+<h2 id="am-wakey-wakey">6:68AM: Wakey Wakey</h2>
 
 <p>My significant other had a brilliant idea in her dreams: Beaneath the Surfers, a game about surfers avoiding being eaten by sharks. If only LD was twice as long!</p>
 
-<p>Back to work, I think I’ll start tackling the asteroid code.</p></p>
+<p>Back to work :D</p>
+
+<h2 id="am-camera">8:07AM: Camera</h2>
+
+<p>I’ve made a bit of progress with an auto-zooming camera that makes sure you can always see at least one asteroid. It’s glitchy, but basically functional so I’m going to shift gears and work on some scanning code.</p>
+
+<pre><code>public class Asteroid : MonoBehaviour {
+	public bool IsVisible(){
+		Vector3 viewPos = Camera.main.WorldToViewportPoint(transform.position);
+
+		if(viewPos.x &lt; 0 || viewPos.x &gt; 1 || viewPos.y &lt; 0 || viewPos.y &gt; 1){
+			return false;
+		}
+
+		return true;
+	}
+}
+</code></pre>
+</p>
 		</div>
 	</div>
 	<div id="footer">

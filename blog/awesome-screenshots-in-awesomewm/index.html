@@ -54,24 +54,27 @@
 		<div class='content'>
 			<h2>Awesome Screenshots In Awesomewm</h2>
 			<h4>Posted on 18 April 2014 by William Blanchette</h4>
-			<p><p>I’ve been experimenting with setting up an <a href='https://www.archlinux.org'>arch linux</a> work environment on my laptop this weekend and one of the things I found myself missing almost immediately from OSX was the handy-dandy built in screenshot functionality.</p>
+			<p><p>I’ve been experimenting with setting up an <a href="https://www.archlinux.org">arch linux</a> work environment on my laptop this weekend and one of the things I found myself missing almost immediately from OSX was the handy-dandy built in screenshot functionality.</p>
 
-<p>In the spirit of open source, I whipped up a quick lua key-binding for <a href='http://awesome.naquadah.org/'>awesome window manager</a>.</p>
+<p>In the spirit of open source, I whipped up a quick lua key-binding for <a href="http://awesome.naquadah.org/">awesome window manager</a>.</p>
 
 <p>Just place the following in an apppropriate place in your <code>~/.config/rc.lua</code> file:</p>
 
-<pre><code>awful.key({ modkey, }, &quot;p&quot;, function () awful.util.spawn_with_shell(&quot;FILENAME=/tmp/
-$(date +%m-%d-%y-%H-%M-%S).png; import -window root \&quot;$FILENAME\&quot;; gimp \&quot;$FILENAME\&quot;&quot;) end)</code></pre>
+<pre><code>awful.key({ modkey, }, "p", function () awful.util.spawn_with_shell("FILENAME=/tmp/
+$(date +%m-%d-%y-%H-%M-%S).png; import -window root \"$FILENAME\"; gimp \"$FILENAME\"") end)
+</code></pre>
 
-<p>You’ll need <a href='http://www.imagemagick.org/'>imagemagick</a> to take the actual screenshot and <a href='http://www.gimp.org/'>gimp</a> to view / edit it.</p>
+<p>You’ll need <a href="http://www.imagemagick.org/">imagemagick</a> to take the actual screenshot and <a href="http://www.gimp.org/">gimp</a> to view / edit it.</p>
 
 <p>Install them like so:</p>
 
-<pre><code>sudo pacman -S imagemagick gimp</code></pre>
+<pre><code>sudo pacman -S imagemagick gimp
+</code></pre>
 
 <p>You can restart <code>awesome</code> by pressing <code>mod4-shift-r</code>, by default.</p>
 
-<p>Now just press <code>mod4-p</code> and a screenshot of your current view will auto-magically be opened in gimp.</p></p>
+<p>Now just press <code>mod4-p</code> and a screenshot of your current view will auto-magically be opened in gimp.</p>
+</p>
 		</div>
 	</div>
 	<div id="footer">

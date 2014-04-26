@@ -8,27 +8,21 @@
 		
 			<item>
 				<title>Ludum Dare 29 Devlog</title>
-				<description>&lt;h2 id=&quot;905pm_initial_ideas&quot;&gt;9:05PM: Initial Ideas&lt;/h2&gt;
+				<description>&lt;h2 id=&quot;pm-initial-ideas&quot;&gt;9:05PM: Initial Ideas&lt;/h2&gt;
 
 &lt;p&gt;The theme is Beneath The Surface. My initial thoughts:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Asteroid mining (something like Dig Dug or Mr Driller?)&lt;/li&gt;
-
-&lt;li&gt;Ocean exploration (fishing?)&lt;/li&gt;
-
-&lt;li&gt;Oil drilling (a puzzle game maybe?)&lt;/li&gt;
-
-&lt;li&gt;Peeling vegetables (could be a good use of touch controls!)&lt;/li&gt;
-
-&lt;li&gt;Exploring the human psyche (psychologist simulator?)&lt;/li&gt;
-
-&lt;li&gt;Crypt / tombs / catacombs (filling up with water maybe?)&lt;/li&gt;
-
-&lt;li&gt;Mine carts (procedurally generated tunnels?)&lt;/li&gt;
+  &lt;li&gt;Asteroid mining (something like Dig Dug or Mr Driller?)&lt;/li&gt;
+  &lt;li&gt;Ocean exploration (fishing?)&lt;/li&gt;
+  &lt;li&gt;Oil drilling (a puzzle game maybe?)&lt;/li&gt;
+  &lt;li&gt;Peeling vegetables (could be a good use of touch controls!)&lt;/li&gt;
+  &lt;li&gt;Exploring the human psyche (psychologist simulator?)&lt;/li&gt;
+  &lt;li&gt;Crypt / tombs / catacombs (filling up with water maybe?)&lt;/li&gt;
+  &lt;li&gt;Mine carts (procedurally generated tunnels?)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;922pm_choosing_an_idea&quot;&gt;9:22PM: Choosing An Idea&lt;/h2&gt;
+&lt;h2 id=&quot;pm-choosing-an-idea&quot;&gt;9:22PM: Choosing An Idea&lt;/h2&gt;
 
 &lt;p&gt;There were a lot of space-type themes in the final list so I was already thinking along these lines before the final theme was chosen.&lt;/p&gt;
 
@@ -37,16 +31,14 @@
 &lt;p&gt;Some initial thoughts:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;I want this to work on mobile devices, so touch-friendly controls are a must.&lt;/li&gt;
-
-&lt;li&gt;I’d like travel between asteroids to be zoomed out, with the camera zooming in for landing&lt;/li&gt;
-
-&lt;li&gt;Parallax stars would be cool for the background&lt;/li&gt;
+  &lt;li&gt;I want this to work on mobile devices, so touch-friendly controls are a must. &lt;/li&gt;
+  &lt;li&gt;I’d like travel between asteroids to be zoomed out, with the camera zooming in for landing&lt;/li&gt;
+  &lt;li&gt;Parallax stars would be cool for the background&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Time to start coding!&lt;/p&gt;
 
-&lt;h2 id=&quot;1022pm_basic_physics__controls&quot;&gt;10:22PM: Basic Physics / Controls&lt;/h2&gt;
+&lt;h2 id=&quot;pm-basic-physics--controls&quot;&gt;10:22PM: Basic Physics / Controls&lt;/h2&gt;
 
 &lt;p&gt;I’ve got a placeholder ship sprite and a basic newtonian physics control setup which allows attitude adjustment (rotation) forward / reverse thrust and velocity clamping to keep things sane.&lt;/p&gt;
 
@@ -60,9 +52,9 @@ public class ShipControls : MonoBehaviour {
 	private float maxVelocity = 2.0f;
 
 	void Update(){
-		transform.Rotate (Vector3.forward * (-Input.GetAxis(&amp;quot;Horizontal&amp;quot;) * rotatationSpeed * Time.deltaTime) ); 
+		transform.Rotate (Vector3.forward * (-Input.GetAxis(&quot;Horizontal&quot;) * rotatationSpeed * Time.deltaTime) ); 
 
-		float inputThrust = Input.GetAxis(&amp;quot;Vertical&amp;quot;);
+		float inputThrust = Input.GetAxis(&quot;Vertical&quot;);
 		thrust += inputThrust * acceleration;
 
 		Vector3 newForce = Vector3.up * thrust * Time.deltaTime;
@@ -75,37 +67,53 @@ public class ShipControls : MonoBehaviour {
 	}
 
 	void OnGUI(){
-		GUI.Label(new Rect(10, 10, 100, 25), &amp;quot;Thrust: &amp;quot; + thrust);
+		GUI.Label(new Rect(10, 10, 100, 25), &quot;Thrust: &quot; + thrust);
 	}
-}&lt;/code&gt;&lt;/pre&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#39;/images/blog/original/ludum-dare-29-1.jpg&#39; rel=&#39;shadowbox&#39;&gt;&lt;img src=&#39;/images/blog/thumbnails/ludum-dare-29-1.jpg&#39; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-29-1.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-29-1.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;1040pm_wrestling_with_blog&quot;&gt;10:40PM: Wrestling With Blog&lt;/h2&gt;
+&lt;h2 id=&quot;pm-wrestling-with-blog&quot;&gt;10:40PM: Wrestling With Blog&lt;/h2&gt;
 
 &lt;p&gt;Grr! My blog publishing scripts are giving me trouble. Mental note: sort this sort of thing out BEFORE the compo next time.&lt;/p&gt;
 
-&lt;h2 id=&quot;1105pm_so_very_tired&quot;&gt;11:05PM: So Very Tired&lt;/h2&gt;
+&lt;h2 id=&quot;pm-so-very-tired&quot;&gt;11:05PM: So Very Tired&lt;/h2&gt;
 
 &lt;p&gt;I’ve done some more “miner” tweaking, but as it’s been a very long day and I’m having trouble keeping my eyes open, I think I’ll get some sleep and hit the ground running in the morning.&lt;/p&gt;
 
 &lt;p&gt;A few notes on my current thoughts for the direction of the game:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Randomly place asteroids around level&lt;/li&gt;
-
-&lt;li&gt;Place “ore” nuggets randomly within asteroids&lt;/li&gt;
-
-&lt;li&gt;Ship must fly by and scan for these ore nuggest&lt;/li&gt;
-
-&lt;li&gt;After locating an ore nugget, player must land on asteroid surface perpendicular to nugget and drill straight down to retrieve it&lt;/li&gt;
+  &lt;li&gt;Randomly place asteroids around level&lt;/li&gt;
+  &lt;li&gt;Place “ore” nuggets randomly within asteroids&lt;/li&gt;
+  &lt;li&gt;Ship must fly by and scan for these ore nuggest&lt;/li&gt;
+  &lt;li&gt;After locating an ore nugget, player must land on asteroid surface perpendicular to nugget and drill straight down to retrieve it&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;668am_wakey_wakey&quot;&gt;6:68AM: Wakey Wakey&lt;/h2&gt;
+&lt;h2 id=&quot;am-wakey-wakey&quot;&gt;6:68AM: Wakey Wakey&lt;/h2&gt;
 
 &lt;p&gt;My significant other had a brilliant idea in her dreams: Beaneath the Surfers, a game about surfers avoiding being eaten by sharks. If only LD was twice as long!&lt;/p&gt;
 
-&lt;p&gt;Back to work, I think I’ll start tackling the asteroid code.&lt;/p&gt;</description>
+&lt;p&gt;Back to work :D&lt;/p&gt;
+
+&lt;h2 id=&quot;am-camera&quot;&gt;8:07AM: Camera&lt;/h2&gt;
+
+&lt;p&gt;I’ve made a bit of progress with an auto-zooming camera that makes sure you can always see at least one asteroid. It’s glitchy, but basically functional so I’m going to shift gears and work on some scanning code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class Asteroid : MonoBehaviour {
+	public bool IsVisible(){
+		Vector3 viewPos = Camera.main.WorldToViewportPoint(transform.position);
+
+		if(viewPos.x &amp;lt; 0 || viewPos.x &amp;gt; 1 || viewPos.y &amp;lt; 0 || viewPos.y &amp;gt; 1){
+			return false;
+		}
+
+		return true;
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
 				<pubDate>Fri, 25 Apr 2014 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/ludum-dare-29-devlog</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/ludum-dare-29-devlog</guid>
@@ -113,24 +121,27 @@ public class ShipControls : MonoBehaviour {
 		
 			<item>
 				<title>Awesome Screenshots In Awesomewm</title>
-				<description>&lt;p&gt;I’ve been experimenting with setting up an &lt;a href=&#39;https://www.archlinux.org&#39;&gt;arch linux&lt;/a&gt; work environment on my laptop this weekend and one of the things I found myself missing almost immediately from OSX was the handy-dandy built in screenshot functionality.&lt;/p&gt;
+				<description>&lt;p&gt;I’ve been experimenting with setting up an &lt;a href=&quot;https://www.archlinux.org&quot;&gt;arch linux&lt;/a&gt; work environment on my laptop this weekend and one of the things I found myself missing almost immediately from OSX was the handy-dandy built in screenshot functionality.&lt;/p&gt;
 
-&lt;p&gt;In the spirit of open source, I whipped up a quick lua key-binding for &lt;a href=&#39;http://awesome.naquadah.org/&#39;&gt;awesome window manager&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In the spirit of open source, I whipped up a quick lua key-binding for &lt;a href=&quot;http://awesome.naquadah.org/&quot;&gt;awesome window manager&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Just place the following in an apppropriate place in your &lt;code&gt;~/.config/rc.lua&lt;/code&gt; file:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;awful.key({ modkey, }, &amp;quot;p&amp;quot;, function () awful.util.spawn_with_shell(&amp;quot;FILENAME=/tmp/
-$(date +%m-%d-%y-%H-%M-%S).png; import -window root \&amp;quot;$FILENAME\&amp;quot;; gimp \&amp;quot;$FILENAME\&amp;quot;&amp;quot;) end)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;awful.key({ modkey, }, &quot;p&quot;, function () awful.util.spawn_with_shell(&quot;FILENAME=/tmp/
+$(date +%m-%d-%y-%H-%M-%S).png; import -window root \&quot;$FILENAME\&quot;; gimp \&quot;$FILENAME\&quot;&quot;) end)
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;You’ll need &lt;a href=&#39;http://www.imagemagick.org/&#39;&gt;imagemagick&lt;/a&gt; to take the actual screenshot and &lt;a href=&#39;http://www.gimp.org/&#39;&gt;gimp&lt;/a&gt; to view / edit it.&lt;/p&gt;
+&lt;p&gt;You’ll need &lt;a href=&quot;http://www.imagemagick.org/&quot;&gt;imagemagick&lt;/a&gt; to take the actual screenshot and &lt;a href=&quot;http://www.gimp.org/&quot;&gt;gimp&lt;/a&gt; to view / edit it.&lt;/p&gt;
 
 &lt;p&gt;Install them like so:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo pacman -S imagemagick gimp&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S imagemagick gimp
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;You can restart &lt;code&gt;awesome&lt;/code&gt; by pressing &lt;code&gt;mod4-shift-r&lt;/code&gt;, by default.&lt;/p&gt;
 
-&lt;p&gt;Now just press &lt;code&gt;mod4-p&lt;/code&gt; and a screenshot of your current view will auto-magically be opened in gimp.&lt;/p&gt;</description>
+&lt;p&gt;Now just press &lt;code&gt;mod4-p&lt;/code&gt; and a screenshot of your current view will auto-magically be opened in gimp.&lt;/p&gt;
+</description>
 				<pubDate>Fri, 18 Apr 2014 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/awesome-screenshots-in-awesomewm</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/awesome-screenshots-in-awesomewm</guid>
@@ -142,8 +153,9 @@ $(date +%m-%d-%y-%H-%M-%S).png; import -window root \&amp;quot;$FILENAME\&amp;qu
 
 &lt;p&gt;Include both &lt;code&gt;angular&lt;/code&gt; and the &lt;code&gt;angular-mocks&lt;/code&gt; library:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;script src=&amp;quot;js/lib/angular.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script src=&amp;quot;js/lib/angular-mocks.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script src=&quot;js/lib/angular.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;js/lib/angular-mocks.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Bootstrap your application and conditionally inject &lt;code&gt;angular-mocks&lt;/code&gt; into your application module. I like to configure things this way to allow easily switching between live and mock backends when developing, testing, etc..&lt;/p&gt;
 
@@ -151,14 +163,15 @@ $(date +%m-%d-%y-%H-%M-%S).png; import -window root \&amp;quot;$FILENAME\&amp;qu
     useMocks: true
 };
 
-var yourApp = angular.module(&amp;quot;YourApp&amp;quot;, [CONFIG.useMocks ? &amp;quot;ngMockE2E&amp;quot; :function(){ }]);&lt;/code&gt;&lt;/pre&gt;
+var yourApp = angular.module(&quot;YourApp&quot;, [CONFIG.useMocks ? &quot;ngMockE2E&quot; :function(){ }]);
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Now, let’s intercept some HTTP requests!&lt;/p&gt;
+&lt;p&gt;Now, let’s intercept some HTTP requests! &lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;yourApp.run([&amp;quot;$httpBackend&amp;quot;, function($httpBackend){
+&lt;pre&gt;&lt;code&gt;yourApp.run([&quot;$httpBackend&quot;, function($httpBackend){
     if(CONFIG.useMocks){
 
-        // Respond to requests to `/foo` with `{&amp;quot;foo&amp;quot;: &amp;quot;bar&amp;quot;}`:
+        // Respond to requests to `/foo` with `{&quot;foo&quot;: &quot;bar&quot;}`:
 
         $httpBackend.whenGET(/^\/foo$/).respond(function(method, uri, body){
                 return [200, {
@@ -166,7 +179,7 @@ var yourApp = angular.module(&amp;quot;YourApp&amp;quot;, [CONFIG.useMocks ? &am
                 }];
             });
 
-        // Respond to requests to `/foo/BAR` with `{&amp;quot;foo&amp;quot;: &amp;quot;BAR&amp;quot;}`:
+        // Respond to requests to `/foo/BAR` with `{&quot;foo&quot;: &quot;BAR&quot;}`:
         // Also throw an exception if the passed value is too short
 
         $httpBackend.whenGET(/^\/foo\/\w+$/).respond(function(method, uri, body){
@@ -178,10 +191,12 @@ var yourApp = angular.module(&amp;quot;YourApp&amp;quot;, [CONFIG.useMocks ? &am
                 }];
             }
 
-            return [500, &amp;quot;There was an error!&amp;quot;];
+            return [500, &quot;There was an error!&quot;];
         });
     }
-}]);&lt;/code&gt;&lt;/pre&gt;</description>
+}]);
+&lt;/code&gt;&lt;/pre&gt;
+</description>
 				<pubDate>Tue, 04 Feb 2014 00:00:00 -0500</pubDate>
 				<link>http://collectivecognition.com/blog/mock-http-backends-in-angular</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/mock-http-backends-in-angular</guid>
@@ -197,25 +212,27 @@ var yourApp = angular.module(&amp;quot;YourApp&amp;quot;, [CONFIG.useMocks ? &am
 
 &lt;p&gt;Here’s a quick example implementation that demonstrates cancelling multiple outstanding $http requests when the controller is destroyed (such as when navigating to a new view):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;angular.module(&amp;quot;App&amp;quot;).
-    controller(&amp;quot;SomeCtrl&amp;quot;, [&amp;quot;$scope&amp;quot;, $http&amp;quot;, $q&amp;quot;, function($scope, $http, $q){
+&lt;pre&gt;&lt;code&gt;angular.module(&quot;App&quot;).
+    controller(&quot;SomeCtrl&quot;, [&quot;$scope&quot;, $http&quot;, $q&quot;, function($scope, $http, $q){
         // Initiate a long running http request
-        $http.get(&amp;quot;http://example.com/endpoint&amp;quot;, {
+        $http.get(&quot;http://example.com/endpoint&quot;, {
             timeout: $scope.canceler.promise
         });
 
         // And another one
-        $http.get(&amp;quot;http://example.com/another_endpoint&amp;quot;, {
+        $http.get(&quot;http://example.com/another_endpoint&quot;, {
             timeout: $scope.canceler.promise
         });
 
         // Wait for the controller to be destroyed
-        $scope.$on(&amp;quot;$destroy&amp;quot;, function(){
+        $scope.$on(&quot;$destroy&quot;, function(){
             // Cancel all outstanding $http requests
             // Multiple requests can share the same timeout promise
             $scope.canceler.resolve();
         });
-    }]);&lt;/code&gt;&lt;/pre&gt;</description>
+    }]);
+&lt;/code&gt;&lt;/pre&gt;
+</description>
 				<pubDate>Mon, 13 Jan 2014 00:00:00 -0500</pubDate>
 				<link>http://collectivecognition.com/blog/cancelling-outstanding-http-requests-in-angular</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/cancelling-outstanding-http-requests-in-angular</guid>
@@ -223,8 +240,9 @@ var yourApp = angular.module(&amp;quot;YourApp&amp;quot;, [CONFIG.useMocks ? &am
 		
 			<item>
 				<title>Vr City</title>
-				<description>&lt;p&gt;&lt;a href=&#39;/images/blog/original/vrcity-wip-2013-7-31.jpg&#39; rel=&#39;shadowbox&#39;&gt;&lt;img src=&#39;/images/blog/thumbnails/vrcity-wip-2013-7-31.jpg&#39; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Some very early work on a procedurally generated city for the Oculus Rift.&lt;/p&gt;</description>
+				<description>&lt;p&gt;&lt;a href=&quot;/images/blog/original/vrcity-wip-2013-7-31.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/vrcity-wip-2013-7-31.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Some very early work on a procedurally generated city for the Oculus Rift.&lt;/p&gt;
+</description>
 				<pubDate>Wed, 31 Jul 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/VR-City</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/VR-City</guid>
@@ -232,7 +250,8 @@ var yourApp = angular.module(&amp;quot;YourApp&amp;quot;, [CONFIG.useMocks ? &am
 		
 			<item>
 				<title>Rss Feed And New Portfolio Page</title>
-				<description>&lt;p&gt;I’ve made a few small updates to the site today, including the addition of an &lt;a href=&quot;/feed&quot;&gt;RSS feed&lt;/a&gt; and a new page to house my &lt;a href=&quot;/web&quot;&gt;web portfolio&lt;/a&gt;. There are only a few projects listed for now, but I’ll be updating it constantly as I bring projects over to the new infrastructure I’m in the process of building.&lt;/p&gt;</description>
+				<description>&lt;p&gt;I’ve made a few small updates to the site today, including the addition of an &lt;a href=&quot;/feed&quot;&gt;RSS feed&lt;/a&gt; and a new page to house my &lt;a href=&quot;/web&quot;&gt;web portfolio&lt;/a&gt;. There are only a few projects listed for now, but I’ll be updating it constantly as I bring projects over to the new infrastructure I’m in the process of building.&lt;/p&gt;
+</description>
 				<pubDate>Tue, 16 Jul 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/rss-feed-and-new-portfolio-page</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/rss-feed-and-new-portfolio-page</guid>
@@ -242,7 +261,8 @@ var yourApp = angular.module(&amp;quot;YourApp&amp;quot;, [CONFIG.useMocks ? &am
 				<title>Computational Complexity For Dummies</title>
 				<description>&lt;p&gt;Dionysis “dionyziz” Zindros has written a &lt;a href=&quot;http://discrete.gr/complexity/&quot;&gt;great post on discrete.gr&lt;/a&gt; tackling the topic of algorithm complexity analysis for those of us who come from a non-CS background.&lt;/p&gt;
 
-&lt;p&gt;It’s very well written and provides a great overview of the concepts involved.&lt;/p&gt;</description>
+&lt;p&gt;It’s very well written and provides a great overview of the concepts involved.&lt;/p&gt;
+</description>
 				<pubDate>Fri, 12 Jul 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/computational-complexity-for-dummies</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/computational-complexity-for-dummies</guid>
@@ -256,27 +276,34 @@ var yourApp = angular.module(&amp;quot;YourApp&amp;quot;, [CONFIG.useMocks ? &am
 
 &lt;p&gt;First, while your master branch is checked out, make sure all of your changes are committed:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git commit -a -m &amp;quot;Some changes&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;git commit -a -m &quot;Some changes&quot;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Now, if you haven’t already, create the gh-pages branch:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git checkout -b gh-pages&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;git checkout -b gh-pages
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;If you’ve already got a branch set up, just switch to it&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git checkout gh-pages&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;git checkout gh-pages
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The git &lt;code&gt;rebase&lt;/code&gt; command lets you copy the contents of one branch to another:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git rebase master&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;git rebase master
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Now, push out the changes in both branches:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git push --all&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;git push --all
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Make sure to switch back to the master branch when you’re done:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git checkout master&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;pre&gt;&lt;code&gt;git checkout master
+&lt;/code&gt;&lt;/pre&gt;
+</description>
 				<pubDate>Tue, 09 Jul 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/keeping-ghpages-in-sync-with-master</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/keeping-ghpages-in-sync-with-master</guid>
@@ -284,7 +311,7 @@ var yourApp = angular.module(&amp;quot;YourApp&amp;quot;, [CONFIG.useMocks ? &am
 		
 			<item>
 				<title>Obfuscating Sequential Ids With Skip32</title>
-				<description>&lt;p&gt;Generally, ID generation schemes fall into one of two camps: sequential and random.&lt;/p&gt;
+				<description>&lt;p&gt;Generally, ID generation schemes fall into one of two camps: sequential and random. &lt;/p&gt;
 
 &lt;p&gt;Sequential provide obvious ease of implementation, where a random scheme will provide non-guessable IDs and a more complicated implementation due to the need to protect against collisions.&lt;/p&gt;
 
@@ -292,23 +319,26 @@ var yourApp = angular.module(&amp;quot;YourApp&amp;quot;, [CONFIG.useMocks ? &am
 
 &lt;p&gt;A sample implementation using node.js is below:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var skip32 = new require(&amp;quot;skip32&amp;quot;).Skip32;
+&lt;pre&gt;&lt;code&gt;var skip32 = new require(&quot;skip32&quot;).Skip32;
 skip32 = new skip32([0x9b, 0x21, 0x96, 0xe, 0x1a, 0xcf, 0x24, 0x5f, 0x14, 0x93]);
 
 var id = 0;
 var generateID = function(){
 	id++;
 	return(skip32.encrypt(id).toString(16));
-}&lt;/code&gt;&lt;/pre&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Calling &lt;code&gt;generateID&lt;/code&gt; repeatedly will result in a series of obfuscated sequential IDs:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;console.log(generateID());
 # 3d4a6194
 console.log(generateID());
-# 23e8cd4b&lt;/code&gt;&lt;/pre&gt;
+# 23e8cd4b
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Note that the array passed to the skip32 constructor is a key in the form of a byte array and can be up to 10 bytes in length. You’ll want to change this for your own purposes and store it securely like any key.&lt;/p&gt;</description>
+&lt;p&gt;Note that the array passed to the skip32 constructor is a key in the form of a byte array and can be up to 10 bytes in length. You’ll want to change this for your own purposes and store it securely like any key.&lt;/p&gt;
+</description>
 				<pubDate>Sat, 01 Jun 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/obfuscating-sequential-ids-with-skip32</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/obfuscating-sequential-ids-with-skip32</guid>
@@ -327,11 +357,13 @@ info  - transport end (error)
 debug - set close timeout for client DL6P-B6mDjt1hrhM3VYw
 debug - cleared close timeout for client DL6P-B6mDjt1hrhM3VYw
 debug - cleared heartbeat interval for client DL6P-B6mDjt1hrhM3VYw
-debug - discarding transport&lt;/code&gt;&lt;/pre&gt;
+debug - discarding transport
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The problem turned out to be due to my use of the (still experimental) &lt;code&gt;cluster&lt;/code&gt; API causing a race condition in socket.io and causing erratic behaviour in my application.&lt;/p&gt;
+&lt;p&gt;The problem turned out to be due to my use of the (still experimental) &lt;code&gt;cluster&lt;/code&gt; API  causing a race condition in socket.io and causing erratic behaviour in my application.&lt;/p&gt;
 
-&lt;p&gt;Luckily, multiple-cpu support isn’t a huge requirement for me at this time. Just a heads up for anyone else having similar problems.&lt;/p&gt;</description>
+&lt;p&gt;Luckily, multiple-cpu support isn’t a huge requirement for me at this time. Just a heads up for anyone else having similar problems.&lt;/p&gt;
+</description>
 				<pubDate>Wed, 29 May 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/socket.io-and-node.js-clustering</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/socket.io-and-node.js-clustering</guid>
