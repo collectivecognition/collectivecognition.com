@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
 
-<title> Collective Cognition</title>
+<title> Ludum Dare 29 Devlog |  Collective Cognition</title>
 
 <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
 <meta name="robots" content="index, follow" />
@@ -54,7 +54,11 @@
 		<div class='content'>
 			<h2>Ludum Dare 29 Devlog</h2>
 			<h4>Posted on 25 April 2014 by William Blanchette</h4>
-			<p><p>** 9:05PM: Initial Ideas **</p><p>The theme is Beneath The Surface. My initial thoughts:</p><ul>
+			<p><p>** 9:05PM: Initial Ideas **</p>
+
+<p>The theme is Beneath The Surface. My initial thoughts:</p>
+
+<ul>
 <li>Asteroid mining (something like Dig Dug or Mr Driller?)</li>
 
 <li>Ocean exploration (fishing?)</li>
@@ -68,13 +72,31 @@
 <li>Crypt / tombs / catacombs (filling up with water maybe?)</li>
 
 <li>Mine carts (procedurally generated tunnels?)</li>
-</ul><p>** 9:22PM: Choosing An Idea **</p><p>There were a lot of space-type themes in the final list so I was already thinking along these lines before the final theme was chosen.</p><p>I think I have to go with asteroid mining. I’m imagining something like a combination of Lunar Lander and the classic Asteroids. Unity should be able to handle most of the physics “heavy lifting” and as long as I stick to a simple graphical style, I think I might be able to pull this off.</p><p>Some initial thoughts:wd</p><ul>
+</ul>
+
+<p>** 9:22PM: Choosing An Idea **</p>
+
+<p>There were a lot of space-type themes in the final list so I was already thinking along these lines before the final theme was chosen.</p>
+
+<p>I think I have to go with asteroid mining. I’m imagining something like a combination of Lunar Lander and the classic Asteroids. Unity should be able to handle most of the physics “heavy lifting” and as long as I stick to a simple graphical style, I think I might be able to pull this off.</p>
+
+<p>Some initial thoughts:wd</p>
+
+<ul>
 <li>I want this to work on mobile devices, so touch-friendly controls are a must.</li>
 
 <li>I’d like travel between asteroids to be zoomed out, with the camera zooming in for landing</li>
 
 <li>Parallax stars would be cool for the background</li>
-</ul><p>Time to start coding!</p><p>** 10:22PM: Basic Physics / Controls **</p><p>I’ve got a placeholder ship sprite and a basic newtonian physics control setup which allows attitude adjustment (rotation) forward / reverse thrust and velocity clamping to keep things sane.</p><pre><code>using UnityEngine;
+</ul>
+
+<p>Time to start coding!</p>
+
+<p>** 10:22PM: Basic Physics / Controls **</p>
+
+<p>I’ve got a placeholder ship sprite and a basic newtonian physics control setup which allows attitude adjustment (rotation) forward / reverse thrust and velocity clamping to keep things sane.</p>
+
+<pre><code>using UnityEngine;
 using System.Collections;
 
 public class ShipControls : MonoBehaviour {
@@ -101,7 +123,9 @@ public class ShipControls : MonoBehaviour {
 	void OnGUI(){
 		GUI.Label(new Rect(10, 10, 100, 25), &quot;Thrust: &quot; + thrust);
 	}
-}</code></pre><p><a href='/images/blog/original/ludum-dare-29-1.jpg' rel='shadowbox'><img src='/images/blog/thumbnails/ludum-dare-29-1.jpg' /></a></p></p>
+}</code></pre>
+
+<p><a href='/images/blog/original/ludum-dare-29-1.jpg' rel='shadowbox'><img src='/images/blog/thumbnails/ludum-dare-29-1.jpg' /></a></p></p>
 		</div>
 	</div>
 	<div id="footer">

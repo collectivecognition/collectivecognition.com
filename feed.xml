@@ -8,7 +8,7 @@
 		
 			<item>
 				<title>Ludum Dare 29 Devlog</title>
-				<description>&lt;h1 id=&quot;905pm_initial_ideas&quot;&gt;9:05PM: Initial Ideas&lt;/h1&gt;
+				<description>&lt;p&gt;** 9:05PM: Initial Ideas **&lt;/p&gt;
 
 &lt;p&gt;The theme is Beneath The Surface. My initial thoughts:&lt;/p&gt;
 
@@ -28,7 +28,7 @@
 &lt;li&gt;Mine carts (procedurally generated tunnels?)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;922pm_choosing_an_idea&quot;&gt;9:22PM: Choosing An Idea&lt;/h1&gt;
+&lt;p&gt;** 9:22PM: Choosing An Idea **&lt;/p&gt;
 
 &lt;p&gt;There were a lot of space-type themes in the final list so I was already thinking along these lines before the final theme was chosen.&lt;/p&gt;
 
@@ -46,7 +46,7 @@
 
 &lt;p&gt;Time to start coding!&lt;/p&gt;
 
-&lt;h1 id=&quot;1022pm_basic_physics__controls&quot;&gt;10:22PM: Basic Physics / Controls&lt;/h1&gt;
+&lt;p&gt;** 10:22PM: Basic Physics / Controls **&lt;/p&gt;
 
 &lt;p&gt;I’ve got a placeholder ship sprite and a basic newtonian physics control setup which allows attitude adjustment (rotation) forward / reverse thrust and velocity clamping to keep things sane.&lt;/p&gt;
 
@@ -79,7 +79,7 @@ public class ShipControls : MonoBehaviour {
 	}
 }&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#39;/images/blog/original/ludum-dare-29-1.png&#39; rel=&#39;shadowbox&#39;&gt;&lt;img src=&#39;/images/blog/thumbnails/ludum-dare-29-1.png&#39; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#39;/images/blog/original/ludum-dare-29-1.jpg&#39; rel=&#39;shadowbox&#39;&gt;&lt;img src=&#39;/images/blog/thumbnails/ludum-dare-29-1.jpg&#39; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
 				<pubDate>Fri, 25 Apr 2014 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/ludum-dare-29-devlog</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/ludum-dare-29-devlog</guid>
