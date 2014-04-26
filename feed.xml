@@ -101,7 +101,11 @@ public class ShipControls : MonoBehaviour {
 &lt;li&gt;After locating an ore nugget, player must land on asteroid surface perpendicular to nugget and drill straight down to retrieve it&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Cya in the morning!&lt;/p&gt;</description>
+&lt;h2 id=&quot;668am_wakey_wakey&quot;&gt;6:68AM: Wakey Wakey&lt;/h2&gt;
+
+&lt;p&gt;My significant other had a brilliant idea in her dreams: Beaneath the Surfers, a game about surfers avoiding being eaten by sharks. If only LD was twice as long!&lt;/p&gt;
+
+&lt;p&gt;Back to work, I think I’ll start tackling the asteroid code.&lt;/p&gt;</description>
 				<pubDate>Fri, 25 Apr 2014 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/ludum-dare-29-devlog</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/ludum-dare-29-devlog</guid>
