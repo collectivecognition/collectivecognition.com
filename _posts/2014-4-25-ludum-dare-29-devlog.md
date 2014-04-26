@@ -106,3 +106,10 @@ I've made a bit of progress with an auto-zooming camera that makes sure you can 
 			return true;
 		}
 	}
+
+9:20AM: Scanner
+---------------
+
+I have a basic scanner system in place. Scanner is triggered by holding down the mouse button and then aimed with the mouse. Ore that is "scanned" will become visible.
+
+<a href="/images/blog/original/ludum-dare-29-2.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-2.jpg"></a>
