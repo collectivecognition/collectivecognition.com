@@ -129,3 +129,10 @@ All in all, things are progressing nicely and I have decent confidence I'll be a
 
 <a href="/images/blog/original/ludum-dare-29-3.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-3.jpg"></a>
 
+11:32:AM: Lunch Break!
+
+I got a little distracted and added animated thrusters to indicate the direction / intensity of thrust and also tweaked the physics a bit.
+
+Most of the core mechanics are in place, except "mining" the ore and collisions, so I think this is a good stopping point to take a break and go grab some lunch.
+
+<a href="/images/blog/original/ludum-dare-29-4.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-4.jpg"></a>
