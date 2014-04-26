@@ -2,8 +2,7 @@
 layout: post
 ---
 
-9:05PM: Initial Ideas
-=====================
+** 9:05PM: Initial Ideas ** 
 
 The theme is Beneath The Surface. My initial thoughts:
 
@@ -15,8 +14,7 @@ The theme is Beneath The Surface. My initial thoughts:
 - Crypt / tombs / catacombs (filling up with water maybe?)
 - Mine carts (procedurally generated tunnels?)
 
-9:22PM: Choosing An Idea
-========================
+** 9:22PM: Choosing An Idea ** 
 
 There were a lot of space-type themes in the final list so I was already thinking along these lines before the final theme was chosen.
 
@@ -30,8 +28,7 @@ Some initial thoughts:wd
 
 Time to start coding!
 
-10:22PM: Basic Physics / Controls
-=================================
+** 10:22PM: Basic Physics / Controls ** 
 
 I've got a placeholder ship sprite and a basic newtonian physics control setup which allows attitude adjustment (rotation) forward / reverse thrust and velocity clamping to keep things sane.
 
@@ -64,4 +61,4 @@ I've got a placeholder ship sprite and a basic newtonian physics control setup w
 		}
 	}
 
-<a href="/images/blog/original/ludum-dare-29-1.png" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-1.png"></a>
+<a href="/images/blog/original/ludum-dare-29-1.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-1.jpg"></a>
