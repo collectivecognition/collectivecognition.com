@@ -7,6 +7,85 @@
 		<atom:link href="http://collectivecognition.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Ludum Dare 29 Devlog</title>
+				<description>&lt;h1 id=&quot;905pm_initial_ideas&quot;&gt;9:05PM: Initial Ideas&lt;/h1&gt;
+
+&lt;p&gt;The theme is Beneath The Surface. My initial thoughts:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Asteroid mining (something like Dig Dug or Mr Driller?)&lt;/li&gt;
+
+&lt;li&gt;Ocean exploration (fishing?)&lt;/li&gt;
+
+&lt;li&gt;Oil drilling (a puzzle game maybe?)&lt;/li&gt;
+
+&lt;li&gt;Peeling vegetables (could be a good use of touch controls!)&lt;/li&gt;
+
+&lt;li&gt;Exploring the human psyche (psychologist simulator?)&lt;/li&gt;
+
+&lt;li&gt;Crypt / tombs / catacombs (filling up with water maybe?)&lt;/li&gt;
+
+&lt;li&gt;Mine carts (procedurally generated tunnels?)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;922pm_choosing_an_idea&quot;&gt;9:22PM: Choosing An Idea&lt;/h1&gt;
+
+&lt;p&gt;There were a lot of space-type themes in the final list so I was already thinking along these lines before the final theme was chosen.&lt;/p&gt;
+
+&lt;p&gt;I think I have to go with asteroid mining. I’m imagining something like a combination of Lunar Lander and the classic Asteroids. Unity should be able to handle most of the physics “heavy lifting” and as long as I stick to a simple graphical style, I think I might be able to pull this off.&lt;/p&gt;
+
+&lt;p&gt;Some initial thoughts:wd&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I want this to work on mobile devices, so touch-friendly controls are a must.&lt;/li&gt;
+
+&lt;li&gt;I’d like travel between asteroids to be zoomed out, with the camera zooming in for landing&lt;/li&gt;
+
+&lt;li&gt;Parallax stars would be cool for the background&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Time to start coding!&lt;/p&gt;
+
+&lt;h1 id=&quot;1022pm_basic_physics__controls&quot;&gt;10:22PM: Basic Physics / Controls&lt;/h1&gt;
+
+&lt;p&gt;I’ve got a placeholder ship sprite and a basic newtonian physics control setup which allows attitude adjustment (rotation) forward / reverse thrust and velocity clamping to keep things sane.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;using UnityEngine;
+using System.Collections;
+
+public class ShipControls : MonoBehaviour {
+	private float rotatationSpeed = 100.0f;
+	private float acceleration = 2.0f;
+	private float thrust = 0.0f;
+	private float maxVelocity = 2.0f;
+
+	void Update(){
+		transform.Rotate (Vector3.forward * (-Input.GetAxis(&amp;quot;Horizontal&amp;quot;) * rotatationSpeed * Time.deltaTime) ); 
+
+		float inputThrust = Input.GetAxis(&amp;quot;Vertical&amp;quot;);
+		thrust += inputThrust * acceleration;
+
+		Vector3 newForce = Vector3.up * thrust * Time.deltaTime;
+		Vector3 relativeForce = transform.InverseTransformDirection(newForce);
+		rigidbody2D.AddForce(new Vector2(relativeForce.x * -1f, relativeForce.y));
+
+		rigidbody2D.velocity = Vector3.ClampMagnitude(rigidbody2D.velocity, maxVelocity);
+
+		Debug.DrawLine (transform.position, transform.position + Vector3.up * 2f, Color.red);
+	}
+
+	void OnGUI(){
+		GUI.Label(new Rect(10, 10, 100, 25), &amp;quot;Thrust: &amp;quot; + thrust);
+	}
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#39;/images/blog/original/ludum-dare-29-1.png&#39; rel=&#39;shadowbox&#39;&gt;&lt;img src=&#39;/images/blog/thumbnails/ludum-dare-29-1.png&#39; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+				<pubDate>Fri, 25 Apr 2014 00:00:00 -0400</pubDate>
+				<link>http://collectivecognition.com/blog/ludum-dare-29-devlog</link>
+				<guid isPermaLink="true">http://collectivecognition.com/blog/ludum-dare-29-devlog</guid>
+			</item>
+		
+			<item>
 				<title>Awesome Screenshots In Awesomewm</title>
 				<description>&lt;p&gt;I’ve been experimenting with setting up an &lt;a href=&#39;https://www.archlinux.org&#39;&gt;arch linux&lt;/a&gt; work environment on my laptop this weekend and one of the things I found myself missing almost immediately from OSX was the handy-dandy built in screenshot functionality.&lt;/p&gt;
 
@@ -230,26 +309,6 @@ debug - discarding transport&lt;/code&gt;&lt;/pre&gt;
 				<pubDate>Wed, 29 May 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/socket.io-and-node.js-clustering</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/socket.io-and-node.js-clustering</guid>
-			</item>
-		
-			<item>
-				<title>Bare Minimum Javascript Tests</title>
-				<description>&lt;p&gt;I had a need to write some quick and dirty tests for a javascript library I was working on and whipped up a minimal (one line) assertion function which fills all of my testing requirements on simple projects:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;var assert = function(test, description){ console.log(&amp;quot;[&amp;quot; + (test ? &amp;quot;PASS&amp;quot; : &amp;quot;FAIL&amp;quot;) + &amp;quot;] &amp;quot; + description); };&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Assertions can be made like so:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;assert(true !== false, &amp;quot;True is not false&amp;quot;);&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;will result in:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[TRUE] True is not false&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Throw the assert function and your tests together into &lt;code&gt;someTests.js&lt;/code&gt; and execute them: &lt;code&gt;node someTests&lt;/code&gt;.&lt;/p&gt;</description>
-				<pubDate>Tue, 28 May 2013 00:00:00 -0400</pubDate>
-				<link>http://collectivecognition.com/blog/bare-minimum-javascript-tests</link>
-				<guid isPermaLink="true">http://collectivecognition.com/blog/bare-minimum-javascript-tests</guid>
 			</item>
 		
 	</channel>
