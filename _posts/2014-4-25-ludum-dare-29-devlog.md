@@ -88,4 +88,21 @@ A few notes on my current thoughts for the direction of the game:
 
 My significant other had a brilliant idea in her dreams: Beaneath the Surfers, a game about surfers avoiding being eaten by sharks. If only LD was twice as long!
 
-Back to work, I think I'll start tackling the asteroid code.
+Back to work :D
+
+8:07AM: Camera
+--------------
+
+I've made a bit of progress with an auto-zooming camera that makes sure you can always see at least one asteroid. It's glitchy, but basically functional so I'm going to shift gears and work on some scanning code.
+
+	public class Asteroid : MonoBehaviour {
+		public bool IsVisible(){
+			Vector3 viewPos = Camera.main.WorldToViewportPoint(transform.position);
+
+			if(viewPos.x < 0 || viewPos.x > 1 || viewPos.y < 0 || viewPos.y > 1){
+				return false;
+			}
+
+			return true;
+		}
+	}
