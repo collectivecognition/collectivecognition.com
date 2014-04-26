@@ -70,3 +70,17 @@ I've got a placeholder ship sprite and a basic newtonian physics control setup w
 ----------------------------
 
 Grr! My blog publishing scripts are giving me trouble. Mental note: sort this sort of thing out BEFORE the compo next time.
+
+11:05PM: So Very Tired
+----------------------
+
+I've done some more "miner" tweaking, but as it's been a very long day and I'm having trouble keeping my eyes open, I think I'll get some sleep and hit the ground running in the morning.
+
+A few notes on my current thoughts for the direction of the game:
+
+- Randomly place asteroids around level
+- Place "ore" nuggets randomly within asteroids
+- Ship must fly by and scan for these ore nuggest
+- After locating an ore nugget, player must land on asteroid surface perpendicular to nugget and drill straight down to retrieve it
+
+Cya in the morning!
