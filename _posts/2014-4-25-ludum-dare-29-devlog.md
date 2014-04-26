@@ -207,3 +207,10 @@ I've finally got the physics and controls in a place I'm happy with, and a solid
 I'm going to replace the scanning beam with more of a "pulse" which gets sent out in all directions at intervals. The scanning beam will be repurposed as a sort of mining tractor beam and become the mechanism by which the player retrives ore.
 
 Time to think about some dinner, do a few errands around the house and finish plotting my next steps.
+
+7:06PM: Scanning
+----------------
+
+I've revamped the scanning system and played with a lot of the graphics and small subsystems. Things are going slowly but surely. I think I'll be able to have all the core gameplay finished before I go to bed, leaving all day tomorrow for polishing, playtesting, sound effects and finishing touches like menus, etc..
+
+<a href="/images/blog/original/ludum-dare-29-7.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-7.jpg"></a>
