@@ -214,3 +214,10 @@ Time to think about some dinner, do a few errands around the house and finish pl
 I've revamped the scanning system and played with a lot of the graphics and small subsystems. Things are going slowly but surely. I think I'll be able to have all the core gameplay finished before I go to bed, leaving all day tomorrow for polishing, playtesting, sound effects and finishing touches like menus, etc..
 
 <a href="/images/blog/original/ludum-dare-29-7.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-7.jpg"></a>
+
+8:30PM: Version Control
+-----------------------
+
+Remember, friends don't let friends develop without using version control! Set up a git repo for the project so I can start tracking changes after a small scare with some changes causing a nasty crash.
+
+The mining beam is coming along nicely, should have a working prototype soon.
