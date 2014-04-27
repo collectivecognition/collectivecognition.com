@@ -221,3 +221,10 @@ I've revamped the scanning system and played with a lot of the graphics and smal
 Remember, friends don't let friends develop without using version control! Set up a git repo for the project so I can start tracking changes after a small scare with some changes causing a nasty crash.
 
 The mining beam is coming along nicely, should have a working prototype soon.
+
+9:37PM: Mining Beam
+-------------------
+
+My first stab at the mining beam is complete, as well as some basic score-keeping. The game now officially meets the definition a game, being that it has a beginning, a middle and an end.
+
+I think I'm in good shape to get this thing into decent shape for submission by the deadline tomorrow., so I'll probably slow down a bit for the rest of the evening, but I'll likely chip away at a few small things before bed.
