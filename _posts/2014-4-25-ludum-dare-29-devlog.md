@@ -228,3 +228,10 @@ The mining beam is coming along nicely, should have a working prototype soon.
 My first stab at the mining beam is complete, as well as some basic score-keeping. The game now officially meets the definition a game, being that it has a beginning, a middle and an end.
 
 I think I'm in good shape to get this thing into decent shape for submission by the deadline tomorrow., so I'll probably slow down a bit for the rest of the evening, but I'll likely chip away at a few small things before bed.
+
+10:00AM: Late Start
+-------------------
+
+Had a little bit of a sleep in and then had to do some grocery shopping, so I'm starting later than I wanted to. Fortunately, I have a pretty good idea of how to tackle the last few features so hopefully things will progress quickly today.
+
+Also, Sarah helped me come up with a name for the game: Ursa Miner.
