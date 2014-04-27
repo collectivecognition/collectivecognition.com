@@ -265,3 +265,14 @@ I've polished up the level generation code to generate a nice circular asteroid 
 Added score GUI and hi score tracking. I also redrew the ore sprites and added a few colors for variety. Lots of other small tweaks / bug fixes as well.
 
 <a href="/images/blog/original/ludum-dare-29-11.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-11.jpg"></a>
+
+5:04PM: Final Touches
+---------------------
+
+Fixed the last bugs on my list, including fixing a number of issues with collision masks and refactoring the code that drags the ore into the ship, which was profoundly broken.
+
+I also added a bunch little things that add to general polish, like flickering flames for the ship thrusters, smoke trails and a small delay before the player can reload the level so that the explosion animation can play.
+
+All that's left now is to add some sound effects and submit!
+
+<a href="/images/blog/original/ludum-dare-29-12.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-12.jpg"></a>
