@@ -258,3 +258,10 @@ There's also now a message when you die prompting the player to press a key to r
 I've polished up the level generation code to generate a nice circular asteroid belt, as well as adding a few new asteroid types and tweaking the algorithm that distributes ore inside the asteroids.
 
 <a href="/images/blog/original/ludum-dare-29-10.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-10.jpg"></a>
+
+2:24PM: Scores
+--------------
+
+Added score GUI and hi score tracking. I also redrew the ore sprites and added a few colors for variety. Lots of other small tweaks / bug fixes as well.
+
+<a href="/images/blog/original/ludum-dare-29-11.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-11.jpg"></a>
