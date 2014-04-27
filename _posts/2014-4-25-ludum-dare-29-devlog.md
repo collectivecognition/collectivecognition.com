@@ -251,3 +251,10 @@ I've implemented a main menu of sorts, including a logo and some basic instrctui
 There's also now a message when you die prompting the player to press a key to restart, and the ability to restart the game.
 
 <a href="/images/blog/original/ludum-dare-29-9.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-9.jpg"></a>
+
+1:00PM: Level Generation
+------------------------
+
+I've polished up the level generation code to generate a nice circular asteroid belt, as well as adding a few new asteroid types and tweaking the algorithm that distributes ore inside the asteroids.
+
+<a href="/images/blog/original/ludum-dare-29-10.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-10.jpg"></a>
