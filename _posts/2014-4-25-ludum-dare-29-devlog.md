@@ -229,9 +229,16 @@ My first stab at the mining beam is complete, as well as some basic score-keepin
 
 I think I'm in good shape to get this thing into decent shape for submission by the deadline tomorrow., so I'll probably slow down a bit for the rest of the evening, but I'll likely chip away at a few small things before bed.
 
-10:00AM: Late Start
+10:06AM: Late Start
 -------------------
 
 Had a little bit of a sleep in and then had to do some grocery shopping, so I'm starting later than I wanted to. Fortunately, I have a pretty good idea of how to tackle the last few features so hopefully things will progress quickly today.
 
 Also, Sarah helped me come up with a name for the game: Ursa Miner.
+
+10:51AM: Mini Map
+-----------------
+
+I'm working through my wish list of extra features now. First up: a mini map. This was pretty easy to pull off using a second camera, although there were some difficulties with converting between real and normalized screen coordinates, rendering order of GUI elements vs game objects, etc.. I think it looks really slick for such a small amount of work!
+
+<a href="/images/blog/original/ludum-dare-29-8.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-8.jpg"></a>
