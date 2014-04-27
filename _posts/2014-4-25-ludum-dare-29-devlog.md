@@ -242,3 +242,12 @@ Also, Sarah helped me come up with a name for the game: Ursa Miner.
 I'm working through my wish list of extra features now. First up: a mini map. This was pretty easy to pull off using a second camera, although there were some difficulties with converting between real and normalized screen coordinates, rendering order of GUI elements vs game objects, etc.. I think it looks really slick for such a small amount of work!
 
 <a href="/images/blog/original/ludum-dare-29-8.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-8.jpg"></a>
+
+12:01PM: UI Work
+----------------
+
+I've implemented a main menu of sorts, including a logo and some basic instrctuions. The letters of the logo slowly drift around, to add some continuity with the ship death animation and a bit of extra personality.
+
+There's also now a message when you die prompting the player to press a key to restart, and the ability to restart the game.
+
+<a href="/images/blog/original/ludum-dare-29-9.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-9.jpg"></a>
