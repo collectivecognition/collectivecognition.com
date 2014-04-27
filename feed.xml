@@ -271,6 +271,10 @@ public class ShipControls : MonoBehaviour {
 &lt;p&gt;All that’s left now is to add some sound effects and submit!&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-29-12.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-29-12.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pm-sound-effects&quot;&gt;7:25PM: Sound Effects&lt;/h2&gt;
+
+&lt;p&gt;After a few tries at generating some sound effects, I settled on a nice minimal retro feel. I think the game is as done as it’s going to get, so I’m going to do a final build and submit. Only 1.5 hours to spare!&lt;/p&gt;
 </description>
 				<pubDate>Fri, 25 Apr 2014 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/ludum-dare-29-devlog</link>
