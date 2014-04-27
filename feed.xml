@@ -217,6 +217,12 @@ public class ShipControls : MonoBehaviour {
 &lt;p&gt;I’ve revamped the scanning system and played with a lot of the graphics and small subsystems. Things are going slowly but surely. I think I’ll be able to have all the core gameplay finished before I go to bed, leaving all day tomorrow for polishing, playtesting, sound effects and finishing touches like menus, etc..&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-29-7.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-29-7.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pm-version-control&quot;&gt;8:30PM: Version Control&lt;/h2&gt;
+
+&lt;p&gt;Remember, friends don’t let friends develop without using version control! Set up a git repo for the project so I can start tracking changes after a small scare with some changes causing a nasty crash.&lt;/p&gt;
+
+&lt;p&gt;The mining beam is coming along nicely, should have a working prototype soon.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 25 Apr 2014 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/ludum-dare-29-devlog</link>
