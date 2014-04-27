@@ -276,3 +276,8 @@ I also added a bunch little things that add to general polish, like flickering f
 All that's left now is to add some sound effects and submit!
 
 <a href="/images/blog/original/ludum-dare-29-12.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-12.jpg"></a>
+
+7:25PM: Sound Effects
+---------------------
+
+After a few tries at generating some sound effects, I settled on a nice minimal retro feel. I think the game is as done as it's going to get, so I'm going to do a final build and submit. Only 1.5 hours to spare!
