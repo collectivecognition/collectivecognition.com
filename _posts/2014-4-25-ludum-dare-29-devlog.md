@@ -281,3 +281,10 @@ All that's left now is to add some sound effects and submit!
 ---------------------
 
 After a few tries at generating some sound effects, I settled on a nice minimal retro feel. I think the game is as done as it's going to get, so I'm going to do a final build and submit. Only 1.5 hours to spare!
+
+7:58PM: DONE!
+-------------
+
+Ursa Miner has been submitted!
+
+You can head over to <a href="http://www.ludumdare.com/compo/ludum-dare-29/?action=preview&uid=11551">the Ludum Dare entry</a> to vote, to <a href="https://github.com/collectivecognition/UrsaMiner">Github</a>  to view the source or <a href="http://collectivecognition.github.io/UrsaMiner/">play it online here</a>.
