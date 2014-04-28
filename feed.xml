@@ -275,6 +275,12 @@ public class ShipControls : MonoBehaviour {
 &lt;h2 id=&quot;pm-sound-effects&quot;&gt;7:25PM: Sound Effects&lt;/h2&gt;
 
 &lt;p&gt;After a few tries at generating some sound effects, I settled on a nice minimal retro feel. I think the game is as done as it’s going to get, so I’m going to do a final build and submit. Only 1.5 hours to spare!&lt;/p&gt;
+
+&lt;h2 id=&quot;pm-done&quot;&gt;7:58PM: DONE!&lt;/h2&gt;
+
+&lt;p&gt;Ursa Miner has been submitted!&lt;/p&gt;
+
+&lt;p&gt;You can head over to &lt;a href=&quot;http://www.ludumdare.com/compo/ludum-dare-29/?action=preview&amp;amp;uid=11551&quot;&gt;the Ludum Dare entry&lt;/a&gt; to vote, to &lt;a href=&quot;https://github.com/collectivecognition/UrsaMiner&quot;&gt;Github&lt;/a&gt;  to view the source or &lt;a href=&quot;http://collectivecognition.github.io/UrsaMiner/&quot;&gt;play it online here&lt;/a&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 25 Apr 2014 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/ludum-dare-29-devlog</link>
