@@ -38,6 +38,14 @@
 &lt;p&gt;I’ve made a bit of progress on a wind system and added some basic manual controls.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-30-3.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-30-3.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pm-slow-progress&quot;&gt;3:30PM: Slow Progress&lt;/h2&gt;
+
+&lt;p&gt;The game is progressing slowly but I’m definitely making progress. I’ve got some basic world generation to generate random islands, a simple ship model with simulated cloth sails and have made a bunch of tweaks to the controls and the physics.&lt;/p&gt;
+
+&lt;p&gt;Next up will be adding some user interface stuff so I can start to flesh out some actual gameplay.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-30-4.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-30-4.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Fri, 22 Aug 2014 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/ludum-dare-30-devlog</link>
