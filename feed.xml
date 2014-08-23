@@ -7,6 +7,22 @@
 		<atom:link href="http://collectivecognition.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Ludum Dare 30 Devlog</title>
+				<description>&lt;h2 id=&quot;pm-waiting&quot;&gt;8:30PM: Waiting…&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Blog post started. Check.&lt;/li&gt;
+  &lt;li&gt;Latest version of Unity installed. Check.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Now to wait for the theme to be announced!&lt;/p&gt;
+</description>
+				<pubDate>Fri, 22 Aug 2014 00:00:00 -0400</pubDate>
+				<link>http://collectivecognition.com/blog/ludum-dare-30-devlog</link>
+				<guid isPermaLink="true">http://collectivecognition.com/blog/ludum-dare-30-devlog</guid>
+			</item>
+		
+			<item>
 				<title>Ludum Dare 29 Devlog</title>
 				<description>&lt;h2 id=&quot;pm-initial-ideas&quot;&gt;9:05PM: Initial Ideas&lt;/h2&gt;
 
@@ -510,31 +526,6 @@ console.log(generateID());
 				<pubDate>Sat, 01 Jun 2013 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/obfuscating-sequential-ids-with-skip32</link>
 				<guid isPermaLink="true">http://collectivecognition.com/blog/obfuscating-sequential-ids-with-skip32</guid>
-			</item>
-		
-			<item>
-				<title>Socket.io And Node.js Clustering</title>
-				<description>&lt;p&gt;I ran into a problem while working on chat.js, in the form of alot of log-spam from socket.io that looked something like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;info  - handshake authorized DL6P-B6mDjt1hrhM3VYw
-debug - setting request GET /socket.io/1/websocket/DL6P-B6mDjt1hrhM3VYw
-debug - set heartbeat interval for client DL6P-B6mDjt1hrhM3VYw
-debug - websocket writing 7:::1+0
-warn  - client not handshaken client should reconnect
-info  - transport end (error)
-debug - set close timeout for client DL6P-B6mDjt1hrhM3VYw
-debug - cleared close timeout for client DL6P-B6mDjt1hrhM3VYw
-debug - cleared heartbeat interval for client DL6P-B6mDjt1hrhM3VYw
-debug - discarding transport
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The problem turned out to be due to my use of the (still experimental) &lt;code&gt;cluster&lt;/code&gt; API  causing a race condition in socket.io and causing erratic behaviour in my application.&lt;/p&gt;
-
-&lt;p&gt;Luckily, multiple-cpu support isn’t a huge requirement for me at this time. Just a heads up for anyone else having similar problems.&lt;/p&gt;
-</description>
-				<pubDate>Wed, 29 May 2013 00:00:00 -0400</pubDate>
-				<link>http://collectivecognition.com/blog/socket.io-and-node.js-clustering</link>
-				<guid isPermaLink="true">http://collectivecognition.com/blog/socket.io-and-node.js-clustering</guid>
 			</item>
 		
 	</channel>
