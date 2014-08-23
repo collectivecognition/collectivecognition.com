@@ -26,4 +26,11 @@ I'm going to try to keep the look of the game as simple as possible so I can con
 
 Just a quick update to show some progress in the graphical style. I've pretty much decided on a wind movement mechanic which I'm going to start on as soon as I get back from doing some grocery shopping.
 
-<a href="/images/blog/original/ludum-dare-30-1.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-2.jpg"></a>
+<a href="/images/blog/original/ludum-dare-30-2.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-2.jpg"></a>
+
+11:30AM: Wind!
+--------------
+
+I've made a bit of progress on a wind system and added some basic manual controls.
+
+<a href="/images/blog/original/ludum-dare-30-3.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-3.jpg"></a>
