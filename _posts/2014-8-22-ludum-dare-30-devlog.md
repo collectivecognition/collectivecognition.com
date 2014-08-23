@@ -43,3 +43,14 @@ The game is progressing slowly but I'm definitely making progress. I've got some
 Next up will be adding some user interface stuff so I can start to flesh out some actual gameplay.
 
 <a href="/images/blog/original/ludum-dare-30-4.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-4.jpg"></a>
+
+5:00PM: UI Work
+----------------
+
+I've updated to Unity 4.6 to get access to the new UI system, which burned a bit of time. On the up side, it's MUCH easier to get up and running than the old system so I think I'll make up the lost time with increased efficiency.
+
+I designed added an event dialog which will enable a lot of the gameplay features I'm planning to be added rapidly.
+
+Time for a short dinner / excercise break!
+
+<a href="/images/blog/original/ludum-dare-30-5.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-5.jpg"></a>
