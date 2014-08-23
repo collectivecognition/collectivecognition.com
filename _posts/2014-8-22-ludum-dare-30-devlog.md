@@ -34,3 +34,12 @@ Just a quick update to show some progress in the graphical style. I've pretty mu
 I've made a bit of progress on a wind system and added some basic manual controls.
 
 <a href="/images/blog/original/ludum-dare-30-3.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-3.jpg"></a>
+
+3:30PM: Slow Progress
+---------------------
+
+The game is progressing slowly but I'm definitely making progress. I've got some basic world generation to generate random islands, a simple ship model with simulated cloth sails and have made a bunch of tweaks to the controls and the physics.
+
+Next up will be adding some user interface stuff so I can start to flesh out some actual gameplay.
+
+<a href="/images/blog/original/ludum-dare-30-4.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-4.jpg"></a>
