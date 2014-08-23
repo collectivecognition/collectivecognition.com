@@ -46,6 +46,16 @@
 &lt;p&gt;Next up will be adding some user interface stuff so I can start to flesh out some actual gameplay.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-30-4.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-30-4.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pm-ui-work&quot;&gt;5:00PM: UI Work&lt;/h2&gt;
+
+&lt;p&gt;I’ve updated to Unity 4.6 to get access to the new UI system, which burned a bit of time. On the up side, it’s MUCH easier to get up and running than the old system so I think I’ll make up the lost time with increased efficiency.&lt;/p&gt;
+
+&lt;p&gt;I designed added an event dialog which will enable a lot of the gameplay features I’m planning to be added rapidly.&lt;/p&gt;
+
+&lt;p&gt;Time for a short dinner / excercise break!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-30-5.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-30-5.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Fri, 22 Aug 2014 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/ludum-dare-30-devlog</link>
