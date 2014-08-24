@@ -69,16 +69,45 @@
 
 &lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-30-6.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-30-6.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;pm-sleep&quot;&gt;1:30PM: Sleep&lt;/h2&gt;
+
+&lt;p&gt;I’ve completed a bunch of stuff, including:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Revamped the water texture, physics and animation&lt;/li&gt;
+  &lt;li&gt;Adjusted the lighting&lt;/li&gt;
+  &lt;li&gt;Ironed out a bunch of kinks with the flags&lt;/li&gt;
+  &lt;li&gt;Added particle effects for the ship wake&lt;/li&gt;
+  &lt;li&gt;Revamped the ship controls&lt;/li&gt;
+  &lt;li&gt;Completed a basic implementation of the random event system&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Time to get some sleep and hit this fresh in the morning!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-30-7.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-30-7.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;todo&quot;&gt;TODO&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Wake particles&lt;/li&gt;
-  &lt;li&gt;Disable input when even UI is up&lt;/li&gt;
-  &lt;li&gt;Flag animations&lt;/li&gt;
   &lt;li&gt;Hover effect for event buttons&lt;/li&gt;
-  &lt;li&gt;Revamp water (move water instead of boat so it laps on shore, etc..)&lt;/li&gt;
   &lt;li&gt;Better sail animation&lt;/li&gt;
   &lt;li&gt;Compass&lt;/li&gt;
+  &lt;li&gt;Title screen&lt;/li&gt;
+  &lt;li&gt;Sound effects
+    &lt;ul&gt;
+      &lt;li&gt;Discover island&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Fix island collisions&lt;/li&gt;
+  &lt;li&gt;Stop rotation / movement when collide&lt;/li&gt;
+  &lt;li&gt;Sky&lt;/li&gt;
+  &lt;li&gt;Fix flicker of water&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://neotextureedit.sourceforge.net/&quot;&gt;NeoTextureEdit&lt;/a&gt; for the water texture&lt;/li&gt;
 &lt;/ul&gt;
 </description>
 				<pubDate>Fri, 22 Aug 2014 00:00:00 -0400</pubDate>
