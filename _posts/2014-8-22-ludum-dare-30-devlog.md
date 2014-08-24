@@ -93,6 +93,11 @@ I'm going to keep this short so I can get back to work!
 
 <a href="/images/blog/original/ludum-dare-30-8.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-8.jpg"></a>
 
+11:30AM: More Writing & Some UI
+-------------------------------
+
+<a href="/images/blog/original/ludum-dare-30-9.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-9.jpg"></a>
+
 TODO
 ----
 
@@ -105,17 +110,29 @@ TODO
 + Fix island collisions
 + Sky
 + Fix flicker of water
-+ Starting island (castle + dock)
 + Starting story line
 + Inventory
-+ Crew members
++ Crew
 + Food
++ Gold
 + NICE: Edge of world (darker water)
 
 Events
 ------
 
-
++ Intro
++ Win
++ Lose (no crew)
++ Desertion (no gold to pay, lose 1 crew, give names)
++ Starve (no food to feed, lose 1 crew, give names)
++ Poisoned (lose 1 crew)
++ Find spice A-D
++ Gain 1 crew
++ Lose 1 crew
++ Gain gold
++ Lose gold
++ Gain food
++ Spoiled
 
 Tools
 -----
