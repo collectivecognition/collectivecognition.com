@@ -45,7 +45,7 @@ Next up will be adding some user interface stuff so I can start to flesh out som
 <a href="/images/blog/original/ludum-dare-30-4.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-4.jpg"></a>
 
 5:00PM: UI Work
-----------------
+---------------
 
 I've updated to Unity 4.6 to get access to the new UI system, which burned a bit of time. On the up side, it's MUCH easier to get up and running than the old system so I think I'll make up the lost time with increased efficiency.
 
@@ -54,3 +54,27 @@ I designed added an event dialog which will enable a lot of the gameplay feature
 Time for a short dinner / excercise break!
 
 <a href="/images/blog/original/ludum-dare-30-5.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-5.jpg"></a>
+
+10:00PM: Flags!
+---------------
+
+The most obvious thing I've added in the last 3 or so hours since dinner is the flags which pop up when you encounter an island for the first time. These will serve to help you keep track of which islands you've already been to in order to encourage exploration.
+
+When colliding with a new island, the flag will pop up (accompanied by an animation and a particle effect) and a random event will occur.
+
+I spent an inordinate amount of time playing with cloth physics for the flags but I think it looks cool enough to be worthwhile AND I had an excuse to learn a Unity system I wasn't really familiar with before.
+
+I did lots and lots of refactoring and tweaking throughout the game as well, so I think things will progress quickly for the remainder of the evening.
+
+<a href="/images/blog/original/ludum-dare-30-6.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-6.jpg"></a>
+
+TODO
+----
+
++ Wake particles
++ Disable input when even UI is up
++ Flag animations
++ Hover effect for event buttons
++ Revamp water (move water instead of boat so it laps on shore, etc..)
++ Better sail animation
++ Compass
