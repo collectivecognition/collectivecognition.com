@@ -86,28 +86,44 @@
 
 &lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-30-7.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-30-7.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;am-quick-update-1&quot;&gt;9:30AM: Quick Update&lt;/h2&gt;
+
+&lt;p&gt;I’ve been up ‘n at it for a couple hours now. I’ve modelled the “home” island, where the game starts and done a lot of the event / story writing. &lt;/p&gt;
+
+&lt;p&gt;I’m going to keep this short so I can get back to work!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-30-8.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-30-8.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;todo&quot;&gt;TODO&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Hover effect for event buttons&lt;/li&gt;
   &lt;li&gt;Better sail animation&lt;/li&gt;
   &lt;li&gt;Compass&lt;/li&gt;
-  &lt;li&gt;Title screen&lt;/li&gt;
+  &lt;li&gt;Title screen (drifting letters)&lt;/li&gt;
   &lt;li&gt;Sound effects
     &lt;ul&gt;
       &lt;li&gt;Discover island&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Fix island collisions&lt;/li&gt;
-  &lt;li&gt;Stop rotation / movement when collide&lt;/li&gt;
   &lt;li&gt;Sky&lt;/li&gt;
   &lt;li&gt;Fix flicker of water&lt;/li&gt;
+  &lt;li&gt;Starting island (castle + dock)&lt;/li&gt;
+  &lt;li&gt;Starting story line&lt;/li&gt;
+  &lt;li&gt;Inventory&lt;/li&gt;
+  &lt;li&gt;Crew members&lt;/li&gt;
+  &lt;li&gt;Food&lt;/li&gt;
+  &lt;li&gt;NICE: Edge of world (darker water)&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;events&quot;&gt;Events&lt;/h2&gt;
 
 &lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://neotextureedit.sourceforge.net/&quot;&gt;NeoTextureEdit&lt;/a&gt; for the water texture&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://silourl&quot;&gt;Silo&lt;/a&gt; for polygon modelling&lt;/li&gt;
 &lt;/ul&gt;
 </description>
 				<pubDate>Fri, 22 Aug 2014 00:00:00 -0400</pubDate>
