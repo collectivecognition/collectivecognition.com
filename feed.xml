@@ -94,6 +94,10 @@
 
 &lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-30-8.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-30-8.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;am-more-writing--some-ui&quot;&gt;11:30AM: More Writing &amp;amp; Some UI&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-30-9.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-30-9.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;todo&quot;&gt;TODO&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -109,15 +113,31 @@
   &lt;li&gt;Fix island collisions&lt;/li&gt;
   &lt;li&gt;Sky&lt;/li&gt;
   &lt;li&gt;Fix flicker of water&lt;/li&gt;
-  &lt;li&gt;Starting island (castle + dock)&lt;/li&gt;
   &lt;li&gt;Starting story line&lt;/li&gt;
   &lt;li&gt;Inventory&lt;/li&gt;
-  &lt;li&gt;Crew members&lt;/li&gt;
+  &lt;li&gt;Crew&lt;/li&gt;
   &lt;li&gt;Food&lt;/li&gt;
+  &lt;li&gt;Gold&lt;/li&gt;
   &lt;li&gt;NICE: Edge of world (darker water)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;events&quot;&gt;Events&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Intro&lt;/li&gt;
+  &lt;li&gt;Win&lt;/li&gt;
+  &lt;li&gt;Lose (no crew)&lt;/li&gt;
+  &lt;li&gt;Desertion (no gold to pay, lose 1 crew, give names)&lt;/li&gt;
+  &lt;li&gt;Starve (no food to feed, lose 1 crew, give names)&lt;/li&gt;
+  &lt;li&gt;Poisoned (lose 1 crew)&lt;/li&gt;
+  &lt;li&gt;Find spice A-D&lt;/li&gt;
+  &lt;li&gt;Gain 1 crew&lt;/li&gt;
+  &lt;li&gt;Lose 1 crew&lt;/li&gt;
+  &lt;li&gt;Gain gold&lt;/li&gt;
+  &lt;li&gt;Lose gold&lt;/li&gt;
+  &lt;li&gt;Gain food&lt;/li&gt;
+  &lt;li&gt;Spoiled&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
 
