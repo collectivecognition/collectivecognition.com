@@ -84,21 +84,41 @@ Time to get some sleep and hit this fresh in the morning!
 
 <a href="/images/blog/original/ludum-dare-30-7.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-7.jpg"></a>
 
+9:30AM: Quick Update
+--------------------
+
+I've been up 'n at it for a couple hours now. I've modelled the "home" island, where the game starts and done a lot of the event / story writing. 
+
+I'm going to keep this short so I can get back to work!
+
+<a href="/images/blog/original/ludum-dare-30-8.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-8.jpg"></a>
+
 TODO
 ----
 
 + Hover effect for event buttons
 + Better sail animation
 + Compass
-+ Title screen
++ Title screen (drifting letters)
 + Sound effects
     * Discover island
 + Fix island collisions
-+ Stop rotation / movement when collide
 + Sky
 + Fix flicker of water
++ Starting island (castle + dock)
++ Starting story line
++ Inventory
++ Crew members
++ Food
++ NICE: Edge of world (darker water)
+
+Events
+------
+
+
 
 Tools
 -----
 
 + [NeoTextureEdit](http://neotextureedit.sourceforge.net/) for the water texture
++ [Silo](http://silourl) for polygon modelling
