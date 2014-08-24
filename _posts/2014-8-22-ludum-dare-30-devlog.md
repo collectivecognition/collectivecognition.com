@@ -68,13 +68,37 @@ I did lots and lots of refactoring and tweaking throughout the game as well, so 
 
 <a href="/images/blog/original/ludum-dare-30-6.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-6.jpg"></a>
 
+1:30PM: Sleep
+-------------
+
+I've completed a bunch of stuff, including:
+
++ Revamped the water texture, physics and animation
++ Adjusted the lighting
++ Ironed out a bunch of kinks with the flags
++ Added particle effects for the ship wake
++ Revamped the ship controls
++ Completed a basic implementation of the random event system
+
+Time to get some sleep and hit this fresh in the morning!
+
+<a href="/images/blog/original/ludum-dare-30-7.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-7.jpg"></a>
+
 TODO
 ----
 
-+ Wake particles
-+ Disable input when even UI is up
-+ Flag animations
 + Hover effect for event buttons
-+ Revamp water (move water instead of boat so it laps on shore, etc..)
 + Better sail animation
 + Compass
++ Title screen
++ Sound effects
+    * Discover island
++ Fix island collisions
++ Stop rotation / movement when collide
++ Sky
++ Fix flicker of water
+
+Tools
+-----
+
++ [NeoTextureEdit](http://neotextureedit.sourceforge.net/) for the water texture
