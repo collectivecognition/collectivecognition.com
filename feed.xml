@@ -56,6 +56,30 @@
 &lt;p&gt;Time for a short dinner / excercise break!&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-30-5.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-30-5.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pm-flags&quot;&gt;10:00PM: Flags!&lt;/h2&gt;
+
+&lt;p&gt;The most obvious thing I’ve added in the last 3 or so hours since dinner is the flags which pop up when you encounter an island for the first time. These will serve to help you keep track of which islands you’ve already been to in order to encourage exploration.&lt;/p&gt;
+
+&lt;p&gt;When colliding with a new island, the flag will pop up (accompanied by an animation and a particle effect) and a random event will occur.&lt;/p&gt;
+
+&lt;p&gt;I spent an inordinate amount of time playing with cloth physics for the flags but I think it looks cool enough to be worthwhile AND I had an excuse to learn a Unity system I wasn’t really familiar with before.&lt;/p&gt;
+
+&lt;p&gt;I did lots and lots of refactoring and tweaking throughout the game as well, so I think things will progress quickly for the remainder of the evening.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/blog/original/ludum-dare-30-6.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/ludum-dare-30-6.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;todo&quot;&gt;TODO&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Wake particles&lt;/li&gt;
+  &lt;li&gt;Disable input when even UI is up&lt;/li&gt;
+  &lt;li&gt;Flag animations&lt;/li&gt;
+  &lt;li&gt;Hover effect for event buttons&lt;/li&gt;
+  &lt;li&gt;Revamp water (move water instead of boat so it laps on shore, etc..)&lt;/li&gt;
+  &lt;li&gt;Better sail animation&lt;/li&gt;
+  &lt;li&gt;Compass&lt;/li&gt;
+&lt;/ul&gt;
 </description>
 				<pubDate>Fri, 22 Aug 2014 00:00:00 -0400</pubDate>
 				<link>http://collectivecognition.com/blog/ludum-dare-30-devlog</link>
