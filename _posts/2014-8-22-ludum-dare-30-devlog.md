@@ -98,44 +98,25 @@ I'm going to keep this short so I can get back to work!
 
 <a href="/images/blog/original/ludum-dare-30-9.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-9.jpg"></a>
 
-TODO
-----
+8:30PM: Final Build Submitted
+-----------------------------
 
-+ Hover effect for event buttons
-+ Better sail animation
-+ Compass
-+ Title screen (drifting letters)
-+ Sound effects
-    * Discover island
-+ Fix island collisions
-+ Sky
-+ Fix flicker of water
-+ Starting story line
-+ Inventory
-+ Crew
-+ Food
-+ Gold
-+ NICE: Edge of world (darker water)
+8+ hours of crunch time later and the game is as finished as it's going to be.
 
-Events
-------
+I've very happy with the result and most of what I had in my design made it in to the game (with the exception of sound). 
 
-+ Intro
-+ Win
-+ Lose (no crew)
-+ Desertion (no gold to pay, lose 1 crew, give names)
-+ Starve (no food to feed, lose 1 crew, give names)
-+ Poisoned (lose 1 crew)
-+ Find spice A-D
-+ Gain 1 crew
-+ Lose 1 crew
-+ Gain gold
-+ Lose gold
-+ Gain food
-+ Spoiled
+Try it for yourself [here](http://collectivecognition.github.io/Curmudgeon/) or check out the [source code](http://collectivecognition.github.io/Curmudgeon/).
 
-Tools
------
+<a href="/images/blog/original/ludum-dare-30-10.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-10.jpg"></a>
 
+<a href="/images/blog/original/ludum-dare-30-11.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-11.jpg"></a>
+
+<a href="/images/blog/original/ludum-dare-30-12.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-30-12.jpg"></a>
+
+Tools Used
+----------
+
++ [Silo](http://silo3d.com) for polygon modelling
++ [Photoshop](http://www.photoshop.com/) for textures / UI graphics
 + [NeoTextureEdit](http://neotextureedit.sourceforge.net/) for the water texture
-+ [Silo](http://silourl) for polygon modelling
++ [Unity](http://unity3d.com) for everything else
