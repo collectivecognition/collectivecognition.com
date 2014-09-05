@@ -353,6 +353,10 @@ a img {
     }
 
     &.games {
+        .game {
+            margin-bottom: 20px;
+        }
+        
         img {
             margin-right: 20px;
             float: left;
