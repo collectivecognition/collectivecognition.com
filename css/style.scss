@@ -38,6 +38,10 @@ a img {
     clear: both;
 }
 
+.pad-bottom {
+    margin-bottom: 20px;
+}
+
 .page.top .header.blank {
 
 }
@@ -359,11 +363,6 @@ a img {
 
     &.games {
         .game {
-            &:after {
-                float: none;
-                clear: both;
-            }
-            
             margin-bottom: 20px;
         }
         
@@ -382,6 +381,7 @@ a img {
         h2 {
             float: none;
             margin: 0 0 20px 0;
+            position: relative;
         }
 
         h2 a {
