@@ -33,6 +33,11 @@ a img {
     height: 36px;
 }
 
+.clear {
+    float: none;
+    clear: both;
+}
+
 .page.top .header.blank {
 
 }
@@ -354,6 +359,11 @@ a img {
 
     &.games {
         .game {
+            &:after {
+                float: none;
+                clear: both;
+            }
+            
             margin-bottom: 20px;
         }
         
