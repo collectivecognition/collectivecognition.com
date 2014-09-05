@@ -398,6 +398,10 @@ a img {
             background: url(../images/games-button.png);
             margin-left: 4px;
             float: left;
+
+            &:first-child {
+                margin-left: 0;
+            }
         }
 
         h2 a:hover{
@@ -407,7 +411,11 @@ a img {
         h2 .buttons {
             display: block;
             position: relative;
-            margin: 10px 0;
+            margin: 20px 0;
+        }
+
+        p {
+            margin: 0 0 20px 0;
         }
     }
 }
