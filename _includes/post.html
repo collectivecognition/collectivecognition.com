@@ -1,17 +1,23 @@
-<div class='page blog white top'>
-	<div class='header'>
-		{% include top.html %}
-	</div>
-	<div class='background'>
-		<div class='content'>
-			<h2>{{post.title}}</h2>
-			<h4>Posted on {{post.date | date: "%d %B %Y"}} by William Blanchette</h4>
+{% include top.html %}
+<div class="page {{page.class}}">
+	<div class="wrapper">
+		<div class="content post">
+			<h1>
+				{{post.title}}
+				<span class="subtle"> / {{post.date | date: "%d %B %Y"}}</span>
+			</h1>
+
 			<p>{{post.content | markdownify}}</p>
+
+			<div class="nav">
+				{%if post.previous %}<a class="button" href="{{post.previous.url}}">&laquo; previous post</a>{%endif%}
+				{%if post.next %}<a class="button" href="{{post.next.url}}">next post &raquo;</a>{%endif%}
+			</div>
 		</div>
 	</div>
-	<div id="footer">
-		{%if post.previous %}<div class="nav-older"><a href="{{post.previous.url}}">&laquo; Previous Post</a></div>{%endif%}
-		{%if post.next %}<div class="nav-newer"><a href="{{post.next.url}}">Next Post &raquo;</a></div>{%endif%}
-		<span class="copyright">&copy; {{site.time | date: "%Y"}} Collective Cognition, all rights reserved - <a href="{{site.url}}/feed">RSS Feed</a></div>
+</div>
+<div id="footer">
+	<div class="wrapper">
+		<span id="copyright">&copy; {{site.time | date: "%Y"}} Collective Cognition, all rights reserved - <a href="{{site.url}}/feed">RSS Feed</a>
 	</div>
 </div>

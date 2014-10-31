@@ -1,16 +1,16 @@
 ---
 layout: default
 ---
-<div class='page {{ page.class }} top'>
-	<div class='header'>
-		{% include top.html %}
-	</div>
-	<div class='background'>
-		<div class='content'>
+{% include top.html %}
+<div class="page {{page.class}}">
+	<div class="wrapper">
+		<div class="content">
 			{{content}}
 		</div>
 	</div>
-	<div id="footer">
-		<span class="copyright">&copy; {{site.time | date: "%Y"}} Collective Cognition, all rights reserved - <a href="{{site.url}}/feed">RSS Feed</a></div>
+</div>
+<div id="footer">
+	<div class="wrapper">
+		<span class="copyright">&copy; {{site.time | date: "%Y"}} Collective Cognition, all rights reserved - <a href="{{site.url}}/feed">RSS Feed</a></span>
 	</div>
 </div>

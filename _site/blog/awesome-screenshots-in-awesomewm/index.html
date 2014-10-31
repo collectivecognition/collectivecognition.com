@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0  Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head profile="http://gmpg.org/xfn/11">
+		<title> Awesome Screenshots In Awesomewm |  Collective Cognition</title>
+
+		<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+		<meta name="robots" content="index, follow" />
+		<meta charset=utf-8 />
+
+		<meta name="description" content="Collective Cognition designs and develops engaging web and mobile experiences." />
+		<meta name="keywords" content="collective, cognition, web, design, development, css, html, javascript, site, mobile, apps, apple, iphone, ios" />
+		<meta name="author" content="wb@collectivecognition.com" />
+
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
+		<!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>-->
+		<script type="text/javascript" src="/js/highlight.min.js"></script>
+		<script type="text/javascript" src="/js/shadowbox-inlined-min.js"></script>
+		<script type="text/javascript">
+			Shadowbox.init();
+			hljs.initHighlightingOnLoad();
+		</script>
+
+		<link rel="shortcut icon" href="/favicon.gif" />
+		<link rel="alternate" type="application/rss+xml" title="Collective Cognition Blog" href="http://collectivecognition.com/feed" />
+		<link rel="stylesheet" href="/css/style.css" media="screen,projection" type="text/css" />
+		<link href="https://plus.google.com/112066706442483184529/" rel="publisher" />
+	</head>
+
+	<body>
+		
+
+<div id="header">
+	<div class="wrapper">
+		<img id="hamburger" src="images/hamburger.svg">
+
+		<a href="http://collectivecognition.com" class="logo">
+			<img src="/images/logo.svg" alt="Collective Cognition logo">
+		</a>
+						
+		<div id="menu">
+			<a class="button" href="/">blog</a>
+			<a class="button" href="/web">web</a>
+			<a class="button" href="/games">games</a>
+			<a class="button img no-pad-bottom octocat" href="http://github.com/collectivecognition?tab=repositories">
+				<img src="/images/octocat.svg">
+			</a>
+			<a class="button img" href="https://www.linkedin.com/in/wblanchette">
+				<img src="/images/linkedin.svg">
+			</a>
+		</div>
+	</div>
+</div>
+<div class="page ">
+	<div class="wrapper">
+		<div class="content post">
+			<h1>
+				Awesome Screenshots In Awesomewm
+				<span class="subtle"> / 18 April 2014</span>
+			</h1>
+
+			<p><p>I’ve been experimenting with setting up an <a href="https://www.archlinux.org">arch linux</a> work environment on my laptop this weekend and one of the things I found myself missing almost immediately from OSX was the handy-dandy built in screenshot functionality.</p>
+
+<p>In the spirit of open source, I whipped up a quick lua key-binding for <a href="http://awesome.naquadah.org/">awesome window manager</a>.</p>
+
+<p>Just place the following in an apppropriate place in your <code>~/.config/rc.lua</code> file:</p>
+
+<pre><code>awful.key({ modkey, }, "p", function () awful.util.spawn_with_shell("FILENAME=/tmp/
+$(date +%m-%d-%y-%H-%M-%S).png; import -window root \"$FILENAME\"; gimp \"$FILENAME\"") end)
+</code></pre>
+
+<p>You’ll need <a href="http://www.imagemagick.org/">imagemagick</a> to take the actual screenshot and <a href="http://www.gimp.org/">gimp</a> to view / edit it.</p>
+
+<p>Install them like so:</p>
+
+<pre><code>sudo pacman -S imagemagick gimp
+</code></pre>
+
+<p>You can restart <code>awesome</code> by pressing <code>mod4-shift-r</code>, by default.</p>
+
+<p>Now just press <code>mod4-p</code> and a screenshot of your current view will auto-magically be opened in gimp.</p>
+</p>
+
+			<div class="nav">
+				<a class="button" href="/blog/mock-http-backends-in-angular">&laquo; previous post</a>
+				<a class="button" href="/blog/ludum-dare-29-devlog">next post &raquo;</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<div class="wrapper">
+		<span id="copyright">&copy; 2014 Collective Cognition, all rights reserved - <a href="http://collectivecognition.com/feed">RSS Feed</a>
+	</div>
+</div>
+	</body>
+</html>

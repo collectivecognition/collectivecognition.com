@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0  Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head profile="http://gmpg.org/xfn/11">
+		<title> Ludum Dare 29 Devlog |  Collective Cognition</title>
+
+		<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+		<meta name="robots" content="index, follow" />
+		<meta charset=utf-8 />
+
+		<meta name="description" content="Collective Cognition designs and develops engaging web and mobile experiences." />
+		<meta name="keywords" content="collective, cognition, web, design, development, css, html, javascript, site, mobile, apps, apple, iphone, ios" />
+		<meta name="author" content="wb@collectivecognition.com" />
+
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
+		<!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>-->
+		<script type="text/javascript" src="/js/highlight.min.js"></script>
+		<script type="text/javascript" src="/js/shadowbox-inlined-min.js"></script>
+		<script type="text/javascript">
+			Shadowbox.init();
+			hljs.initHighlightingOnLoad();
+		</script>
+
+		<link rel="shortcut icon" href="/favicon.gif" />
+		<link rel="alternate" type="application/rss+xml" title="Collective Cognition Blog" href="http://collectivecognition.com/feed" />
+		<link rel="stylesheet" href="/css/style.css" media="screen,projection" type="text/css" />
+		<link href="https://plus.google.com/112066706442483184529/" rel="publisher" />
+	</head>
+
+	<body>
+		
+
+<div id="header">
+	<div class="wrapper">
+		<img id="hamburger" src="images/hamburger.svg">
+
+		<a href="http://collectivecognition.com" class="logo">
+			<img src="/images/logo.svg" alt="Collective Cognition logo">
+		</a>
+						
+		<div id="menu">
+			<a class="button" href="/">blog</a>
+			<a class="button" href="/web">web</a>
+			<a class="button" href="/games">games</a>
+			<a class="button img no-pad-bottom octocat" href="http://github.com/collectivecognition?tab=repositories">
+				<img src="/images/octocat.svg">
+			</a>
+			<a class="button img" href="https://www.linkedin.com/in/wblanchette">
+				<img src="/images/linkedin.svg">
+			</a>
+		</div>
+	</div>
+</div>
+<div class="page ">
+	<div class="wrapper">
+		<div class="content post">
+			<h1>
+				Ludum Dare 29 Devlog
+				<span class="subtle"> / 25 April 2014</span>
+			</h1>
+
+			<p><h2 id="pm-initial-ideas">9:05PM: Initial Ideas</h2>
+
+<p>The theme is Beneath The Surface. My initial thoughts:</p>
+
+<ul>
+  <li>Asteroid mining (something like Dig Dug or Mr Driller?)</li>
+  <li>Ocean exploration (fishing?)</li>
+  <li>Oil drilling (a puzzle game maybe?)</li>
+  <li>Peeling vegetables (could be a good use of touch controls!)</li>
+  <li>Exploring the human psyche (psychologist simulator?)</li>
+  <li>Crypt / tombs / catacombs (filling up with water maybe?)</li>
+  <li>Mine carts (procedurally generated tunnels?)</li>
+</ul>
+
+<h2 id="pm-choosing-an-idea">9:22PM: Choosing An Idea</h2>
+
+<p>There were a lot of space-type themes in the final list so I was already thinking along these lines before the final theme was chosen.</p>
+
+<p>I think I have to go with asteroid mining. I’m imagining something like a combination of Lunar Lander and the classic Asteroids. Unity should be able to handle most of the physics “heavy lifting” and as long as I stick to a simple graphical style, I think I might be able to pull this off.</p>
+
+<p>Some initial thoughts:</p>
+
+<ul>
+  <li>I want this to work on mobile devices, so touch-friendly controls are a must. </li>
+  <li>I’d like travel between asteroids to be zoomed out, with the camera zooming in for landing</li>
+  <li>Parallax stars would be cool for the background</li>
+</ul>
+
+<p>Time to start coding!</p>
+
+<h2 id="pm-basic-physics--controls">10:22PM: Basic Physics / Controls</h2>
+
+<p>I’ve got a placeholder ship sprite and a basic newtonian physics control setup which allows attitude adjustment (rotation) forward / reverse thrust and velocity clamping to keep things sane.</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+
+public class ShipControls : MonoBehaviour {
+	private float rotatationSpeed = 100.0f;
+	private float acceleration = 2.0f;
+	private float thrust = 0.0f;
+	private float maxVelocity = 2.0f;
+
+	void Update(){
+		transform.Rotate (Vector3.forward * (-Input.GetAxis("Horizontal") * rotatationSpeed * Time.deltaTime) ); 
+
+		float inputThrust = Input.GetAxis("Vertical");
+		thrust += inputThrust * acceleration;
+
+		Vector3 newForce = Vector3.up * thrust * Time.deltaTime;
+		Vector3 relativeForce = transform.InverseTransformDirection(newForce);
+		rigidbody2D.AddForce(new Vector2(relativeForce.x * -1f, relativeForce.y));
+
+		rigidbody2D.velocity = Vector3.ClampMagnitude(rigidbody2D.velocity, maxVelocity);
+
+		Debug.DrawLine (transform.position, transform.position + Vector3.up * 2f, Color.red);
+	}
+
+	void OnGUI(){
+		GUI.Label(new Rect(10, 10, 100, 25), "Thrust: " + thrust);
+	}
+}
+</code></pre>
+
+<p><a href="/images/blog/original/ludum-dare-29-1.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-1.jpg" /></a></p>
+
+<h2 id="pm-wrestling-with-blog">10:40PM: Wrestling With Blog</h2>
+
+<p>Grr! My blog publishing scripts are giving me trouble. Mental note: sort this sort of thing out BEFORE the compo next time.</p>
+
+<h2 id="pm-so-very-tired">11:05PM: So Very Tired</h2>
+
+<p>I’ve done some more “miner” tweaking, but as it’s been a very long day and I’m having trouble keeping my eyes open, I think I’ll get some sleep and hit the ground running in the morning.</p>
+
+<p>A few notes on my current thoughts for the direction of the game:</p>
+
+<ul>
+  <li>Randomly place asteroids around level</li>
+  <li>Place “ore” nuggets randomly within asteroids</li>
+  <li>Ship must fly by and scan for these ore nuggest</li>
+  <li>After locating an ore nugget, player must land on asteroid surface perpendicular to nugget and drill straight down to retrieve it</li>
+</ul>
+
+<h2 id="am-wakey-wakey">6:58AM: Wakey Wakey</h2>
+
+<p>My significant other had a brilliant idea in her dreams: Beaneath the Surfers, a game about surfers avoiding being eaten by sharks. If only LD was twice as long!</p>
+
+<p>Back to work :D</p>
+
+<h2 id="am-camera">8:07AM: Camera</h2>
+
+<p>I’ve made a bit of progress with an auto-zooming camera that makes sure you can always see at least one asteroid. It’s glitchy, but basically functional so I’m going to shift gears and work on some scanning code.</p>
+
+<pre><code>public class Asteroid : MonoBehaviour {
+	public bool IsVisible(){
+		Vector3 viewPos = Camera.main.WorldToViewportPoint(transform.position);
+
+		if(viewPos.x &lt; 0 || viewPos.x &gt; 1 || viewPos.y &lt; 0 || viewPos.y &gt; 1){
+			return false;
+		}
+
+		return true;
+	}
+}
+</code></pre>
+
+<h2 id="am-scanner">9:20AM: Scanner</h2>
+
+<p>I have a basic scanner system in place. Scanner is triggered by holding down the mouse button and then aimed with the mouse. Ore that is “scanned” will become visible.</p>
+
+<p><a href="/images/blog/original/ludum-dare-29-2.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-2.jpg" /></a></p>
+
+<h2 id="am-level-generation">10:40AM: Level Generation</h2>
+
+<p>Lots of tweaks / additions in the last hour.</p>
+
+<ul>
+  <li>Implemented a basic level generator that places asteroids and adds ore to them.</li>
+  <li>Re-wrote camera zooming system to simply toggle between zoom levels based on the distance the closest asteroid. This works MUCH better than the more elaborate system.</li>
+  <li>Tweaked ship controls to make the physics more manageable.</li>
+</ul>
+
+<p>The next task will be adding support for landing on asteroids (and destroying the ship if you come in too fast / upside down /etc..), which is probably going to be one of the trickiest bits of code in the game.</p>
+
+<p>All in all, things are progressing nicely and I have decent confidence I’ll be able to finish SOMETHING to submit tomorrow.</p>
+
+<p><a href="/images/blog/original/ludum-dare-29-3.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-3.jpg" /></a></p>
+
+<h2 id="am-lunch-break">11:32AM: Lunch Break!</h2>
+
+<p>I got a little distracted and added animated thrusters to indicate the direction / intensity of thrust and also tweaked the physics a bit.</p>
+
+<p>Most of the core mechanics are in place, except “mining” the ore and collisions, so I think this is a good stopping point to take a break and go grab some lunch.</p>
+
+<p><a href="/images/blog/original/ludum-dare-29-4.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-4.jpg" /></a></p>
+
+<h2 id="pm-lots-of-updates">2:24PM: Lots of Updates</h2>
+
+<p>Had a nice long lunch (Korean pork bone soup) and then got a ton of work done!</p>
+
+<p>Highlights are a bunch of graphics updates, including parallax backgrounds and new asteroids.</p>
+
+<p>I also re-wrote the ore distribution code to place the ore realistically beneath the uneven surface of the asteroids by picking. Quick code sample to illustrate the technique:</p>
+
+<pre><code>public class Asteroid : MonoBehaviour {
+	public GameObject orePrefab;
+
+	private float minDepth = 0.1f;
+	private float maxDepth = 0.5f;
+	private int minOre = 2;
+	private int maxOre = 20;
+
+	// Initialize a new asteroid
+
+	public void Start(){
+
+		// Generate a random number of ore, within the specified range
+
+		int numOre = Random.Range(minOre, maxOre);
+
+		for(int ii = 0; ii &lt; numOre; ii++){
+
+			// Instantiate a new ore object and parent it to the asteroid
+
+			GameObject ore = (GameObject)Instantiate(orePrefab);
+			ore.transform.parent = gameObject.transform;
+
+			// Pick a random point along the outside of the asteroid collider
+
+			PolygonCollider2D p = (PolygonCollider2D)collider2D;
+			Vector2 randomPoint = p.points[Random.Range (0, p.points.Length)];
+
+			// Move it to a random depth in the specified range
+
+			float randomDepth = Random.Range(minDepth, maxDepth);
+			randomPoint = Vector2.Lerp(randomPoint, Vector2.zero, randomDepth);
+
+			// Set position of ore, making sure to place it's z in front of the asteroid
+
+			Vector3 randomPos = new Vector3(randomPoint.x, randomPoint.y, -0.0001f);
+			ore.transform.localPosition = randomPos;
+		}
+	}
+}
+</code></pre>
+
+<p><a href="/images/blog/original/ludum-dare-29-5.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-5.jpg" /></a></p>
+
+<h2 id="pm-slow-going">4:19PM: Slow Going</h2>
+
+<p>Physics are turning into a pain in the butt (as per usual), so I’ve wasted a good amount of time tweaking those and I’ms till not 100% happy with the controls.</p>
+
+<p>I did manage to throw in a nice explosion animation when the ship collides with an asteroid and a system for breaking the ship up into it’s component parts and applying random forces to them so they drift / spin away during the explosion. It looks pretty cool!</p>
+
+<p><a href="/images/blog/original/ludum-dare-29-6.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-6.jpg" /></a></p>
+
+<h2 id="pm-more-tweaking">5:04PM: More Tweaking</h2>
+
+<p>I’ve finally got the physics and controls in a place I’m happy with, and a solid idea of where I want the rest of the gameplay to go.</p>
+
+<p>I’m going to replace the scanning beam with more of a “pulse” which gets sent out in all directions at intervals. The scanning beam will be repurposed as a sort of mining tractor beam and become the mechanism by which the player retrives ore.</p>
+
+<p>Time to think about some dinner, do a few errands around the house and finish plotting my next steps.</p>
+
+<h2 id="pm-scanning">7:06PM: Scanning</h2>
+
+<p>I’ve revamped the scanning system and played with a lot of the graphics and small subsystems. Things are going slowly but surely. I think I’ll be able to have all the core gameplay finished before I go to bed, leaving all day tomorrow for polishing, playtesting, sound effects and finishing touches like menus, etc..</p>
+
+<p><a href="/images/blog/original/ludum-dare-29-7.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-7.jpg" /></a></p>
+
+<h2 id="pm-version-control">8:30PM: Version Control</h2>
+
+<p>Remember, friends don’t let friends develop without using version control! Set up a git repo for the project so I can start tracking changes after a small scare with some changes causing a nasty crash.</p>
+
+<p>The mining beam is coming along nicely, should have a working prototype soon.</p>
+
+<h2 id="pm-mining-beam">9:37PM: Mining Beam</h2>
+
+<p>My first stab at the mining beam is complete, as well as some basic score-keeping. The game now officially meets the definition a game, being that it has a beginning, a middle and an end.</p>
+
+<p>I think I’m in good shape to get this thing into decent shape for submission by the deadline tomorrow., so I’ll probably slow down a bit for the rest of the evening, but I’ll likely chip away at a few small things before bed.</p>
+
+<h2 id="am-late-start">10:06AM: Late Start</h2>
+
+<p>Had a little bit of a sleep in and then had to do some grocery shopping, so I’m starting later than I wanted to. Fortunately, I have a pretty good idea of how to tackle the last few features so hopefully things will progress quickly today.</p>
+
+<p>Also, Sarah helped me come up with a name for the game: Ursa Miner.</p>
+
+<h2 id="am-mini-map">10:51AM: Mini Map</h2>
+
+<p>I’m working through my wish list of extra features now. First up: a mini map. This was pretty easy to pull off using a second camera, although there were some difficulties with converting between real and normalized screen coordinates, rendering order of GUI elements vs game objects, etc.. I think it looks really slick for such a small amount of work!</p>
+
+<p><a href="/images/blog/original/ludum-dare-29-8.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-8.jpg" /></a></p>
+
+<h2 id="pm-ui-work">12:01PM: UI Work</h2>
+
+<p>I’ve implemented a main menu of sorts, including a logo and some basic instrctuions. The letters of the logo slowly drift around, to add some continuity with the ship death animation and a bit of extra personality.</p>
+
+<p>There’s also now a message when you die prompting the player to press a key to restart, and the ability to restart the game.</p>
+
+<p><a href="/images/blog/original/ludum-dare-29-9.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-9.jpg" /></a></p>
+
+<h2 id="pm-level-generation">1:00PM: Level Generation</h2>
+
+<p>I’ve polished up the level generation code to generate a nice circular asteroid belt, as well as adding a few new asteroid types and tweaking the algorithm that distributes ore inside the asteroids.</p>
+
+<p><a href="/images/blog/original/ludum-dare-29-10.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-10.jpg" /></a></p>
+
+<h2 id="pm-scores">2:24PM: Scores</h2>
+
+<p>Added score GUI and hi score tracking. I also redrew the ore sprites and added a few colors for variety. Lots of other small tweaks / bug fixes as well.</p>
+
+<p><a href="/images/blog/original/ludum-dare-29-11.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-11.jpg" /></a></p>
+
+<h2 id="pm-final-touches">5:04PM: Final Touches</h2>
+
+<p>Fixed the last bugs on my list, including fixing a number of issues with collision masks and refactoring the code that drags the ore into the ship, which was profoundly broken.</p>
+
+<p>I also added a bunch little things that add to general polish, like flickering flames for the ship thrusters, smoke trails and a small delay before the player can reload the level so that the explosion animation can play.</p>
+
+<p>All that’s left now is to add some sound effects and submit!</p>
+
+<p><a href="/images/blog/original/ludum-dare-29-12.jpg" rel="shadowbox"><img src="/images/blog/thumbnails/ludum-dare-29-12.jpg" /></a></p>
+
+<h2 id="pm-sound-effects">7:25PM: Sound Effects</h2>
+
+<p>After a few tries at generating some sound effects, I settled on a nice minimal retro feel. I think the game is as done as it’s going to get, so I’m going to do a final build and submit. Only 1.5 hours to spare!</p>
+
+<h2 id="pm-done">7:58PM: DONE!</h2>
+
+<p>Ursa Miner has been submitted!</p>
+
+<p>You can head over to <a href="http://www.ludumdare.com/compo/ludum-dare-29/?action=preview&amp;uid=11551">the Ludum Dare entry</a> to vote, to <a href="https://github.com/collectivecognition/UrsaMiner">Github</a>  to view the source or <a href="http://collectivecognition.github.io/UrsaMiner/">play it online here</a>.</p>
+</p>
+
+			<div class="nav">
+				<a class="button" href="/blog/awesome-screenshots-in-awesomewm">&laquo; previous post</a>
+				<a class="button" href="/blog/ludum-dare-30-devlog">next post &raquo;</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<div class="wrapper">
+		<span id="copyright">&copy; 2014 Collective Cognition, all rights reserved - <a href="http://collectivecognition.com/feed">RSS Feed</a>
+	</div>
+</div>
+	</body>
+</html>

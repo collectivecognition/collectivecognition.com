@@ -1,7 +1,34 @@
 ---
-layout: default
+layout: page
+class: web
 ---
 
-{% assign post = site.posts[0] %}
+<script src="/js/home.js"></script>
 
-{% include post.html %}
+<div class="cells">
+	<a class="cell yellow">
+		<div class="inner">
+			<img class="icon" src="/images/beer.svg">
+			<div class="num"></div>
+			<div class="desc"></div>
+		</div>
+	</a>
+
+	<a class="cell blue">
+		<div class="inner">
+			<img class="icon" src="/images/book.svg">
+			<div class="num"></div>
+			<div class="desc"></div>
+		</div>
+	</a>
+
+	<a class="cell purple">
+		<div class="inner">
+			<img class="icon" src="/images/stopwatch.svg">
+			<div class="num"></div>
+			<div class="desc"></div>
+		</div>
+	</a>
+
+	<div id="photos"></div>
+</div>
