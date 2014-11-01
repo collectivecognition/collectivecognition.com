@@ -27,6 +27,5 @@ gulp.task("start", ["serve", "watch"]);
 
 gulp.task("publish", function(){
 	return gulp.src("_site/**").
-		pipe(shell("jekyll build")).
-		pipe(ghpages());
+		pipe(shell("jekyll build"))
 });
