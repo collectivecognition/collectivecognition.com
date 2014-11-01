@@ -2,8 +2,8 @@ safe: false
 source: ./
 lsi: false
 permalink: /blog/:title
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", edit, publish, build]
-pygments: true
+exclude: ["node_module", ".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", edit, publish, build]
+highlighter: true
 markdown: kramdown
 
 title: Collective Cognition
@@ -16,11 +16,6 @@ author:
   feedburner: 
 
 url: http://collectivecognition.com
-
-sass:
-  style: expanded
-  deploy_style: compressed
-  compile_in_place: false
 
 mini_magick:
     thumbnail:
