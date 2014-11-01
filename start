@@ -1,3 +1,2 @@
 #!/bin/sh
-jekyll serve --watch
-sass --watch css/style.scss:_site/css/style.css
+jekyll start --watch
