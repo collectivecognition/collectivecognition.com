@@ -32,5 +32,5 @@ gulp.task("gh-pages", function(){
 });
 
 gulp.task("publish", function(callback){
-	sequence(shell("jekyll build"), "gh-pages"], callback);
+	sequence(shell("jekyll build"), "gh-pages", callback);
 });
