@@ -184,6 +184,10 @@ h2 {
 
 .cells {
     @include clearfix;
+
+    h1 {
+        text-align: center;
+    }
 }
 
 $cell-padding: 10px;

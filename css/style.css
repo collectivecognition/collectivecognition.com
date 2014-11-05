@@ -132,6 +132,8 @@ h2 {
   font-size: 0;
   clear: both;
   height: 0; }
+.cells h1 {
+  text-align: center; }
 
 .cell {
   display: inline-block;
