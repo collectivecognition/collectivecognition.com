@@ -5,9 +5,7 @@ class: web
 
 <script src="/js/home.js"></script>
 
-<div class="cells">
-	<h1>Quantified Self:</h1>
-
+<!--<div class="cells">
 	<a class="cell yellow">
 		<div class="inner">
 			<img class="icon" src="/images/beer.svg">
@@ -31,8 +29,18 @@ class: web
 			<div class="desc"></div>
 		</div>
 	</a>
+</div>-->
 
-	<h1>Latest Photos:</h1>
-
-	<div id="photos"></div>
+<div class="cells posts">
+	{% for post in site.posts | limit:9 %}
+		<a href="{{ post.url }}" class="cell post">
+			<div class="date">
+				<div class="month">{{ post.date | date:"%b"}}</div>
+				<div class="day">{{ post.date | date:"%-d"}}</div>
+			</div>
+			<div class="title">{{ post.title | truncate:60 }} &raquo;</div>
+		</a>
+	{% endfor %}
 </div>
+
+<!--<div class="cells" id="photos"></div>-->

@@ -195,7 +195,7 @@ $cell-padding: 10px;
 .cell {
     display: inline-block;
     box-sizing: border-box;
-    width: 33%;
+    width: 50%;
     height: auto;
     overflow: hidden;
     position: relative;
@@ -224,8 +224,9 @@ $cell-padding: 10px;
         bottom: $cell-padding;
     }
 
+    /*
     &:nth-child(3n+1){
-        padding-left: $cell-padding * 2/3;
+        padding-right: $cell-padding * 2/3;
 
         .inner {
             right: $cell-padding * 2/3;
@@ -243,17 +244,22 @@ $cell-padding: 10px;
     }
 
     &:nth-child(3n+3){
-        padding-right: $cell-padding * 2/3;
+        padding-left: $cell-padding * 2/3;
 
         .inner {
             left: $cell-padding * 2/3;
         }
     }
+    */
 
     &:after {
         padding-top: 56.25%; // 16:9 aspect ratio
         display: block;
         content: "";
+    }
+
+    &.photo:after {
+        padding-top: 80%;
     }
 
     &.purple {
@@ -271,6 +277,50 @@ $cell-padding: 10px;
     &.yellow {
         .inner {
             background-color: #FFB733;
+        }
+    }
+
+    &.post {
+        height: 110px;
+        margin-bottom: 10px;
+        text-decoration: none;
+
+        .date {
+            background: #D8D8D8;
+            float: left;
+            width: 80px;
+            height: 110px;
+            padding: 30px 10px 40px 10px;
+            text-align: center;
+            box-sizing: border-box;
+            box-shadow: inset 0 -10px 0 rgba(0, 0, 0, 0.5);
+
+            .month {
+                font-size: 20px;
+                font-weight: 600;
+                color: #A1A1A1;
+                text-transform: uppercase;
+            }
+
+            .day {
+                font-size: 28px;
+                font-weight: 200;
+                color: #7F7F7F;
+            }
+        }
+
+        .title {
+            color: #D7D7D7;
+            font-size: 28px;
+            font-weight: 200;
+            height: 110px;
+            line-height: 30px;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 10px;
+            overflow: hidden;
+            box-sizing: border-box;
+            line-height: 30px;
         }
     }
 }

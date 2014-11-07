@@ -1,6 +1,6 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
 @import url(//fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700);
-/* line 17, /Users/will/collectivecognition.com/css/style.scss */
+/* line 17, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 body {
   background: #009688;
   margin: 0;
@@ -10,32 +10,32 @@ body {
   line-height: 22px;
 }
 
-/* line 26, /Users/will/collectivecognition.com/css/style.scss */
+/* line 28, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 a,
 a:visited,
 a:hover {
   color: #009688;
 }
 
-/* line 32, /Users/will/collectivecognition.com/css/style.scss */
+/* line 32, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 a img {
   border: 0;
 }
 
-/* line 36, /Users/will/collectivecognition.com/css/style.scss */
+/* line 36, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .wrapper {
   width: 960px;
   margin: 0px auto;
 }
 
-/* line 41, /Users/will/collectivecognition.com/css/style.scss */
+/* line 41, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 #header {
   background: #009688;
   position: relative;
   height: 70px;
   width: 100%;
 }
-/* line 47, /Users/will/collectivecognition.com/css/style.scss */
+/* line 47, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 #header #hamburger {
   float: left;
   height: 30px;
@@ -44,28 +44,28 @@ a img {
   width: 0px;
   transition: width 150ms linear, opacity 150ms linear, padding-right 150ms linear;
 }
-/* line 56, /Users/will/collectivecognition.com/css/style.scss */
+/* line 56, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 #header .logo {
   float: left;
 }
-/* line 59, /Users/will/collectivecognition.com/css/style.scss */
+/* line 59, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 #header .logo img {
   box-sizing: border-box;
   height: 70px;
   padding: 10px 0;
 }
-/* line 66, /Users/will/collectivecognition.com/css/style.scss */
+/* line 66, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 #header #menu {
   float: left;
   padding: 15px 0 0 25px;
 }
-/* line 70, /Users/will/collectivecognition.com/css/style.scss */
+/* line 70, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 #header #menu .button {
   float: left;
   margin-right: 10px;
 }
 
-/* line 77, /Users/will/collectivecognition.com/css/style.scss */
+/* line 77, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 #footer {
   height: 70px;
   width: 100%;
@@ -75,14 +75,14 @@ a img {
   text-align: center;
   line-height: 70px;
 }
-/* line 86, /Users/will/collectivecognition.com/css/style.scss */
+/* line 86, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 #footer a {
   color: rgba(255, 255, 255, 0.5);
   font-size: 14px;
   font-weight: 100;
 }
 
-/* line 93, /Users/will/collectivecognition.com/css/style.scss */
+/* line 94, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .button,
 .button:visited {
   display: inline-block;
@@ -97,86 +97,86 @@ a img {
   font-size: 16px;
   font-weight: 400;
 }
-/* line 107, /Users/will/collectivecognition.com/css/style.scss */
+/* line 107, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .button:hover,
 .button:visited:hover {
   color: #fff;
 }
-/* line 112, /Users/will/collectivecognition.com/css/style.scss */
+/* line 112, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .button.img img,
 .button:visited.img img {
   height: 100%;
   box-sizing: border-box;
   opacity: 0.9;
 }
-/* line 118, /Users/will/collectivecognition.com/css/style.scss */
+/* line 118, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .button.img.octocat img,
 .button:visited.img.octocat img {
   padding-top: 3px;
 }
-/* line 122, /Users/will/collectivecognition.com/css/style.scss */
+/* line 122, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .button.img:hover img,
 .button:visited.img:hover img {
   opacity: 1;
 }
 
-/* line 128, /Users/will/collectivecognition.com/css/style.scss */
+/* line 128, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .clear {
   float: none;
   clear: both;
 }
 
-/* line 133, /Users/will/collectivecognition.com/css/style.scss */
+/* line 133, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .right {
   float: right;
 }
 
-/* line 137, /Users/will/collectivecognition.com/css/style.scss */
+/* line 137, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .no-pad-bottom {
   padding-bottom: 0;
 }
 
-/* line 141, /Users/will/collectivecognition.com/css/style.scss */
+/* line 141, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 h1, h2, h3, h4 {
   color: #009688;
   text-transform: uppercase;
   font-weight: 100;
 }
-/* line 146, /Users/will/collectivecognition.com/css/style.scss */
+/* line 146, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 h1 .subtle, h2 .subtle, h3 .subtle, h4 .subtle {
   opacity: 0.15;
   color: #35625d;
 }
 
-/* line 152, /Users/will/collectivecognition.com/css/style.scss */
+/* line 152, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 h1 {
   font-size: 26px;
 }
 
-/* line 156, /Users/will/collectivecognition.com/css/style.scss */
+/* line 156, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 h2 {
   font-size: 22px;
 }
 
-/* line 160, /Users/will/collectivecognition.com/css/style.scss */
+/* line 160, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .page {
   background: #fff;
   padding: 10px 0;
 }
 
-/* line 166, /Users/will/collectivecognition.com/css/style.scss */
+/* line 166, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .post img {
   display: block;
   width: auto;
   max-width: 80%;
   margin: 0 auto;
 }
-/* line 173, /Users/will/collectivecognition.com/css/style.scss */
+/* line 173, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .post .nav {
   margin: 30px 0;
   text-align: center;
 }
-/* line 7, /Users/will/collectivecognition.com/css/style.scss */
+/* line 7, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .post .nav:after {
   content: " ";
   visibility: hidden;
@@ -185,12 +185,12 @@ h2 {
   clear: both;
   height: 0;
 }
-/* line 179, /Users/will/collectivecognition.com/css/style.scss */
+/* line 179, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .post .nav .button {
   margin-right: 10px;
 }
 
-/* line 7, /Users/will/collectivecognition.com/css/style.scss */
+/* line 7, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .cells:after {
   content: " ";
   visibility: hidden;
@@ -199,23 +199,50 @@ h2 {
   clear: both;
   height: 0;
 }
-/* line 188, /Users/will/collectivecognition.com/css/style.scss */
+/* line 188, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .cells h1 {
   text-align: center;
 }
 
-/* line 195, /Users/will/collectivecognition.com/css/style.scss */
+/* line 195, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .cell {
   display: inline-block;
   box-sizing: border-box;
-  width: 33%;
+  width: 50%;
   height: auto;
   overflow: hidden;
   position: relative;
   float: left;
   padding-bottom: 10px;
+    /*
+    &:nth-child(3n+1){
+        padding-right: $cell-padding * 2/3;
+
+        .inner {
+            right: $cell-padding * 2/3;
+        }
+    }
+
+    &:nth-child(3n+2){
+        padding-left: $cell-padding * 1/3;
+        padding-right: $cell-padding * 1/3;
+
+        .inner {
+            left: $cell-padding * 1/3;
+            right: $cell-padding * 1/3;
+        }
+    }
+
+    &:nth-child(3n+3){
+        padding-left: $cell-padding * 2/3;
+
+        .inner {
+            left: $cell-padding * 2/3;
+        }
+    }
+    */
 }
-/* line 204, /Users/will/collectivecognition.com/css/style.scss */
+/* line 204, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .cell .inner {
   box-sizing: border-box;
   box-shadow: inset 0 -10px 0 rgba(0, 0, 0, 0.5);
@@ -228,79 +255,101 @@ h2 {
   right: 0;
   padding: 20px;
 }
-/* line 216, /Users/will/collectivecognition.com/css/style.scss */
+/* line 216, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .cell .inner .icon {
   height: 100%;
 }
-/* line 223, /Users/will/collectivecognition.com/css/style.scss */
+/* line 223, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .cell .inner {
   bottom: 10px;
 }
-/* line 227, /Users/will/collectivecognition.com/css/style.scss */
-.cell:nth-child(3n+1) {
-  padding-left: 6.66667px;
-}
-/* line 230, /Users/will/collectivecognition.com/css/style.scss */
-.cell:nth-child(3n+1) .inner {
-  right: 6.66667px;
-}
-/* line 235, /Users/will/collectivecognition.com/css/style.scss */
-.cell:nth-child(3n+2) {
-  padding-left: 3.33333px;
-  padding-right: 3.33333px;
-}
-/* line 239, /Users/will/collectivecognition.com/css/style.scss */
-.cell:nth-child(3n+2) .inner {
-  left: 3.33333px;
-  right: 3.33333px;
-}
-/* line 245, /Users/will/collectivecognition.com/css/style.scss */
-.cell:nth-child(3n+3) {
-  padding-right: 6.66667px;
-}
-/* line 248, /Users/will/collectivecognition.com/css/style.scss */
-.cell:nth-child(3n+3) .inner {
-  left: 6.66667px;
-}
-/* line 253, /Users/will/collectivecognition.com/css/style.scss */
+/* line 255, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .cell:after {
   padding-top: 56.25%;
   display: block;
   content: "";
 }
-/* line 260, /Users/will/collectivecognition.com/css/style.scss */
+/* line 261, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
+.cell.photo:after {
+  padding-top: 80%;
+}
+/* line 266, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .cell.purple .inner {
   background-color: #7F1EAD;
 }
-/* line 266, /Users/will/collectivecognition.com/css/style.scss */
+/* line 272, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .cell.blue .inner {
   background-color: #305CAC;
 }
-/* line 272, /Users/will/collectivecognition.com/css/style.scss */
+/* line 278, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .cell.yellow .inner {
   background-color: #FFB733;
 }
+/* line 283, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
+.cell.post {
+  height: 110px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+/* line 288, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
+.cell.post .date {
+  background: #D8D8D8;
+  float: left;
+  width: 80px;
+  height: 110px;
+  padding: 30px 10px 40px 10px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: inset 0 -10px 0 rgba(0, 0, 0, 0.5);
+}
+/* line 298, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
+.cell.post .date .month {
+  font-size: 20px;
+  font-weight: 600;
+  color: #A1A1A1;
+  text-transform: uppercase;
+}
+/* line 305, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
+.cell.post .date .day {
+  font-size: 28px;
+  font-weight: 200;
+  color: #7F7F7F;
+}
+/* line 312, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
+.cell.post .title {
+  color: #D7D7D7;
+  font-size: 28px;
+  font-weight: 200;
+  height: 110px;
+  line-height: 30px;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  line-height: 30px;
+}
 
 @media only screen and (max-width: 800px) {
-  /* line 279, /Users/will/collectivecognition.com/css/style.scss */
+  /* line 329, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
   .wrapper {
     width: 100%;
   }
 
-  /* line 283, /Users/will/collectivecognition.com/css/style.scss */
+  /* line 333, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
   #header {
     position: fixed;
     z-index: 99;
   }
 
-  /* line 288, /Users/will/collectivecognition.com/css/style.scss */
+  /* line 338, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
   #header #hamburger {
     width: 20px;
     opacity: 1;
     padding-right: 10px;
   }
 
-  /* line 294, /Users/will/collectivecognition.com/css/style.scss */
+  /* line 344, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
   #menu {
     position: fixed;
     left: 0;
@@ -309,59 +358,59 @@ h2 {
   }
 }
 @media only screen and (max-width: 500px) {
-  /* line 303, /Users/will/collectivecognition.com/css/style.scss */
+  /* line 353, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
   .cell {
     width: 100%;
   }
 }
-/* line 308, /Users/will/collectivecognition.com/css/style.scss */
+/* line 358, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .hljs {
   display: block;
   padding: 0.5em;
   background: #F0F0F0;
 }
 
-/* line 313, /Users/will/collectivecognition.com/css/style.scss */
+/* line 363, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .hljs, .hljs-subst, .hljs-tag .hljs-title, .lisp .hljs-title, .clojure .hljs-built_in, .nginx .hljs-title {
   color: black;
 }
 
-/* line 317, /Users/will/collectivecognition.com/css/style.scss */
+/* line 367, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .hljs-string, .hljs-title, .hljs-constant, .hljs-parent, .hljs-tag .hljs-value, .hljs-rules .hljs-value, .hljs-rules .hljs-value .hljs-number, .hljs-preprocessor, .hljs-pragma, .haml .hljs-symbol, .ruby .hljs-symbol, .ruby .hljs-symbol .hljs-string, .hljs-aggregate, .hljs-template_tag, .django .hljs-variable, .smalltalk .hljs-class, .hljs-addition, .hljs-flow, .hljs-stream, .bash .hljs-variable, .apache .hljs-tag, .apache .hljs-cbracket, .tex .hljs-command, .tex .hljs-special, .erlang_repl .hljs-function_or_atom, .asciidoc .hljs-header, .markdown .hljs-header, .coffeescript .hljs-attribute {
   color: #800;
 }
 
-/* line 321, /Users/will/collectivecognition.com/css/style.scss */
+/* line 371, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .smartquote, .hljs-comment, .hljs-annotation, .hljs-template_comment, .diff .hljs-header, .hljs-chunk, .asciidoc .hljs-blockquote, .markdown .hljs-blockquote {
   color: #888;
 }
 
-/* line 325, /Users/will/collectivecognition.com/css/style.scss */
+/* line 375, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .hljs-number, .hljs-date, .hljs-regexp, .hljs-literal, .hljs-hexcolor, .smalltalk .hljs-symbol, .smalltalk .hljs-char, .go .hljs-constant, .hljs-change, .lasso .hljs-variable, .makefile .hljs-variable, .asciidoc .hljs-bullet, .markdown .hljs-bullet, .asciidoc .hljs-link_url, .markdown .hljs-link_url {
   color: #080;
 }
 
-/* line 329, /Users/will/collectivecognition.com/css/style.scss */
+/* line 379, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .hljs-label, .hljs-javadoc, .ruby .hljs-string, .hljs-decorator, .hljs-filter .hljs-argument, .hljs-localvars, .hljs-array, .hljs-attr_selector, .hljs-important, .hljs-pseudo, .hljs-pi, .haml .hljs-bullet, .hljs-doctype, .hljs-deletion, .hljs-envvar, .hljs-shebang, .apache .hljs-sqbracket, .nginx .hljs-built_in, .tex .hljs-formula, .erlang_repl .hljs-reserved, .hljs-prompt, .asciidoc .hljs-link_label, .markdown .hljs-link_label, .vhdl .hljs-attribute, .clojure .hljs-attribute, .asciidoc .hljs-attribute, .lasso .hljs-attribute, .coffeescript .hljs-property, .hljs-phony {
-  color: #88F;
+  color: #8888ff;
 }
 
-/* line 333, /Users/will/collectivecognition.com/css/style.scss */
+/* line 383, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .hljs-keyword, .hljs-id, .hljs-title, .hljs-built_in, .hljs-aggregate, .css .hljs-tag, .hljs-javadoctag, .hljs-phpdoc, .hljs-yardoctag, .smalltalk .hljs-class, .hljs-winutils, .bash .hljs-variable, .apache .hljs-tag, .go .hljs-typename, .tex .hljs-command, .asciidoc .hljs-strong, .markdown .hljs-strong, .hljs-request, .hljs-status {
   font-weight: bold;
 }
 
-/* line 337, /Users/will/collectivecognition.com/css/style.scss */
+/* line 387, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .asciidoc .hljs-emphasis, .markdown .hljs-emphasis {
   font-style: italic;
 }
 
-/* line 341, /Users/will/collectivecognition.com/css/style.scss */
+/* line 391, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .nginx .hljs-built_in {
   font-weight: normal;
 }
 
-/* line 345, /Users/will/collectivecognition.com/css/style.scss */
+/* line 395, /Volumes/Macintosh HD/wb/Documents/collectivecognition.com/css/style.scss */
 .coffeescript .javascript, .javascript .xml, .lasso .markup, .tex .hljs-formula, .xml .javascript, .xml .vbscript, .xml .css, .xml .hljs-cdata {
   opacity: 0.5;
 }

@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 			for(var ii = 0; ii < photos.length && ii < 3; ii++){
 				var photo = photos[ii];
-				$("#photos").append("<a class='cell' href='" + photo.url + "'><div class='inner' style='background-image: url(" + photo.image + ");'></div></a>");
+				$("#photos").append("<a class='cell photo' href='" + photo.url + "'><div class='inner' style='background-image: url(" + photo.image + ");'></div></a>");
 			}
 		}
 	});

@@ -22,7 +22,7 @@ gulp.task("watch", function(){
      return gulp.watch("css/*.scss", ["css"]);
 });
 
-gulp.task("serve", bg("jekyll", "serve"));
+gulp.task("serve", bg("jekyll", "serve", "--watch"));
 
 gulp.task("start", ["serve", "watch"]);
 

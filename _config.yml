@@ -2,7 +2,7 @@ safe: false
 source: ./
 lsi: false
 permalink: /blog/:title
-exclude: ["node_module", ".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", edit, publish, build]
+exclude: ["node_modules", ".sass-cache", ".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", edit, publish, build]
 highlighter: true
 markdown: kramdown
 
