@@ -19,6 +19,12 @@
 &lt;p&gt;My initial thought was a sphere composed of hexoganal tiles, but it turns out that this is mathematically impossible. Damn you reality! After messing with everything from electromagnetic repulsion simulations to hypercube rejection I finally settled on using the lowly icosphere as the basic for my game world.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/images/blog/original/procedural-jam-2014-1.jpg&quot; rel=&quot;shadowbox&quot;&gt;&lt;img src=&quot;/images/blog/thumbnails/procedural-jam-2014-1.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pm-1&quot;&gt;11:41PM&lt;/h2&gt;
+
+&lt;p&gt;Sleep time! I spend an hour or so playing with the perlin noise capabilities in Unity to try to generate some simple terrain. This first attempt involved converting the cartesian coordinates of my vertices to polar coordinates and then using those to see the perlin noise generator, but as you can see from this animation there are a number of warping / wrapping issues I need to resolve.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/thumbnails/procedural-jam-2014-2.gif&quot; /&gt;&lt;/p&gt;
 </description>
 				<pubDate>Fri, 07 Nov 2014 00:00:00 -0500</pubDate>
 				<link>http://collectivecognition.com/blog/procedural-generation-jam-2014</link>
