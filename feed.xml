@@ -25,6 +25,12 @@
 &lt;p&gt;Sleep time! I spend an hour or so playing with the perlin noise capabilities in Unity to try to generate some simple terrain. This first attempt involved converting the cartesian coordinates of my vertices to polar coordinates and then using those to see the perlin noise generator, but as you can see from this animation there are a number of warping / wrapping issues I need to resolve.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://fat.gfycat.com/HarmfulImaginaryHamster.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;saturday-910am&quot;&gt;Saturday, 9:10AM&lt;/h2&gt;
+
+&lt;p&gt;I found an implemented a simplex noise generator which is giving me much more natural looking results. I think I’ll leave this aspect for now and start working on some actual gameplay.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://fat.gfycat.com/AdeptSpiffyCondor.gif&quot; /&gt;&lt;/p&gt;
 </description>
 				<pubDate>Fri, 07 Nov 2014 00:00:00 -0500</pubDate>
 				<link>http://collectivecognition.com/blog/procedural-generation-jam-2014</link>
